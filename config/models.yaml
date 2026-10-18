@@ -1,0 +1,33 @@
+# Моделі, параметри семплінгу і налаштування extraction.
+# Назви моделей і ціни змінюються тут, а не в коді.
+
+models:
+  provider:
+    client: openrouter
+    id: openai/gpt-4o-mini
+    # USD за 1M токенів, з https://openrouter.ai/api/v1/models станом на 18.10.2026
+    price_per_1m_tokens: { input: 0.15, output: 0.60 }
+  local:
+    client: ollama
+    id: qwen2.5:7b-instruct   # при < 16 ГБ RAM: qwen2.5:3b-instruct
+    price_per_1m_tokens: { input: 0, output: 0 }
+
+sampling:
+  A: { temperature: 0.0, top_p: 1.0 }   # детермінована
+  B: { temperature: 0.7, top_p: 0.9 }   # «творча»
+
+extraction:
+  prompt: extract_defect/v1
+  timeout_s: 60
+  retries: 2            # повтори при мережевих помилках / timeout
+  repair_attempts: 1    # спроби виправити невалідний JSON
+  max_tokens: 1024
+
+data:
+  inputs:
+    - data/synthetic/defects_synthetic.jsonl
+    - data/github/defects_github.jsonl
+  results_dir: results
+
+ollama:
+  base_url: http://localhost:11434
