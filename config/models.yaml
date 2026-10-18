@@ -11,13 +11,22 @@ models:
     client: ollama
     id: qwen2.5:7b-instruct   # при < 16 ГБ RAM: qwen2.5:3b-instruct
     price_per_1m_tokens: { input: 0, output: 0 }
+  local_json:
+    # та сама модель, але без схеми у format (лише "json") — для демонстрації валідації й repair
+    client: ollama
+    id: qwen2.5:7b-instruct
+    structured: false
+    price_per_1m_tokens: { input: 0, output: 0 }
+
+run:
+  models: [provider, local]   # що запускає `python main.py run` без --models
 
 sampling:
   A: { temperature: 0.0, top_p: 1.0 }   # детермінована
   B: { temperature: 0.7, top_p: 0.9 }   # «творча»
 
 extraction:
-  prompt: extract_defect/v1
+  prompt: extract_defect/v2   # production-версія; v1 — baseline, запуск: --prompt extract_defect/v1
   timeout_s: 60
   retries: 2            # повтори при мережевих помилках / timeout
   repair_attempts: 1    # спроби виправити невалідний JSON

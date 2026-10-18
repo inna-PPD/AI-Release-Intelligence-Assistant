@@ -64,10 +64,18 @@ def extract_one(
             ]
             continue
         status = "ok" if attempt == 1 else "repaired"
-        return {**totals, "status": status, "attempts": attempt, "output": output.model_dump(mode="json"), "error": None}
+        # для repaired зберігаємо, що саме було не так у першій відповіді — матеріал для розбору помилок
+        note = None if error is None else f"repaired after validation: {describe(error)}"
+        return {**totals, "status": status, "attempts": attempt, "output": output.model_dump(mode="json"), "error": note}
 
     return {**totals, "status": "failed", "attempts": repair_attempts + 1, "output": None,
-            "error": f"validation: {error.error_count()} errors: {error.errors()[0]['msg']}"}
+            "error": f"validation: {describe(error)}"}
+
+
+def describe(error: ValidationError) -> str:
+    first = error.errors()[0]
+    location = ".".join(str(p) for p in first["loc"]) or "<root>"
+    return f"{error.error_count()} errors, first: {location} — {first['msg']}"
 
 
 def run_extraction(
@@ -95,6 +103,7 @@ def run_extraction(
                 "doc_id": doc["id"],
                 "model": client.name,
                 "prompt_version": prompt.id,
+                "prompt_sha": prompt.sha,
                 "sampling": {"name": sampling_name, "temperature": params.temperature, "top_p": params.top_p},
                 "status": part["status"],
                 "attempts": part["attempts"],

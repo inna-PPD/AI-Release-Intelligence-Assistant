@@ -52,6 +52,12 @@ def test_schema_rejects_unknown_enum():
         DefectReport.model_validate(INVALID)
 
 
+def test_prompt_versions_have_distinct_hashes():
+    v1, v2 = load_prompt("extract_defect/v1"), load_prompt("extract_defect/v2")
+    assert len(v1.sha) == 12 and v1.sha != v2.sha
+    assert load_prompt("extract_defect/v1").sha == v1.sha  # стабільний між запусками
+
+
 def test_prompt_keeps_braces_in_text(prompt):
     messages = prompt.messages(DOC["text"])
     assert "flow впав на {UAT}" in messages[1]["content"]
@@ -68,6 +74,7 @@ def test_repaired_after_invalid(prompt):
     part = extract_one(client, prompt, DOC, DefectReport, SamplingParams(), repair_attempts=1)
     assert part["status"] == "repaired" and part["attempts"] == 2
     assert part["tokens_in"] == 200  # токени обох спроб враховано
+    assert part["error"].startswith("repaired after validation: 1 errors, first: environments.0")
     assert "не пройшла валідацію" in client.calls[1][-1]["content"]
 
 

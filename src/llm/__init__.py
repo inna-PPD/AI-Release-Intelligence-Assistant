@@ -9,7 +9,8 @@ def make_client(model_cfg: dict, config: dict) -> LLMClient:
     if model_cfg["client"] == "openrouter":
         return OpenRouterClient(model_cfg["id"], timeout_s=ex["timeout_s"], retries=ex["retries"])
     if model_cfg["client"] == "ollama":
-        client = OllamaClient(model_cfg["id"], config["ollama"]["base_url"], ex["timeout_s"], ex["retries"])
+        client = OllamaClient(model_cfg["id"], config["ollama"]["base_url"], ex["timeout_s"], ex["retries"],
+                              structured=model_cfg.get("structured", True))
         client.check()
         return client
     raise ValueError(f"Невідомий client: {model_cfg['client']}")

@@ -7,3 +7,4 @@ run_id,model,prompt,sampling,docs,valid_pct,failed,p50_ms,p95_ms,cost_per_1000_u
 2026-10-18T20-42_qwen2.5-7b-instruct_extract_defect-v2_A,qwen2.5:7b-instruct,extract_defect/v2,A,40,100.0,0,8299,19431,0.0,0.7291666666666666,1.0,0.6,0.7166666666666667,0.6,0.7,0.7,0.775,0.8,0.6,0.8
 2026-10-18T20-44_openai_gpt-4o-mini_extract_defect-v2_B,openai/gpt-4o-mini,extract_defect/v2,B,40,100.0,0,2347,3582,0.6572325,0.8921666666666667,1.0,0.8,0.8466666666666667,1.0,1.0,0.9,0.975,0.9,0.6,0.9
 2026-10-18T20-48_qwen2.5-7b-instruct_extract_defect-v2_B,qwen2.5:7b-instruct,extract_defect/v2,B,40,100.0,0,8267,18070,0.0,0.7444102564102564,0.9,0.6,0.764102564102564,0.8,0.7,0.8,0.78,0.9,0.4,0.8
+2026-10-18T21-09_qwen2.5-7b-instruct+json-mode_extract_defect-v2_A,qwen2.5:7b-instruct+json-mode,extract_defect/v2,A,40,100.0,0,8255,15553,0.0,0.7592307692307693,1.0,0.5,0.7,0.8,0.7,0.9,0.7923076923076923,0.8,0.5,0.9

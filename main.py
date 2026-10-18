@@ -76,7 +76,7 @@ def cmd_run(args, config: dict) -> int:
     if args.limit:
         docs = docs[: args.limit]
     golden = load_golden()
-    model_keys = args.models.split(",") if args.models else list(config["models"])
+    model_keys = args.models.split(",") if args.models else config["run"]["models"]
     sampling_keys = args.sampling.split(",") if args.sampling else list(config["sampling"])
     print(f"Документів: {len(docs)} | промпт: {prompt.id} | моделі: {model_keys} | семплінг: {sampling_keys}")
 
