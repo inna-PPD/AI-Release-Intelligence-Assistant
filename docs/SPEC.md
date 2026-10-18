@@ -129,7 +129,7 @@ release-intelligence/
 │   ├── github/              # знеособлені issues і releases
 │   ├── public/              # Microsoft release notes, changelogs
 │   └── golden/
-│       ├── golden_set.jsonl # еталонна розмітка
+│       ├── golden_set.json  # еталонна розмітка (JSON з відступами — редагується вручну)
 │       └── ANNOTATION_GUIDE.md
 ├── prompts/
 │   └── extract_defect/

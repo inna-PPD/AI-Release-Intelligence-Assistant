@@ -1,0 +1,266 @@
+[
+  {
+    "id": "syn-001",
+    "reviewed": true,
+    "expected": {
+      "title": "Не зберігається заявка на закупівлю",
+      "is_defect": true,
+      "components": [
+        {
+          "type": "canvas_app",
+          "name": "Заявки на закупівлю"
+        },
+        {
+          "type": "table",
+          "name": "cnt_request"
+        }
+      ],
+      "environments": ["uat"],
+      "severity": "high",
+      "release_version": "1.4.2",
+      "steps_to_reproduce": [
+        "відкрити canvas app «Заявки на закупівлю»",
+        "заповнити всі поля, додати вкладення >5MB",
+        "Save"
+      ],
+      "expected_result": "заявка створюється в cnt_request",
+      "actual_result": "спінер крутиться ~30 сек потім 'Something went wrong'",
+      "is_regression": null
+    },
+    "notes": ""
+  },
+  {
+    "id": "syn-005",
+    "reviewed": true,
+    "expected": {
+      "title": "Помилка missing dependency на cnt_invoice при імпорті солюшена на тест",
+      "is_defect": true,
+      "components": [
+        {
+          "type": "solution",
+          "name": null
+        },
+        {
+          "type": "table",
+          "name": "cnt_invoice"
+        }
+      ],
+      "environments": ["test"],
+      "severity": "critical",
+      "release_version": "1.5.0",
+      "steps_to_reproduce": [],
+      "expected_result": null,
+      "actual_result": "при імпорті солюшена вилітає помилка міссінг депенденсі на таблицю cnt_invoice",
+      "is_regression": null
+    },
+    "notes": "«блокує деплой» + «терміново» → critical; dev працює — не додаємо"
+  },
+  {
+    "id": "syn-009",
+    "reviewed": true,
+    "expected": {
+      "title": "Задачі з LEO PPM не синхронізуються в Dataverse (429 Too Many Requests)",
+      "is_defect": true,
+      "components": [
+        {
+          "type": "leo_ppm",
+          "name": "LEO PPM"
+        },
+        {
+          "type": "cloud_flow",
+          "name": "LEO Task Sync"
+        },
+        {
+          "type": "table",
+          "name": "cnt_projecttask"
+        }
+      ],
+      "environments": ["prod"],
+      "severity": "critical",
+      "release_version": null,
+      "steps_to_reproduce": [],
+      "expected_result": null,
+      "actual_result": "задачі з ЛЕО не підтягуються в таблицю cnt_projecttask; в run history флоу помилка 429 Too Many Requests, після 3 retry фейлиться",
+      "is_regression": true
+    },
+    "notes": "«з 12.10 не підтягуються» → раніше працювало"
+  },
+  {
+    "id": "syn-010",
+    "reviewed": true,
+    "expected": {
+      "title": "Duplicate records in cnt_invoice after Approval Flow v2 rerun",
+      "is_defect": true,
+      "components": [
+        {
+          "type": "cloud_flow",
+          "name": "Approval Flow v2"
+        },
+        {
+          "type": "table",
+          "name": "cnt_invoice"
+        },
+        {
+          "type": "table",
+          "name": "cnt_request"
+        }
+      ],
+      "environments": ["test", "uat"],
+      "severity": null,
+      "release_version": "1.5.1",
+      "steps_to_reproduce": [],
+      "expected_result": "upsert by cnt_invoicenumber",
+      "actual_result": "новий запис з тим самим номером",
+      "is_regression": true
+    },
+    "notes": "перезапуск з run history — умова, а не послідовність кроків"
+  },
+  {
+    "id": "syn-017",
+    "reviewed": true,
+    "expected": {
+      "title": "Клон погодженої заявки зберігає статус Approved і йде в оплату без погодження",
+      "is_defect": true,
+      "components": [],
+      "environments": ["uat"],
+      "severity": null,
+      "release_version": "1.5.1",
+      "steps_to_reproduce": [
+        "беру заявку яка вже погоджена",
+        "скопіювати (кнопка Clone)",
+        "міняю постачальника і суму",
+        "зберігаю"
+      ],
+      "expected_result": "копія створюється в статусі Draft",
+      "actual_result": "в копії лишається статус Approved і вона одразу йде в оплату, минаючи погодження",
+      "is_regression": null
+    },
+    "notes": "застосунок/таблиця не названі → components []; «!!!» без оцінки впливу → severity null"
+  },
+  {
+    "id": "syn-018",
+    "reviewed": true,
+    "expected": {
+      "title": "Business rule 'Set default currency' doesn't fire on quick create",
+      "is_defect": true,
+      "components": [
+        {
+          "type": "business_rule",
+          "name": "Set default currency"
+        },
+        {
+          "type": "table",
+          "name": "cnt_request"
+        }
+      ],
+      "environments": [],
+      "severity": "low",
+      "release_version": "1.5.2",
+      "steps_to_reproduce": [],
+      "expected_result": null,
+      "actual_result": "Business rule 'Set default currency' on cnt_request doesn't fire when the form is opened via quick create; users must select currency manually",
+      "is_regression": null
+    },
+    "notes": "known issue з release notes — це дефект; 1.5.3 — версія виправлення, не прояву"
+  },
+  {
+    "id": "syn-020",
+    "reviewed": true,
+    "expected": {
+      "title": "Нагадування в Approval Flow для непогоджених заявок",
+      "is_defect": false,
+      "components": [
+        {
+          "type": "cloud_flow",
+          "name": "Approval Flow"
+        }
+      ],
+      "environments": ["prod"],
+      "severity": null,
+      "release_version": null,
+      "steps_to_reproduce": [],
+      "expected_result": "в Approval Flow приходить нагадування якщо заявка не погоджена 3 дні",
+      "actual_result": "заявка висить тиждень і ніхто не знає",
+      "is_regression": null
+    },
+    "notes": "побажання, не дефект"
+  },
+  {
+    "id": "gh-005",
+    "reviewed": true,
+    "expected": {
+      "title": "8 Flows have failed with the same error message - \"The user is not a member of the organization.\"",
+      "is_defect": true,
+      "components": [
+        {
+          "type": "cloud_flow",
+          "name": "Admin | Sync Template v4"
+        },
+        {
+          "type": "cloud_flow",
+          "name": "Cleanup Helper – Check Deleted v4"
+        }
+      ],
+      "environments": [],
+      "severity": null,
+      "release_version": "4.50.0",
+      "steps_to_reproduce": [],
+      "expected_result": null,
+      "actual_result": "flows are consistently failing with the error message \"The user is not a member of the organization.\"",
+      "is_regression": null
+    },
+    "notes": "у тексті і 4.5.0, і 4.50.0 — беремо зі структурованого поля «What solution version are you using?»"
+  },
+  {
+    "id": "gh-012",
+    "reviewed": true,
+    "expected": {
+      "title": "pac catalog submit fails in v1.46.1 with TypeLoad exception",
+      "is_defect": true,
+      "components": [
+        {
+          "type": "alm_tooling",
+          "name": "pac catalog submit"
+        }
+      ],
+      "environments": [],
+      "severity": null,
+      "release_version": "1.46.1",
+      "steps_to_reproduce": [],
+      "expected_result": null,
+      "actual_result": "type load exception \"could not load file or assembly 'Microsoft.PowerPlatform.Dataverse.Client\"",
+      "is_regression": true
+    },
+    "notes": "«the same command in v1.44.2 works» → регресія; версія прояву 1.46.1"
+  },
+  {
+    "id": "gh-019",
+    "reviewed": true,
+    "expected": {
+      "title": "pac solution pack places Quick Create forms under <forms type=\"quick\" />",
+      "is_defect": true,
+      "components": [
+        {
+          "type": "alm_tooling",
+          "name": "pac solution pack"
+        }
+      ],
+      "environments": [],
+      "severity": null,
+      "release_version": "2.6.4",
+      "steps_to_reproduce": [
+        "Create a solution, add a table and create a new Quick Create form",
+        "Add an 'onLoad' event handler to the new Quick Create form",
+        "Use the Power Platform source control integration to commit the solution to git",
+        "Clone/download to git repository",
+        "Navigate to the solution root folder and run `pac solution pack --folder ./ --zipfile QuickCreateForm.zip --packageType managed`",
+        "Attempt to import the example.zip managed solution file into another environment",
+        "Manually unzip the QuickCreateForm.zip solution file and view the customizations.xml file"
+      ],
+      "expected_result": "When packing YAML solution source, Quick Create form definitions should go under <forms type='quickCreate'> only",
+      "actual_result": "the resulting solution.zip duplicates the Quick Create form definition under <forms type='quick'> as well as <forms type='quickCreate'>; solution imports fail when the quick create form contains an <events /> definition",
+      "is_regression": null
+    },
+    "notes": "версія pac cli з розділу Desktop"
+  }
+]

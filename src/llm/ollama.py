@@ -23,6 +23,8 @@ class OllamaClient:
         names = {m["name"] for m in tags.get("models", [])}
         if self.name not in names and f"{self.name}:latest" not in names:
             raise LLMError(f"Модель {self.name} не завантажена: виконайте `ollama pull {self.name}`")
+        # прогрів: завантажує модель у пам'ять, щоб час завантаження не потрапив у latency першого документа
+        self._http.post("/api/generate", json={"model": self.name, "keep_alive": "30m"})
 
     def generate_structured(
         self, messages: list[dict], schema: type[BaseModel], params: SamplingParams

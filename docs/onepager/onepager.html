@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<title>AI Release Intelligence Assistant — one-pager</title>
+<style>
+  @page { size: A4; margin: 12mm 14mm; }
+  * { box-sizing: border-box; }
+  body { font-family: "Segoe UI", Arial, sans-serif; font-size: 9.3pt; line-height: 1.38; color: #1f2430; margin: 0; }
+  h1 { font-size: 19pt; margin: 0 0 2px; color: #0f2a4a; }
+  .sub { color: #4a5568; font-size: 10pt; margin-bottom: 2px; }
+  .meta { color: #718096; font-size: 8.5pt; margin-bottom: 8px; }
+  h2 { font-size: 10.5pt; color: #0f5fa8; margin: 9px 0 3px; text-transform: uppercase; letter-spacing: .04em; border-bottom: 1px solid #d6e2f0; padding-bottom: 2px; }
+  p { margin: 0 0 4px; }
+  ul, ol { margin: 0 0 4px; padding-left: 16px; }
+  li { margin-bottom: 1px; }
+  .stats { display: flex; gap: 6px; margin: 6px 0 4px; }
+  .stat { flex: 1; background: #eef4fb; border-radius: 6px; padding: 5px 8px; text-align: center; }
+  .stat b { display: block; font-size: 16pt; color: #0f5fa8; line-height: 1.1; }
+  .stat span { font-size: 7.8pt; color: #4a5568; }
+  table { width: 100%; border-collapse: collapse; margin: 2px 0 4px; font-size: 8.6pt; }
+  th, td { border: 1px solid #d6e2f0; padding: 3px 5px; text-align: left; vertical-align: top; }
+  th { background: #eef4fb; }
+  .two { display: flex; gap: 14px; }
+  .two > div { flex: 1; }
+  code { font-family: Consolas, monospace; font-size: 8.4pt; background: #f2f4f7; padding: 0 2px; border-radius: 3px; }
+  .q { background: #fff8e6; border-left: 3px solid #f0b429; padding: 5px 8px; margin-top: 6px; }
+</style>
+</head>
+<body>
+
+<h1>AI Release Intelligence Assistant</h1>
+<div class="sub">Асистент релізів і тестування для команд Microsoft Power Platform</div>
+<div class="meta">Inna Kurylo · Power Platform Development Lead · AI Engineering, 2 потік · галузь: IT / розробка — баг-репорти, release notes</div>
+
+<div class="stats">
+  <div class="stat"><b>40</b><span>«брудних» текстів для кейсу 1</span></div>
+  <div class="stat"><b>20 + 20</b><span>реальні GitHub + синтетичні</span></div>
+  <div class="stat"><b>10</b><span>текстів у golden set</span></div>
+  <div class="stat"><b>10 / 3</b><span>полів у схемі / enum</span></div>
+</div>
+
+<h2>Ідея проєкту</h2>
+<p>Команди на Power Platform живуть у постійному потоці змін: щомісячні оновлення платформи, Dataverse, Power Automate, pac CLI, CoE Starter Kit — і власні релізи рішення. Інформація розкидана по release notes, баг-репортах в Azure DevOps, Teams і листах, написана різними мовами й у різному стилі. Щоб відповісти на питання <b>«що зачепить оновлення і що перетестувати?»</b>, Release/QA lead годинами читає документи вручну — і щось пропускає, звідси регресії на проді.</p>
+<p>Система структурує сирі баг-репорти, шукає по релізній документації з посиланнями на джерела і формує рекомендації для оновлення й регресійного тестування.</p>
+
+<div class="two">
+<div>
+<h2>Для кого</h2>
+<ul>
+  <li><b>Release Manager / Dev Lead</b> — зміни в релізі, breaking changes, ризики</li>
+  <li><b>QA Lead</b> — які тест-кейси запускати, які дефекти можуть повернутися</li>
+  <li><b>Розробник</b> — чи зачіпає нова версія pac CLI / платформи наші flows, плагіни, PCF</li>
+</ul>
+</div>
+<div>
+<h2>Дані</h2>
+<p><b>Лише публічні та синтетичні, без корпоративних даних.</b></p>
+<ul>
+  <li>20 баг-репортів з GitHub (<code>microsoft/coe-starter-kit</code>, <code>microsoft/powerplatform-build-tools</code>), знеособлені скриптом</li>
+  <li>20 синтетичних баг-репортів вигаданої компанії Contoso: UA / EN / суржик, пропущені поля, не-дефекти</li>
+  <li>Для пошуку (етап 2): GitHub Releases, Microsoft release notes, синтетичні тест-кейси й user stories</li>
+</ul>
+</div>
+</div>
+
+<h2>4 етапи</h2>
+<ol>
+  <li><b>Extraction</b> — сирий баг-репорт → JSON за схемою <code>DefectReport</code>; порівняння провайдерської й локальної моделей.</li>
+  <li><b>RAG</b> — пошук по release notes, дефектах і тест-кейсах; відповідь з посиланням на джерело.</li>
+  <li><b>Агент</b> — за новим релізом знаходить зачеплені компоненти, минулі дефекти й тест-кейси → регресійний тест-план.</li>
+  <li><b>Сервіс</b> — FastAPI, автентифікація, моніторинг, облік вартості; виклик з Power Automate через custom connector.</li>
+</ol>
+
+<h2>Кейс 1 — Structured Extraction</h2>
+<table>
+  <tr><th style="width:22%">Схема</th><td><code>DefectReport</code>: title, is_defect, <b>components[ {type, name} ]</b>, environments, severity, release_version, steps_to_reproduce, expected/actual_result, is_regression. Enum: тип компонента (12 значень), середовище, серйозність.</td></tr>
+  <tr><th>Моделі</th><td>Провайдерська: <code>openai/gpt-4o-mini</code> через OpenRouter, strict structured output. Локальна: <code>qwen2.5:7b-instruct</code> через Ollama. Спільний інтерфейс <code>LLMClient</code>.</td></tr>
+  <tr><th>Семплінг</th><td>A: temperature 0, top_p 1 · B: temperature 0.7, top_p 0.9</td></tr>
+  <tr><th>Метрики</th><td>Точність по полях на golden set, % валідних (ok / repaired / failed), latency p50/p95, вартість на 1000 документів.</td></tr>
+  <tr><th>Надійність</th><td>Retry 2× з backoff, timeout 60 с; невалідна відповідь → 1 спроба виправлення → failed; лог моделі, версії промпту й параметрів у кожному записі.</td></tr>
+  <tr><th>Стан</th><td>Готово: дані, схема, промпт v1, пайплайн, тести. Далі: прогони, golden set, метрики, промпт v2, REPORT.md.</td></tr>
+</table>
+
+<div class="q"><b>Питання:</b> 1) чи підходить тема і поєднання публічних та синтетичних даних? 2) чи нормально, що в кейсі 1 витягую лише баг-репорти, а release notes підключаю з етапу RAG? 3) чи підходить пара моделей gpt-4o-mini + qwen2.5:7b?</div>
+
+</body>
+</html>

@@ -52,7 +52,7 @@ class DefectReport(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     title: str = Field(description="Короткий заголовок проблеми (до 100 символів), мовою оригіналу")
-    is_defect: bool = Field(description="false, якщо це побажання, питання або відомий issue, а не помилка")
+    is_defect: bool = Field(description="true, якщо описано некоректну поведінку системи (включно з known issue); false для побажань і питань")
     components: list[Component] = Field(description="Усі зачеплені компоненти; порожній список, якщо не зрозуміло")
     environments: list[Environment] = Field(description="Середовища, де відтворюється; порожній список, якщо не вказано")
     severity: Optional[Severity] = Field(description="Серйозність, якщо вказана явно або однозначно випливає з тексту ('блокує деплой', 'критично'); інакше null")
