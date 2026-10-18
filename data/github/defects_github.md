@@ -552,7 +552,7 @@ Steps to reproduce the behavior:
 Successful compilation
 
 **Screenshots**
-`PS C:\Users\<USER>\source\Eos.PWA.PowerAppsTools_Eos\powercat-code-components\Solution> pac install latest
+`PS C:\Users\<USER>\source\<PROJECT>_Eos\powercat-code-components\Solution> pac install latest
 Feeds used:
   <URL>
 
@@ -560,11 +560,11 @@ Installing package 'Microsoft.PowerApps.CLI' to 'C:\Users\<USER>\AppData\Local\M
   GET <URL>
   OK <URL> 166ms
 Pacchetto "Microsoft.PowerApps.CLI.1.38.3" è già installato
-PS C:\Users\<USER>\source\Eos.PWA.PowerAppsTools_Eos\powercat-code-components\Solution> msbuild /t:build /restore /p:PcfBuildMode=production
+PS C:\Users\<USER>\source\<PROJECT>_Eos\powercat-code-components\Solution> msbuild /t:build /restore /p:PcfBuildMode=production
 Versione di MSBuild 17.12.6+db5f6012c per .NET Framework
 Compilazione avviata 05/12/2024 11:25:50.
 
-Progetto "C:\Users\<USER>\source\Eos.PWA.PowerAppsTools_Eos\powercat-code-components\Solution\Solution.cdsproj" sul n
+Progetto "C:\Users\<USER>\source\<PROJECT>_Eos\powercat-code-components\Solution\Solution.cdsproj" sul n
 odo 1 (destinazioni: Restore).
 _GetAllRestoreProjectPathItems:
   Individuazione dei progetti da ripristinare...
@@ -574,17 +574,17 @@ Restore:
   La convalida della catena di certificati X.509 userà l'archivio attendibilità predefinito selezionato da .NET per il
   timestamp.
   Il file di asset non è stato modificato. La scrittura sul file di asset verrà ignorata. Percorso: C:\Users\<USER>\s
-  ource\Eos.PWA.PowerAppsTools_Eos\powercat-code-components\Solution\obj\project.assets.json
+  ource\<PROJECT>_Eos\powercat-code-components\Solution\obj\project.assets.json
   Il file di asset non è stato modificato. La scrittura sul file di asset verrà ignorata. Percorso: C:\Users\<USER>\s
-  ource\Eos.PWA.PowerAppsTools_Eos\powercat-code-components\Icon\obj\project.assets.json
+  ource\<PROJECT>_Eos\powercat-code-components\Icon\obj\project.assets.json
   Il file di asset non è stato modificato. La scrittura sul file di asset verrà ignorata. Percorso: C:\Users\<USER>\s
-  ource\Eos.PWA.PowerAppsTools_Eos\powercat-code-components\Spinner\obj\project.assets.json
+  ource\<PROJECT>_Eos\powercat-code-components\Spinner\obj\project.assets.json
   Il file di asset non è stato modificato. La scrittura sul file di asset verrà ignorata. Percorso: C:\Users\<USER>\s
-  ource\Eos.PWA.PowerAppsTools_Eos\powercat-code-components\Nav\obj\project.assets.json
+  ource\<PROJECT>_Eos\powercat-code-components\Nav\obj\project.assets.json
   Il file di asset non è stato modificato. La scrittura sul file di asset verrà ignorata. Percorso: C:\Users\<USER>\s
-  ource\Eos.PWA.PowerAppsTools_Eos\powercat-code-components\Pivot\obj\project.assets.json
+  ource\<PROJECT>_Eos\powercat-code-components\Pivot\obj\project.assets.json
   Il file di asset non è stato modificato. La scrittura sul file di asset verrà ignorata. Percorso: C:\Users\<USER>\s
-  ource\Eos.PWA.PowerAppsTools_Eos\powercat-code-components\DetailsList\obj\project.assets.json
+  ource\<PROJECT>_Eos\powercat-code-components\DetailsList\obj\project.assets.json
   C:\Users\<USER>\s
 [...]
 
