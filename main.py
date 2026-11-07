@@ -130,12 +130,23 @@ def main() -> int:
     ev = sub.add_parser("eval", help="порахувати метрики для results/*.jsonl і зберегти metrics.md / metrics.csv")
     ev.add_argument("files", nargs="*", help="конкретні файли результатів (за замовчуванням — усі)")
     sub.add_parser("ingest", help="кейс 2: корпус → очищення → чанки (data/processed/)")
+    se = sub.add_parser("search", help="кейс 2: пошук по корпусу")
+    se.add_argument("question")
+    se.add_argument("--mode", default="hybrid_rerank", choices=["vector", "bm25", "hybrid", "hybrid_rerank"])
+    se.add_argument("-k", type=int, default=5)
+    se.add_argument("--filter", action="append", default=[], metavar="KEY=VALUE",
+                    help="фільтр за метаданими, напр. product='CoE Starter Kit', source=synthetic, date_from=2025-01-01")
+    sub.add_parser("retrieval-eval", help="кейс 2: recall@k / MRR для конфігурацій пошуку → evals/results/")
     args = parser.parse_args()
 
     if sys.stdout.encoding.lower() != "utf-8":
         sys.stdout.reconfigure(encoding="utf-8")  # кирилиця в консолі Windows
     if args.command == "ingest":
         return cmd_ingest()
+    if args.command == "search":
+        return cmd_search(args)
+    if args.command == "retrieval-eval":
+        return cmd_retrieval_eval()
     config = load_config()
     return cmd_run(args, config) if args.command == "run" else cmd_eval(args, config)
 
@@ -147,6 +158,30 @@ def cmd_ingest() -> int:
     print(f"Документів: {t['documents']} {t['documents_by_format']} · дублікатів документів: {t['duplicate_documents']}")
     print(f"Чанків: {t['chunks']} · видалено дублікатів чанків: {t['duplicate_chunks_removed']}")
     print("→ data/processed/chunks.jsonl, chunks_fixed.jsonl, manifest.json, chunking_comparison.md")
+    return 0
+
+
+def cmd_search(args) -> int:
+    from src.ingest.pipeline import load_rag_config
+    from src.rag.search import Retriever
+
+    filters = dict(f.split("=", 1) for f in args.filter)
+    retriever = Retriever(load_rag_config())
+    for rank, hit in enumerate(retriever.search(args.question, mode=args.mode, k=args.k, filters=filters or None), 1):
+        c = hit.chunk
+        scores = " ".join(f"{k}={v:.3f}" for k, v in hit.scores.items() if v is not None)
+        print(f"\n{rank}. [{c['chunk_id']}] {c['title']} › {c['section']}  ({c.get('version') or c.get('date')})\n   {scores}")
+        print("   " + c["text"][:300].replace("\n", "\n   "))
+    retriever.close()
+    return 0
+
+
+def cmd_retrieval_eval() -> int:
+    from src.ingest.pipeline import load_rag_config
+    from src.rag.retrieval_eval import run_retrieval_eval
+
+    path = run_retrieval_eval(load_rag_config())
+    print(f"\n→ {path.relative_to(ROOT)}")
     return 0
 
 

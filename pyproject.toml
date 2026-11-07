@@ -15,6 +15,11 @@ dependencies = [
     "python-docx>=1.1",
     "pymupdf>=1.24",
     "tiktoken>=0.7",
+    # кейс 2: індекс і пошук
+    "numpy>=1.26",
+    "fastembed>=0.9",
+    "qdrant-client>=1.12",
+    "rank-bm25>=0.2.2",
 ]
 
 [project.optional-dependencies]

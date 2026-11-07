@@ -145,11 +145,13 @@ def extract_pdf(path: Path) -> list[dict]:
     """Заголовки визначаються за розміром шрифту відносно основного тексту; колонтитули — рядки,
     що повторюються на більшості сторінок, — відкидаються."""
     doc = pymupdf.open(path)
-    lines = []  # (сторінка, розмір шрифту, текст, y)
+    lines = []  # (сторінка, розмір шрифту, текст, y, рядок починається з маркера списку)
     tables = {}  # сторінка → [(bbox, текст таблиці)]
     for page_no, page in enumerate(doc):
         found = page.find_tables().tables
         tables[page_no] = [(pymupdf.Rect(t.bbox), _table_rows([[c or "" for c in r] for r in t.extract()])) for t in found]
+        # маркери списку часто намальовані векторно (крапки), а не символом «•» у тексті
+        bullets = [d["rect"] for d in page.get_drawings() if d["rect"].width <= 8 and d["rect"].height <= 8]
         for b in page.get_text("dict")["blocks"]:
             for line in b.get("lines", []):
                 spans = [s for s in line["spans"] if s["text"].strip()]
@@ -157,33 +159,35 @@ def extract_pdf(path: Path) -> list[dict]:
                     continue
                 text = "".join(s["text"] for s in spans).strip()
                 size = max(s["size"] for s in spans)
-                table = next((t for t in tables[page_no] if pymupdf.Rect(line["bbox"]).intersects(t[0])), None)
+                bbox = pymupdf.Rect(line["bbox"])
+                table = next((t for t in tables[page_no] if bbox.intersects(t[0])), None)
                 if table is not None:  # рядок усередині таблиці — таблиця піде окремим блоком
-                    lines.append((page_no, -1.0, table[1], table[0].y0))
+                    lines.append((page_no, -1.0, table[1], table[0].y0, False))
                     continue
-                lines.append((page_no, round(size, 1), text, line["bbox"][1]))
+                has_bullet = any(r.x1 <= bbox.x0 and r.y0 < bbox.y1 and r.y1 > bbox.y0 for r in bullets)
+                lines.append((page_no, round(size, 1), text, bbox.y0, has_bullet))
     if not lines:
         return []
 
     page_count = len(doc)
-    repeated = Counter(t for _, s, t, _ in lines if s > 0)
+    repeated = Counter(t for _, s, t, _, _ in lines if s > 0)
     noise = {t for t, n in repeated.items() if page_count > 1 and n >= max(2, page_count * 0.5)}
-    body_size = Counter(s for _, s, _, _ in lines if s > 0).most_common(1)[0][0]
-    heading_sizes = sorted({s for _, s, _, _ in lines if s >= body_size * 1.2}, reverse=True)
+    body_size = Counter(s for _, s, _, _, _ in lines if s > 0).most_common(1)[0][0]
+    heading_sizes = sorted({s for _, s, _, _, _ in lines if s >= body_size * 1.2}, reverse=True)
 
-    blocks, paragraph, prev_y = [], [], None
+    blocks, paragraph, prev_y, is_item = [], [], None, False
 
     def flush():
         nonlocal paragraph
         if paragraph:
             # рядок, що закінчується дефісом, — перенос усередині слова/імені (svc-│contoso-flows): без пробілу
             text = "".join(line if line.endswith("-") else line + " " for line in paragraph).strip()
-            kind = "list_item" if PDF_BULLET.match(paragraph[0]) else "paragraph"
+            kind = "list_item" if is_item or PDF_BULLET.match(paragraph[0]) else "paragraph"
             blocks.append(block(kind, PDF_BULLET.sub("", text, count=1) if kind == "list_item" else text))
             paragraph = []
 
     emitted_tables = set()
-    for page_no, size, text, y in lines:
+    for page_no, size, text, y, has_bullet in lines:
         if size < 0:  # таблиця: додаємо один раз
             if (page_no, y) not in emitted_tables:
                 flush()
@@ -201,8 +205,9 @@ def extract_pdf(path: Path) -> list[dict]:
                 prev["text"] += " " + text  # довгий заголовок, перенесений на наступний рядок
             else:
                 blocks.append({**block("heading", text, level), "page": page_no})
-        elif PDF_BULLET.match(text) or (prev_y is not None and y - prev_y > size * 1.8):
+        elif has_bullet or PDF_BULLET.match(text) or (prev_y is not None and y - prev_y > size * 1.8):
             flush()  # новий пункт списку або вертикальний розрив = новий абзац
+            is_item = has_bullet or bool(PDF_BULLET.match(text))
             paragraph.append(text)
         else:
             paragraph.append(text)
