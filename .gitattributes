@@ -1,0 +1,2 @@
+# Сирі документи корпусу зберігаються байт-у-байт (raw_sha256 у manifest однаковий на Windows і в CI)
+data/corpus/raw/** -text
