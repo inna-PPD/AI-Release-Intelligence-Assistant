@@ -129,12 +129,25 @@ def main() -> int:
     run.add_argument("--limit", type=int, help="обробити лише перші N документів")
     ev = sub.add_parser("eval", help="порахувати метрики для results/*.jsonl і зберегти metrics.md / metrics.csv")
     ev.add_argument("files", nargs="*", help="конкретні файли результатів (за замовчуванням — усі)")
+    sub.add_parser("ingest", help="кейс 2: корпус → очищення → чанки (data/processed/)")
     args = parser.parse_args()
 
     if sys.stdout.encoding.lower() != "utf-8":
         sys.stdout.reconfigure(encoding="utf-8")  # кирилиця в консолі Windows
+    if args.command == "ingest":
+        return cmd_ingest()
     config = load_config()
     return cmd_run(args, config) if args.command == "run" else cmd_eval(args, config)
+
+
+def cmd_ingest() -> int:
+    from src.ingest.pipeline import run_ingest  # імпорт тут: PDF/DOCX-бібліотеки потрібні лише кейсу 2
+
+    t = run_ingest()["totals"]
+    print(f"Документів: {t['documents']} {t['documents_by_format']} · дублікатів документів: {t['duplicate_documents']}")
+    print(f"Чанків: {t['chunks']} · видалено дублікатів чанків: {t['duplicate_chunks_removed']}")
+    print("→ data/processed/chunks.jsonl, chunks_fixed.jsonl, manifest.json, chunking_comparison.md")
+    return 0
 
 
 if __name__ == "__main__":

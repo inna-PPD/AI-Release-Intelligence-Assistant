@@ -1,0 +1,129 @@
+## First Time Setup Instructions
+- Get started with the CoE Starter Kit Setup: https://docs.microsoft.com/en-us/power-platform/guidance/coe/setup
+- Get started with the ALM Accelerator for Power Platform Setup: https://docs.microsoft.com/en-us/power-platform/guidance/coe/setup-almacceleratorpowerplatform-cli
+
+## Upgrade Instructions
+- Upgrading from the latest version of the CoE Starter Kit: https://docs.microsoft.com/power-platform/guidance/coe/after-setup
+- Upgrading from the latest version of the ALM Accelerator for Power Platform: https://docs.microsoft.com/en-us/power-platform/guidance/coe/setup-almacceleratorpowerplatform-upgrade-config
+
+## Customizing the CoE Starter Kit
+- Best practices on customizing and extending the CoE Starter Kit: https://docs.microsoft.com/en-us/power-platform/guidance/coe/modify-components
+
+## Change Log
+### 🐛 CoE Starter Kit - *BUGS* (80)
+  - #5570-[CoE Starter Kit - BUG] ISSUE TITLE - Issue with Admin Sync Template V3(PVA usage)
+  - #5666-[CoE Starter Kit - BUG] Innovation Backlog - errors on load related to Average and O365 Users profile function calls
+  - #6330-[CoE Starter Kit - BUG] Solution upgrade no longer assigning connection references to person doing the upgrade
+  - #6658-CreatedPrincipalID bringing NULL values in Data Export Feature - all Model Driven Apps shown as owned by SYSTEM as a result.
+  - #6721-[CoE Starter Kit - BUG] Innovation Backlog -Adding 'Tools used' fails
+  - #6990-[CoE Starter Kit - BUG] Data Export Orphans - Environment Maker is based on Created By rather than Owner
+  - #7457-[CoE Starter Kit - BUG] App Owner field blank when owner exists - guest users
+  - #8831-[CoE Starter Kit - BUG] Upgrade Failed with Error code 80047009 - Cannot delete attribute: admin_aibuildermodelid from Entity: admin_AiBuilderModel since the attribute is not a custom field
+  - #8987-[CoE Starter Kit - BUG] ISSUE TITLE - Dataflows are not getting refreshed automatically after the Sep 2024 Upgrade for Test Governance Env.
+  - #9086-[CoE Starter Kit - BUG] DLP Impact Analysis export to CSV disabled
+  - #9268-Some tenants do not have the new Purview schema and so are not gathering audit logs today - with workaround solution
+  - #9439-[CoE Starter Kit - BUG] ISSUE TITLE maker getting error while accessing Environment Request App from COE Maker Command center app
+  - #9440-[CoE Starter Kit - BUG] Import Core solution Timing out to import. Update : Importing  but NOT upgrading
+  - #9441-[CoE Starter Kit - BUG] "error opening file" popup message when opening an app created in PowerApps, because of code components
+  - #9444-[CoE Starter Kit - BUG] Admin | Compliance Details Request eMail (Apps) trigger issue
+  - #9447-[CoE Starter Kit - BUG] 📆 : CoE Kit Holiday Season
+  - #9450-[CoE Starter Kit - BUG] Upgrade issue - Error code 8004F01F
+  - #9452-[CoE Starter Kit - BUG] CLEANUP HELPER - Power Apps User Shared With - Service Principal Upsert failed
+  - #9453-[CoE Starter Kit - BUG] Error deleting app in Developer Compliance Center
+  - #9456-[CoE Starter Kit - BUG] admin_appenvironmentlogicalname of the table not found
+  - #9475-Error modifying Cleanup flows
+  - #9487-[CoE Starter Kit - BUG] Sync Flow Admin | Audit Logs | Sync Audit Logs (V2) in the CoE Starter Kit has failed.
+  - #9490-Issue with Missing Conversation number for Bots in Teams Environment
+  - #9509-[CoE Starter Kit - BUG] Deletion flow not completing
+  - #9577-[CoE Starter Kit - BUG] Starter kit is consuming capacity - File usage is growing significantly
+  - #9766-[CoE Starter Kit - BUG] CLEANUP - Admin | Sync Template v3 (Orphaned Users) - Failing to get Maker_entity
+  - #9791-[CoE Starter Kit - BUG] Admin | Set app quarantine status
+  - #9811-[CoE Starter Kit - BUG] Failed Everytime DLP Request | Sync Policy to Dataverse (Child)
+  - #9890-[CoE Starter Kit - BUG] Multiple COE flows failing for Developer Environments that are disabled and are to be deleted.
+  - #9990-[CoE Starter Kit - BUG]App and Flow Inactivity Notifications Clean Up shows no apps/flows
+  - #9994-[CoE Starter Kit - BUG] Admin_app logs
+  - #10032-[CoE Starter Kit - BUG] App Last Launch On is not synced from "Audit Logs" to "Power Apps App" table
+  - #10071-[CoE Starter Kit - BUG] Command Center App > Initially Populate Bookmarks Error
+  - #10078-[CoE Starter Kit - BUG] Error status code of 400 in Request Orphaned Objects Reassigned (Parent)
+  - #10126-[CoE Starter Kit - BUG] Unable to turn on "Admin | Sync Template v4 (Driver)" flow
+  - #10179-[CoE Starter Kit - BUG] Manage Permissions option missing "Add User", "Add Group" and "Remove" button
+  - #10191-[CoE Starter Kit - BUG] - Driver Escalation Flow Failing
+  - #10192-[CoE Starter Kit - BUG] DLP Request | Sync Policy to Dataverse (Child) | Related Rows
+  - #10196-[CoE Starter Kit - BUG] ISSUE TITLE - Not showing icons
+  - #10200-[CoE Starter Kit - BUG] Passwords Containing Plaintext still set to YES (Reopening ticket)
+  - #10204-[CoE Starter Kit - BUG] COE Command Centre Error Code: AppForbidden
+  - #10205-[CoE Starter Kit - BUG] "HELPER - CloudFlowOperations" fails when assigning a new primary owner, if the flow is solution-aware and has invalid or missing connection references
+  - #10206-[CoE Starter Kit - BUG] number of portals are not match in COE
+  - #10208-[CoE Starter Kit - BUG] ISSUE TITLE Admin | Audit Logs | Sync Audit Logs (V2) not updating the audit log table.
+  - #10211-[CoE Starter Kit - Admin | Sync Template v4 (PVA); Delete PVA Component error: NotFound
+  - #10212-[CoE Starter Kit - BUG] ISSUE TITLE
+  - #10214-[CoE Starter Kit - BUG] ISSUE TITLE
+  - #10215-Http request Received still not showing in Impact analysis when connector is blocked
+  - #10218-[CoE Starter Kit - BUG] Missing Usage Data for Model Driven Apps
+  - #10219-[CoE Starter Kit - BUG] App Access Checker - Spelling Error / Updated error message potential
+  - #10221-Unable to get latest apps that were created in COE kit when checked from power platform Admin view model driven app
+  - #10222-[CoE Starter Kit - BUG] Orphaned Makers Account Enabled flag not updated to False if user not found in Entra
+  - #10223-[CoE Starter Kit - BUG] Some Cloud Flows are not being captured in the inventory
+  - #10224-[CoE Starter Kit - BUG] DLP Impact Analysis Missed Connector
+  - #10226-Not able to get latest created apps
+  - #10234-[CoE Starter Kit - BUG] 'Makers get access to CoE Admin command center as well.
+  - #10235-[CoE Starter Kit - BUG] DLP Impact does not export data to CSV
+  - #10237-[CoE Starter Kit - BUG] Audit log is empty
+  - #10239-[CoE Starter Kit - BUG] ISSUE TITLE
+  - #10241-[CoE Starter Kit - BUG] Group name in table "Environment security role permissions" is not saved
+  - #10242-[CoE Starter Kit - BUG] Quarantine fields mismatch and email overload
+  - #10243-[CoE Starter Kit - BUG] ISSUE TITLE
+  - #10246-[CoE Starter Kit - BUG] ISSUE HELPER - ObjectOperations failed
+  - #10247-[CoE Starter Kit - BUG] Can no longer delete flows from the Power Platform admin view since the September Update of the CoE kit
+  - #10249-[CoE Starter Kit - BUG] Quarantine Flow  does not respect admin_ExcuseFromAppQuarantineFlow status
+  - #10256-[CoE Starter Kit - BUG] Flows_to_iterate failure due to page size
+  - #10258-[CoE Starter Kit - BUG] ISSUE TITLE
+  - #10259-Issue with Enabling Cloud Flow in CoE - Core Components Solution
+  - #10262-[CoE Starter Kit - BUG] Sync failure for Orphaned Users
+  - #10263-[CoE Starter Kit - BUG] Notification is not getting triggered when a CoE flow is disabled by the system due to inactivity or errors
+  - #10264-[CoE Starter Kit - BUG] ISSUE TITLE
+  - #10266-[CoE Starter Kit - BUG] Sync Audit Logs (V2) Taking Multiple Days to Complete
+  - #10267-[CoE Starter Kit - BUG] Orphaned Makers with Account Disabled in Entra ID - Date Maker Orphaned Updates Continuously
+  - #10276-[CoE Starter Kit - BUG] ISSUE TITLE
+  - #10280-[CoE Starter Kit - BUG] Missing Buttons in CoE Maker Command Center and CoE Admin Environment Request apps
+  - #10281-[CoE Starter Kit - BUG] Missing buttons in Data Policy Impact Analysis app
+  - #10286-[CoE Starter Kit - BUG] Localization - Label Display Names are not reflected as expected
+  - #10288-[CoE Starter Kit - BUG] Action Delete_Expired_Environment Failed
+  - #10310-[CoE Starter Kit - BUG] Data Export feature greyed out in Setup Wizard
+  - #10318-[ALM Accelerator - BUG] Checksum mismatch - Error   PA3015: Property Removed:
+### 🎉 CoE Starter Kit - *FEATURES* (2)
+  - #8659-[CoE Starter Kit - Feature]: Automated Install - Create Connections
+  - #9999-[CoE Starter Kit - Feature]: How to view all the Teams Environment from the CoE report without manually adding power platform
+### ✨ CoE Starter Kit - *OTHER* (32)
+  - #5731-[CoE Starter Kit - QUESTION]Dashboard to see all the ideas and select the idea based on higher ROI
+  - #5848-[CoE Starter Kit - QUESTION] capture ROI and business value 
+  - #8895-[CoE Starter Kit - QUESTION] Copilot Studio Metrics
+  - #9442-[CoE Starter Kit - QUESTION] Dynamic Values in Create Approval Email Template
+  - #9455-[CoE Starter Kit - QUESTION] Number of model-driven app launches and usage count is not visible
+  - #9460-[CoE Starter Kit - QUESTION] QUESTION: Get_Parent_BU_for_ID' failed: The remote name could not be resolved
+  - #9476-[CoE Starter Kit - QUESTION] - Only the top 2000 apps and flows were analyzed for impact.
+  - #9478-[CoE Starter Kit - QUESTION] Ability to track app is created by MSFT or custom in the CoE toolkit
+  - #9479-[CoE Starter Kit - QUESTION] Filter hasCDS in Flow Sync Template V4 (PVA)
+  - #9557-[CoE Starter Kit - QUESTION] MC942823/MC981567 and the admin_connectionreferenceidentities table
+  - #9559-[CoE Starter Kit - QUESTION] Helper - Send Mail flow NOT picking up the Outlook connection
+  - #9869-[CoE Starter Kit - QUESTION] Admin | Sync Template v3 (Flow Action Details) running too many actions
+  - #9944-[CoE Starter Kit - QUESTION] Sharing apps
+  - #10181-[CoE Starter Kit - QUESTION] Inactive flow Notification alert emails are triggered even "helper-send email" cloud flow is turned off.
+  - #10186-[CoE Starter Kit - QUESTION] CoE Setup and Upgrade Wizard, Welcome mail customized to German language.
+  - #10213-[CoE Starter Kit - QUESTION] QUESTION
+  - #10216-[CoE Starter Kit - QUESTION] QUESTION
+  - #10227-[CoE Starter Kit - QUESTION] QUESTION
+  - #10230-[CoE Starter Kit - QUESTION] GCCH tenant and opening Power Apps Component Framework
+  - #10238-[CoE Starter Kit - QUESTION] QUESTION
+  - #10240-[CoE Starter Kit - QUESTION] QUESTION
+  - #10245-[CoE Starter Kit - QUESTION] Why "SYNC HELPER - Cloud Flows" keeps getting turned off
+  - #10253-[CoE Starter Kit - QUESTION] QUESTION
+  - #10254-[CoE Starter Kit - QUESTION] QUESTION
+  - #10268-[CoE Starter Kit - QUESTION] QUESTION
+  - #10269-[CoE Starter Kit - QUESTION] QUESTION
+  - #10272-[CoE Starter Kit - QUESTION] QUESTION about IsAuditingEnabled
+  - #10278-[CoE Starter Kit - QUESTION] QUESTION
+  - #10290-[CoE Starter Kit - QUESTION] Starter Kit News
+  - #10291-[CoE Starter Kit - QUESTION] QUESTION
+  - #10297-[CoE Starter Kit - QUESTION] GCC Environment -- SetupWizard>GetUserDetails Flow failing - 401
+  - #10301-[CoE Starter Kit - QUESTION] HTTP With Azure AD authentication error

@@ -1,0 +1,1704 @@
+ <!DOCTYPE html>
+		<html
+			class="layout layout-holy-grail   show-table-of-contents conceptual show-breadcrumb default-focus"
+			lang="en-us"
+			dir="ltr"
+			data-authenticated="false"
+			data-auth-status-determined="false"
+			data-target="docs"
+			x-ms-format-detection="none"
+		>
+			
+		<head>
+			<title>Set up the CoE Starter Kit: Prerequisites and instructions - Power Platform | Microsoft Learn</title>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<meta name="color-scheme" content="light dark" />
+
+			<meta name="description" content="Prerequisites and step-by-step instructions for setting up the CoE Starter Kit to support Power Platform Center of Excellence implementation, governance, and adoption across Power Apps and Power Automate." />
+			<link rel="canonical" href="https://learn.microsoft.com/en-us/power-platform/guidance/coe/setup" /> 
+
+			<!-- Non-customizable open graph and sharing-related metadata -->
+			<meta name="twitter:card" content="summary_large_image" />
+			<meta name="twitter:site" content="@MicrosoftLearn" />
+			<meta property="og:type" content="website" />
+			<meta property="og:image:alt" content="Microsoft Learn" />
+			<meta property="og:image" content="https://learn.microsoft.com/en-us/media/open-graph-image.png" />
+			<!-- Page specific open graph and sharing-related metadata -->
+			<meta property="og:title" content="Set up the CoE Starter Kit: Prerequisites and instructions - Power Platform" />
+			<meta property="og:url" content="https://learn.microsoft.com/en-us/power-platform/guidance/coe/setup" />
+			<meta property="og:description" content="Prerequisites and step-by-step instructions for setting up the CoE Starter Kit to support Power Platform Center of Excellence implementation, governance, and adoption across Power Apps and Power Automate." />
+			<meta name="platform_id" content="69085eb7-3965-9794-3207-2cfc813e5f04" /> <meta name="scope" content="Power Platform" />
+			<meta name="locale" content="en-us" />
+			 
+			<meta name="uhfHeaderId" content="MSDocsHeader-PowerPlatform" />
+
+			<meta name="page_type" content="conceptual" />
+
+			<!--page specific meta tags-->
+			
+
+			<!-- custom meta tags -->
+			
+		<meta name="breadcrumb_path" content="/power-platform/breadcrumb/toc.json" />
+	
+		<meta name="feedback_system" content="Standard" />
+	
+		<meta name="feedback_product_url" content="https://powerusers.microsoft.com/" />
+	
+		<meta name="recommendations" content="true" />
+	
+		<meta name="ms.service" content="power-platform" />
+	
+		<meta name="ms.update-cycle" content="3650-days" />
+	
+		<meta name="ms.subservice" content="guidance-toolkit" />
+	
+		<meta name="search.app" content="powerapps-docs" />
+	
+		<meta name="search.app" content="administration-docs" />
+	
+		<meta name="search.app" content="powerautomate-docs" />
+	
+		<meta name="search.app" content="dataverse-docs" />
+	
+		<meta name="author" content="Grant-Archibald-MS" />
+	
+		<meta name="ms.component" content="pa-admin" />
+	
+		<meta name="ms.topic" content="how-to" />
+	
+		<meta name="ms.date" content="2026-04-20T00:00:00Z" />
+	
+		<meta name="ms.author" content="grarchib" />
+	
+		<meta name="ms.reviewer" content="edoyle" />
+	
+		<meta name="search.audienceType" content="admin" />
+	
+		<meta name="ms.custom" content="ai-gen-docs-bap" />
+	
+		<meta name="ms.custom" content="ai-gen-description" />
+	
+		<meta name="ms.custom" content="ai-seo-date:07/11/2025" />
+	
+		<meta name="document_id" content="3f619bbe-9303-8583-2cb9-a287811cec13" />
+	
+		<meta name="document_version_independent_id" content="8e256e0c-38fa-f2ca-58db-550bb6e9802a" />
+	
+		<meta name="updated_at" content="2026-08-29T01:04:00Z" />
+	
+		<meta name="original_content_git_url" content="https://github.com/MicrosoftDocs/power-platform-pr/blob/live/power-platform/guidance/coe/setup.md" />
+	
+		<meta name="gitcommit" content="https://github.com/MicrosoftDocs/power-platform-pr/blob/a8b19cd3d2fff6c9c87cb99aa43ef6540e709364/power-platform/guidance/coe/setup.md" />
+	
+		<meta name="git_commit_id" content="a8b19cd3d2fff6c9c87cb99aa43ef6540e709364" />
+	
+		<meta name="site_name" content="Docs" />
+	
+		<meta name="depot_name" content="MSDN.power-platform" />
+	
+		<meta name="schema" content="Conceptual" />
+	
+		<meta name="toc_rel" content="../toolkits/toc.json" />
+	
+		<meta name="pdf_url_template" content="https://learn.microsoft.com/pdfstore/en-us/MSDN.power-platform/{branchName}{pdfName}" />
+	
+		<meta name="feedback_help_link_type" content="" />
+	
+		<meta name="feedback_help_link_url" content="" />
+	
+		<meta name="word_count" content="1787" />
+	
+		<meta name="asset_id" content="guidance/coe/setup" />
+	
+		<meta name="moniker_range_name" content="" />
+	
+		<meta name="item_type" content="Content" />
+	
+		<meta name="source_path" content="power-platform/guidance/coe/setup.md" />
+	
+		<meta name="previous_tlsh_hash" content="6FCFCD32961C8622BFD30E19247AB750A2F1C2847EA16BDC11A9196B46AE7D673AA58C6ADF07571D133242A302897649D2E6BB34939C37D34B67643D021833E3E69D3FF3D4" />
+	
+		<meta name="github_feedback_content_git_url" content="https://github.com/MicrosoftDocs/power-platform/blob/main/power-platform/guidance/coe/setup.md" />
+	
+		<meta name="markdown_url" content="https://learn.microsoft.com/en-us/power-platform/guidance/coe/setup?accept=text/markdown" />
+	 
+		<meta name="cmProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/e6f942e8-55a7-4c86-b8e3-7456508ea850" data-source="generated" />
+	
+		<meta name="cmProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/1ae5c491-970a-4062-8301-6336e69f9026" data-source="generated" />
+	
+		<meta name="spProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/f1834696-48d6-470d-966b-6ee418881596" data-source="generated" />
+	
+		<meta name="spProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/f2c3e52e-3667-4e8a-bf11-20b9eaccdc8c" data-source="generated" />
+	
+
+			<!-- Apply persisted/system theme before first paint to prevent wrong-theme flash when scripts are deferred. -->
+			<script id="theme-preference">
+				(function () {
+			try {
+				var stored = localStorage.getItem('theme');
+				var theme = /^(light|dark|high-contrast)$/.test(stored)
+					? stored
+					: matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+				document.documentElement.classList.add('theme-' + theme);
+			} catch (e) {}
+		})();;
+			</script>
+
+			<script id="atlas-layout-preferences">
+				(function () {
+			try {
+				var state = JSON.parse(localStorage.getItem('atlas-layout-preferences') || '{}');
+				var view = state["docs-layout-persistence"] || {};
+				var excludesKey = "";
+				var blocked = {};
+				if (excludesKey) {
+					var exclusions = JSON.parse(localStorage.getItem('atlas-layout-exclusions') || '{}');
+					if (Object.prototype.hasOwnProperty.call(exclusions, excludesKey)) {
+						var scoped = exclusions[excludesKey];
+						if (scoped) {
+							if (typeof scoped === 'object') blocked = scoped;
+						}
+					}
+				}
+				var html = document.documentElement;
+				for (var c in view) {
+					if (Object.prototype.hasOwnProperty.call(blocked, c)) continue;
+					if (view[c]) html.classList.add(c);
+					else html.classList.remove(c);
+				}
+			} catch (e) {}
+		})();;
+			</script>
+
+			<!-- assets and js globals -->
+			
+			<link rel="stylesheet" href="/static/assets/0.4.03595.8353-c1321031/styles/site.css" />
+			
+			<script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+			<!-- Keep this URL in sync with oneDSScriptSelector in instrumentation/one-ds.ts. -->
+			<script async src="https://js.monitor.azure.com/scripts/c/ms.jsll-4.min.js"></script>
+			
+
+			<!-- msdocs global object -->
+			<script id="msdocs-script">
+		var msDocs = {
+  "environment": {
+    "accessLevel": "online",
+    "azurePortalHostname": "portal.azure.com",
+    "reviewFeatures": false,
+    "supportLevel": "production",
+    "systemContent": true,
+    "siteName": "learn",
+    "legacyHosting": false
+  },
+  "data": {
+    "contentLocale": "en-us",
+    "contentDir": "ltr",
+    "userLocale": "en-us",
+    "userDir": "ltr",
+    "pageTemplate": "Conceptual",
+    "layoutStateStorageKey": "docs-layout-persistence",
+    "brand": "",
+    "context": {},
+    "standardFeedback": true,
+    "showFeedbackReport": false,
+    "feedbackHelpLinkType": "",
+    "feedbackHelpLinkUrl": "",
+    "feedbackSystem": "Standard",
+    "feedbackGitHubRepo": "",
+    "feedbackProductUrl": "https://powerusers.microsoft.com/",
+    "extendBreadcrumb": false,
+    "isEditDisplayable": true,
+    "isPrivateUnauthorized": false,
+    "hideViewSource": false,
+    "isPermissioned": false,
+    "hasRecommendations": true
+  },
+  "functions": {}
+};;
+	</script>
+
+			<!-- base scripts, msdocs global should be before this -->
+			<script
+				src="/static/assets/0.4.03595.8353-c1321031/scripts/en-us/index-docs.js"
+				async
+			></script>
+			
+
+			<!-- json-ld -->
+			
+		<script >bazadebezolkohpepadr="1739306214"</script><script type="text/javascript" src="https://learn.microsoft.com/akam/13/67abb7c0"  defer></script></head>
+	
+			<body
+				id="body"
+				data-bi-name="body"
+				class="layout-body "
+				lang="en-us"
+				dir="ltr"
+			>
+				<header class="layout-body-header background-color-body-medium">
+		<div class="header-holder has-default-focus">
+			
+		<a
+			href="#main"
+			
+			style="z-index: 1070"
+			class="outline-color-text visually-hidden-until-focused position-fixed inner-focus focus-visible top-0 left-0 right-0 padding-xs text-align-center background-color-body"
+			
+		>
+			Skip to main content
+		</a>
+	
+		<a
+			href="#"
+			data-skip-to-ask-learn
+			style="z-index: 1070"
+			class="outline-color-text visually-hidden-until-focused position-fixed inner-focus focus-visible top-0 left-0 right-0 padding-xs text-align-center background-color-body"
+			hidden
+		>
+			Skip to Ask Learn chat experience
+		</a>
+	
+
+			<div hidden id="cookie-consent-holder" data-test-id="cookie-consent-container"></div>
+			<!-- Unsupported browser warning -->
+			<div
+				id="unsupported-browser"
+				style="background-color: white; color: black; padding: 16px; border-bottom: 1px solid grey;"
+				hidden
+			>
+				<div style="max-width: 800px; margin: 0 auto;">
+					<p style="font-size: 24px">This browser is no longer supported.</p>
+					<p style="font-size: 16px; margin-top: 16px;">
+						Upgrade to Microsoft Edge to take advantage of the latest features, security updates, and technical support.
+					</p>
+					<div style="margin-top: 12px;">
+						<a
+							href="https://go.microsoft.com/fwlink/p/?LinkID=2092881 "
+							style="background-color: #0078d4; border: 1px solid #0078d4; color: white; padding: 6px 12px; border-radius: 2px; display: inline-block;"
+						>
+							Download Microsoft Edge
+						</a>
+						<a
+							href="https://learn.microsoft.com/en-us/lifecycle/faq/internet-explorer-microsoft-edge"
+							style="background-color: white; padding: 6px 12px; border: 1px solid #505050; color: #171717; border-radius: 2px; display: inline-block;"
+						>
+							More info about Internet Explorer and Microsoft Edge
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- site header -->
+			<div
+				id="ms--site-header"
+				data-test-id="site-header-wrapper"
+				itemscope="itemscope"
+				itemtype="http://schema.org/Organization"
+			>
+				<div
+					id="ms--mobile-nav"
+					class="site-header display-none-tablet padding-inline-none gap-none"
+					data-bi-name="mobile-header"
+					data-test-id="mobile-header"
+				></div>
+				<div
+					id="ms--primary-nav"
+					class="site-header display-none display-flex-tablet"
+					data-bi-name="L1-header"
+					data-test-id="primary-header"
+				></div>
+				<div
+					id="ms--secondary-nav"
+					class="site-header display-none display-flex-tablet"
+					data-bi-name="L2-header"
+					data-test-id="secondary-header"
+					
+				></div>
+			</div>
+			
+		<!-- banner -->
+		<div data-banner>
+			<div id="disclaimer-holder"></div>
+			
+		</div>
+		<!-- banner end -->
+	
+		</div>
+	</header>
+				 <section
+					id="layout-body-menu"
+					class="layout-body-menu border-right display-flex background-color-body-medium"
+					data-bi-name="menu"
+			  >
+					
+		<div
+			id="left-container"
+			class="left-container display-none padding-none display-block-tablet width-full display-none-until-layout-restored"
+			data-toc-container="true"
+		>
+			<div
+				id="ms--toc-content"
+				class="padding-left-sm padding-right-none padding-bottom-sm height-full"
+			>
+				<nav
+					id="affixed-left-container"
+					class="margin-top-xxs-tablet position-sticky display-flex flex-direction-column width-full"
+					aria-label="Primary"
+					data-bi-name="left-toc"
+					role="navigation"
+				>
+					<div
+						id="ms--collapsible-toc-header"
+						class="display-flex flex-direction-row-reverse justify-content-center align-items-center margin-bottom-xxs margin-right-xxs"
+					>
+						<button
+							type="button"
+							class="button button-clear button-sm inner-focus"
+							data-collapsible-toc-toggle
+							aria-expanded="true"
+							hidden
+							aria-controls="ms--toc-content"
+							aria-label="Table of contents"
+						>
+							<span class="icon icon-mirrored-rtl" aria-hidden="true">
+								<span
+									class="docon docon-panel-left-contract display-none-layout-menu-collapsed"
+								></span>
+								<span
+									class="docon docon-panel-left-expand display-none display-inline-layout-menu-collapsed"
+								></span>
+							</span>
+						</button>
+						<div
+							id="ms--collapsible-toc-moniker-slot"
+							class="flex-grow-1 display-none-layout-menu-collapsed"
+						></div>
+					</div>
+				</nav>
+			</div>
+		</div>
+	
+			  </section>
+
+				<main
+					id="main"
+					role="main"
+					class="layout-body-main "
+					data-bi-name="content"
+					lang="en-us"
+					dir="ltr"
+				>
+					
+			<div
+		id="ms--content-header"
+		class="content-header default-focus border-bottom-none"
+		data-bi-name="content-header"
+	>
+		<div class="content-header-controls margin-xxs margin-inline-sm-tablet">
+			<button
+				type="button"
+				class="contents-button button button-sm margin-right-xxs"
+				data-bi-name="contents-expand"
+				aria-haspopup="true"
+				data-contents-button
+			>
+				<span class="icon" aria-hidden="true"><span class="docon docon-menu"></span></span>
+				<span class="contents-expand-title"> Table of contents </span>
+			</button>
+			<button
+				type="button"
+				class="ap-collapse-behavior ap-expanded button button-sm"
+				data-bi-name="ap-collapse"
+				aria-controls="action-panel"
+			>
+				<span class="icon" aria-hidden="true"><span class="docon docon-exit-mode"></span></span>
+				<span>Exit editor mode</span>
+			</button>
+		</div>
+	</div> 
+		<div
+			id="action-panel"
+			role="region"
+			aria-label="Action Panel"
+			class="action-panel"
+			tabindex="-1"
+		></div>
+	
+			<div
+				data-main-column
+				class="reading-width margin-inline-auto layout-padding padding-top-none padding-top-sm-tablet padding-bottom-sm"
+			>
+				<div>
+					
+		<div id="article-header" class="background-color-body margin-bottom-xs display-none-print">
+			<div class="display-flex align-items-center justify-content-space-between">
+				
+		<details
+			id="article-header-breadcrumbs-overflow-popover"
+			class="popover popover-left"
+			data-for="article-header-breadcrumbs"
+		>
+			<summary
+				class="button button-clear button-primary button-sm inner-focus"
+				aria-label="All breadcrumbs"
+			>
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-more"></span>
+				</span>
+			</summary>
+			<div id="article-header-breadcrumbs-overflow" class="popover-content"></div>
+		</details>
+
+		<bread-crumbs
+			id="article-header-breadcrumbs"
+			role="group"
+			aria-label="Breadcrumbs"
+			data-test-id="article-header-breadcrumbs"
+			class="overflow-hidden flex-grow-1 margin-right-sm margin-right-md-tablet margin-right-lg-desktop margin-left-negative-xxs padding-left-xxs"
+		></bread-crumbs>
+	 
+		<div
+			id="article-header-page-actions"
+			class="opacity-none margin-left-auto display-flex flex-wrap-no-wrap align-items-stretch"
+		>
+			
+		<button
+			class="button button-sm border-none inner-focus display-none-tablet flex-shrink-0 "
+			data-bi-name="ask-learn-assistant-entry"
+			data-test-id="ask-learn-assistant-modal-entry-mobile"
+			data-ask-learn-modal-entry
+			
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-label="Ask Learn"
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+		</button>
+		<button
+			class="button button-sm display-none display-inline-flex-tablet display-none-desktop flex-shrink-0 margin-right-xxs border-color-ask-learn "
+			data-bi-name="ask-learn-assistant-entry"
+			
+			data-test-id="ask-learn-assistant-modal-entry-tablet"
+			data-ask-learn-modal-entry
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+		<button
+			class="button button-sm display-none flex-shrink-0 display-inline-flex-desktop margin-right-xxs border-color-ask-learn "
+			data-bi-name="ask-learn-assistant-entry"
+			
+			data-test-id="ask-learn-assistant-flyout-entry"
+			data-ask-learn-flyout-entry
+			data-flyout-button="toggle"
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-controls="ask-learn-flyout"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+	 
+
+			<details class="popover popover-right" id="article-header-page-actions-overflow">
+				<summary
+					class="justify-content-flex-start button button-clear button-sm button-primary inner-focus"
+					aria-label="More actions"
+					aria-expanded="false"
+					title="More actions"
+				>
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-more-vertical"></span>
+					</span>
+				</summary>
+				<div class="popover-content">
+					
+		<button
+			type="button"
+			id="ms--focus-mode-button"
+			data-focus-mode
+			data-bi-name="focus-mode-entry"
+			data-page-action-item="overflow-all"
+			data-popover-close
+			class="button button-clear button-sm button-block justify-content-flex-start text-align-left inner-focus display-none display-inline-flex-tablet"
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-glasses"></span>
+			</span>
+			<span>Reading mode</span>
+		</button>
+	 
+		<button
+			data-page-action-item="overflow-mobile"
+			type="button"
+			class="display-block-layout-menu-collapsed button-block button-sm inner-focus button button-clear display-none-tablet justify-content-flex-start text-align-left"
+			data-bi-name="contents-expand"
+			data-contents-button
+			data-popover-close
+		>
+			<span class="icon" aria-hidden="true"
+				><span class="docon docon-editor-list-bullet"></span
+			></span>
+			<span class="contents-expand-title">Table of contents</span>
+		</button>
+	 
+		<a
+			id="lang-link-overflow"
+			class="button-sm inner-focus button button-clear button-block justify-content-flex-start text-align-left"
+			data-bi-name="language-toggle"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-read-in-link
+			href="#"
+			hidden
+		>
+			<span class="icon" aria-hidden="true" data-read-in-link-icon>
+				<span class="docon docon-locale-globe"></span>
+			</span>
+			<span data-read-in-link-text>Read in English</span>
+		</a>
+	
+					
+		<button
+			type="button"
+			class="collection button button-clear button-sm button-block justify-content-flex-start text-align-left inner-focus"
+			data-list-type="collection"
+			data-bi-name="collection"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-popover-close
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-circle-addition"></span>
+			</span>
+			<span class="collection-status">Add</span>
+		</button>
+	 
+		<button
+			type="button"
+			class="collection button button-block button-clear button-sm justify-content-flex-start text-align-left inner-focus"
+			data-list-type="plan"
+			data-bi-name="plan"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-popover-close
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-circle-addition"></span>
+			</span>
+			<span class="plan-status">Add to Plans</span>
+		</button>
+	 
+					
+		<a
+			data-contenteditbtn
+			class="button button-clear button-block button-sm inner-focus justify-content-flex-start text-align-left text-decoration-none"
+			data-bi-name="edit"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			
+			href="https://github.com/MicrosoftDocs/power-platform/blob/main/power-platform/guidance/coe/setup.md"
+			data-original_content_git_url="https://github.com/MicrosoftDocs/power-platform-pr/blob/live/power-platform/guidance/coe/setup.md"
+			data-original_content_git_url_template="{repo}/blob/{branch}/power-platform/guidance/coe/setup.md"
+			data-pr_repo=""
+			data-pr_branch=""
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-edit-outline"></span>
+			</span>
+			<span>Edit</span>
+		</a>
+	  
+		<hr class="margin-block-xxs" />
+		
+				<button
+					class="button button-block button-clear button-sm justify-content-flex-start text-align-left inner-focus"
+					type="button"
+					data-bi-name="copy-markdown"
+					data-page-action-item="overflow-all"
+					data-copy-markdown
+					data-copy-state="idle"
+					data-check-hidden="true"
+				>
+					<span class="icon color-primary" aria-hidden="true">
+						<span data-show-when="idle" class="docon docon-code-lang"></span>
+						<span data-show-when="loading" class="loader" hidden></span>
+						<span data-show-when="success" class="docon docon-check-mark" hidden></span>
+					</span>
+					<span>Copy Markdown</span>
+				</button>
+		   
+				<button
+					class="button button-block button-clear button-sm justify-content-flex-start text-align-left inner-focus"
+					type="button"
+					data-bi-name="print"
+					data-page-action-item="overflow-all"
+					data-popover-close
+					data-print-page
+					data-check-hidden="true"
+				>
+					<span class="icon color-primary" aria-hidden="true">
+						<span class="docon docon-print"></span>
+					</span>
+					<span>Print</span>
+				</button>
+		  
+	
+				</div>
+			</details>
+		</div>
+	
+			</div>
+		</div>
+	  
+		<!-- privateUnauthorizedTemplate is hidden by default -->
+		<div unauthorized-private-section data-bi-name="permission-content-unauthorized-private" hidden>
+			<hr class="hr margin-top-xs margin-bottom-sm" />
+			<div class="notification notification-info">
+				<div class="notification-content">
+					<p class="margin-top-none notification-title">
+						<span class="icon" aria-hidden="true"
+							><span class="docon docon-exclamation-circle-solid"></span
+						></span>
+						<span>Note</span>
+					</p>
+					<p class="margin-top-none authentication-determined not-authenticated">
+						Access to this page requires authorization. You can try <a class="docs-sign-in" href="#" data-bi-name="permission-content-sign-in">signing in</a> or <a  class="docs-change-directory" data-bi-name="permisson-content-change-directory">changing directories</a>.
+					</p>
+					<p class="margin-top-none authentication-determined authenticated">
+						Access to this page requires authorization. You can try <a class="docs-change-directory" data-bi-name="permisson-content-change-directory">changing directories</a>.
+					</p>
+				</div>
+			</div>
+		</div>
+	
+					<div class="content"><h1 id="set-up-the-coe-starter-kit-prerequisites-and-instructions">Set up the CoE Starter Kit: Prerequisites and instructions</h1></div>
+					
+		<div
+			id="article-metadata"
+			data-bi-name="article-metadata"
+			data-test-id="article-metadata"
+			class="page-metadata-container display-flex gap-xxs justify-content-space-between align-items-center flex-wrap-wrap"
+		>
+			 
+				<div
+					id="user-feedback"
+					class="margin-block-xxs display-none display-none-print"
+					hidden
+					data-hide-on-archived
+				>
+					
+		<button
+			id="user-feedback-button"
+			data-test-id="conceptual-feedback-button"
+			class="button button-sm button-clear button-primary display-none"
+			type="button"
+			data-bi-name="user-feedback-button"
+			data-user-feedback-button
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-like"></span>
+			</span>
+			<span>Feedback</span>
+		</button>
+	
+				</div>
+		  
+		</div>
+	 
+		<div data-id="ai-summary" class="display-none-print">
+			<div id="ms--ai-summary-cta" class="margin-top-xs display-flex align-items-center">
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-sparkle-fill gradient-text-vivid"></span>
+				</span>
+				<button
+					id="ms--ai-summary"
+					type="button"
+					class="tag tag-sm tag-suggestion margin-left-xxs"
+					data-test-id="ai-summary-cta"
+					data-bi-name="ai-summary-cta"
+					data-an="ai-summary"
+				>
+					<span class="ai-summary-cta-text">
+						Summarize this article for me
+					</span>
+				</button>
+			</div>
+			<!-- Slot where the client will render the summary card after the user clicks the CTA -->
+			<div id="ms--ai-summary-header" class="margin-top-xs"></div>
+		</div>
+	 
+		<nav
+			id="center-doc-outline"
+			class="doc-outline display-none-desktop display-none-print margin-bottom-sm"
+			data-bi-name="intopic toc"
+			aria-label="In this article"
+		>
+			<h2 id="ms--in-this-article" class="title is-6 margin-block-xs">
+				In this article
+			</h2>
+		</nav>
+	 <div class="content"><div class="NOTE">
+<p>Note</p>
+<p><strong>The Power Platform CoE Starter Kit is no longer actively maintained.</strong> Its core capabilities are part of the <a href="../../admin/admin-documentation" data-linktype="relative-path">Power Platform admin center</a>.</p>
+<p>Issues are no longer reviewed or addressed. If you identify a potential security issue, please report it to the <a href="https://www.microsoft.com/msrc/faqs-report-an-issue" data-linktype="external">Microsoft Security Response Center</a>.</p>
+</div>
+<p>This article describes how to install the CoE Starter Kit and provides guidance on:</p>
+<ul>
+<li>The identity to use to install and run the solutions.</li>
+<li>The environment type to use for your solutions.</li>
+<li>All prerequisites needed to use the CoE Starter Kit.</li>
+</ul>
+<h2 id="before-setting-up-the-coe-starter-kit">Before setting up the CoE Starter Kit</h2>
+<p>Before you set up the CoE Starter Kit, review the following prerequisites and recommendations to ensure a successful installation and configuration.</p>
+<h3 id="which-identity-should-i-use-to-install-the-coe-starter-kit">Which identity should I use to install the CoE Starter Kit?</h3>
+<p>The CoE Starter Kit requires access to your tenant's Power Platform environments. The identity you set up for the CoE Starter Kit requires the following licenses and roles:</p>
+<ul>
+<li><p><a href="../../admin/use-service-admin-role-manage-tenant#power-platform-administrator" data-linktype="relative-path">Microsoft Power Platform service admin</a> or global tenant admin.</p>
+<div class="NOTE">
+<p>Note</p>
+<p>Dynamics 365 service admin isn't supported, since it:</p>
+<ul>
+<li>Can't gather all environment types; for example, the <em>teams</em> type.</li>
+<li>Doesn't allow privilege escalation.</li>
+</ul>
+</div>
+</li>
+<li><p>Power Apps Per User license (nontrial) and Microsoft 365 license.</p>
+</li>
+<li><p>Power Automate Per User license, or Per Flow licenses (nontrial).</p>
+</li>
+<li><p>Power BI Premium per user or per capacity (if using <a href="#what-data-source-should-i-use-for-my-power-platform-inventory" data-linktype="self-bookmark">data export</a> for inventory).</p>
+</li>
+<li><p>The identity must have access to an Office 365 mailbox that meets all requirements to use the <a href="/en-us/connectors/office365/" data-linktype="absolute-path">Office 365 Outlook</a> connector.</p>
+</li>
+<li><p>If you'd like to collect usage information, such as app launches and unique users per app, you must have access to an Azure app registration. The app registrations need to have permissions to read data from the <a href="/en-us/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance#before-you-search-the-audit-log" data-linktype="absolute-path">Microsoft 365 audit log</a> to complete the setup. You only need this app registration if you're using <a href="#what-data-source-should-i-use-for-my-power-platform-inventory" data-linktype="self-bookmark">Cloud flows</a> for inventory.</p>
+</li>
+<li><p>To share the <a href="power-bi" data-linktype="relative-path">Power BI report</a> that's part of the CoE Starter Kit, make sure the identity has a Power BI Pro license.</p>
+</li>
+</ul>
+<p>These roles and licenses must be available to a user directly and permanently.</p>
+<p><span class="mx-imgBorder">
+<a href="media/ppadminrole.png#lightbox" data-linktype="relative-path">
+<img src="media/ppadminrole.png" alt="Screenshot from Microsoft Azure's Assigned roles showing the Power Platform administrator's active assignment as Direct membership." data-linktype="relative-path">
+</a>
+</span>
+</p>
+<p>Configure multifactor authentication for the account by following the recommended settings for <a href="/en-us/troubleshoot/power-platform/power-automate/conditional-access-and-multi-factor-authentication-in-flow" data-linktype="absolute-path">conditional access and multifactor authentication in Power Automate</a>.</p>
+<h3 id="whats-the-best-way-to-communicate-with-admins-makers-and-users">What's the best way to communicate with admins, makers, and users?</h3>
+<p>Consider how you want to communicate with different groups of people, or <em>personas</em>, before you start the setup.</p>
+<ul>
+<li><strong>Admin persona:</strong>
+<ul>
+<li>Power Platform admins communicate with each other.</li>
+<li>Power Platform makers contact Power Platform admins.</li>
+</ul>
+</li>
+<li><strong>Maker persona:</strong>
+<ul>
+<li>Power Platform admins contact Power Platform makers.</li>
+<li>Power Platform makers communicate with each other.</li>
+</ul>
+</li>
+<li><strong>User persona:</strong>
+<ul>
+<li>Power Platform admins contact Power Platform users.</li>
+</ul>
+</li>
+</ul>
+<p>We recommend using three <a href="/en-us/microsoft-365/admin/create-groups/compare-groups#microsoft-365-groups" data-linktype="absolute-path">Microsoft 365 Groups</a>, one for each persona. This group type is an email-enabled security group and can be associated with a Microsoft team for collaboration between the people in the group.</p>
+<div class="IMPORTANT">
+<p>Important</p>
+<p>As part of the <a href="setup-core-components" data-linktype="relative-path">inventory of a tenant's Power Platform resources</a>, makers are added to the group you define for the <strong>Power Platform Maker persona</strong>.</p>
+<p>To add makers to the group, the admin or service account setting up the <a href="setup-core-components" data-linktype="relative-path">inventory components</a> must be an owner of the group. You can share apps and other resources relevant to makers with this group.</p>
+</div>
+<h4 id="individual-as-an-admin">Individual as an admin</h4>
+<p>Some processes in the CoE Starter Kit send <a href="/en-us/power-automate/get-started-approvals" data-linktype="absolute-path">Power Automate approvals</a> and <a href="/en-us/power-automate/overview-adaptive-cards" data-linktype="absolute-path">adaptive cards for Microsoft Teams</a>.</p>
+<p>These cards can't be assigned to a group. You need an individual named <em>admin</em> to receive these communications:</p>
+<ul>
+<li>Individual to receive chat bot chats</li>
+<li>Individual to receive approvals</li>
+</ul>
+<h3 id="what-data-source-should-i-use-for-my-power-platform-inventory">What data source should I use for my Power Platform inventory?</h3>
+<p>The CoE Starter Kit uses processes to gather information about your Power Platform inventory, helping you manage, govern, and nurture Power Platform adoption in your tenant.</p>
+<p>The CoE Starter Kit offers two mechanisms to gather this data:</p>
+<ul>
+<li><p><strong>Data export (preview)</strong></p>
+<p>You can export Power Platform inventory and usage data directly into Azure Data Lake Storage using the <a href="/en-us/power-platform/admin/self-service-analytics" data-linktype="absolute-path">data export</a> feature in the Power Platform admin center. Because the admin center provides the data, this mechanism is highly efficient. To use this option, <a href="/en-us/power-platform/admin/self-service-analytics#set-up-the-data-export-process-for-your-tenant" data-linktype="absolute-path">set up the data export process for your tenant</a>.</p>
+<div class="IMPORTANT">
+<p>Important</p>
+<p>The CoE Starter Kit using data provided by data export for inventory is currently in experimental preview. We recommend to first test the kit in a dedicated test environment.</p>
+</div>
+<p>Learn more in <a href="#how-can-i-try-out-the-data-export-feature" data-linktype="self-bookmark">How can I try out the data export feature?</a></p>
+</li>
+<li><p><strong>Cloud flows</strong></p>
+<p>Cloud flows use Power Platform admin connectors to query and crawl your tenant and store inventory and usage data in Dataverse tables.</p>
+<p>This method is suitable for small to medium sized tenants but can cause performance issues in tenants where Power Platform inventory exceeds 10,000 objects (combined number of environments, apps, flows).</p>
+</li>
+</ul>
+<h3 id="how-can-i-try-out-the-data-export-feature">How can I try out the data export feature?</h3>
+<ol>
+<li><p>Enable the <a href="/en-us/power-platform/admin/self-service-analytics#set-up-the-data-export-process-for-your-tenant" data-linktype="absolute-path">data export</a> feature in your tenant.</p>
+<p>Proceed with the CoE Starter Kit configuration only when you see inventory data files in your storage account. The initial data export can take up to five days.</p>
+</li>
+<li><p><a href="https://aka.ms/CoEBYODLdownload" data-linktype="external">Download</a> the version of the CoE Starter Kit that integrates with data export and <a href="setup-core-components#set-up-the-inventory-components-by-using-the-setup-wizard" data-linktype="relative-path">use the setup wizard</a> to configure the feature in your tenant.</p>
+</li>
+</ol>
+<p>Learn more in <a href="faq-dataexport" data-linktype="relative-path">Frequently asked questions about the Data Export integration</a>.</p>
+<h2 id="plan-your-upgrade-strategy">Plan your upgrade strategy</h2>
+<p>A new version of the CoE Starter Kit is released monthly, usually in the first full week of each month. This release cadence is important to know so you can review, organize, plan, and test the latest version.</p>
+<div class="IMPORTANT">
+<p>Important</p>
+<p>We recommend upgrading the CoE Starter Kit solution at least <strong>every three months</strong>. With the fast pace of change for Power Platform, leaving updates longer than three months can result in unexpected issues with your next update.</p>
+</div>
+<p>We recommend testing upgrades in a dedicated test environment before upgrading your production environment. Focus your test efforts on your favorite features of the CoE Starter Kit. Verify that components you use continue to work when you add new features.</p>
+<p>In your test environment, set the <em>ProductionEnvironment</em> variable to <em>no</em>. A <em>no</em> setting means no emails are sent to makers and end users as you test features.</p>
+<p>Learn more in <a href="after-setup" data-linktype="relative-path">Update the Center of Excellence (CoE) Starter Kit</a>.</p>
+<h2 id="create-your-environments">Create your environments</h2>
+<p>We recommend creating two environments to install the CoE Starter Kit solution, one for testing and one for production.</p>
+<p>Create two production environments to install the CoE Starter Kit solutions:</p>
+<ul>
+<li><a href="/en-us/power-platform/admin/create-environment#create-an-environment-with-a-database" data-linktype="absolute-path">Create an environment with a database</a>.</li>
+<li>Choose English as the default language.</li>
+<li>Don't add sample apps and datasets.</li>
+<li>Set the security group to <strong>None</strong> to allow open access. Some parts of the CoE Starter Kit use <a href="/en-us/power-automate/get-started-approvals" data-linktype="absolute-path">approval actions</a> and require makers to be able to interact with the environment.</li>
+<li>After you <a href="setup-core-components" data-linktype="relative-path">import the solution</a> and complete the setup steps, set the <em>ProductionEnvironment</em> environment variable to <em>no</em> in your test environment. This configuration lets you test the CoE Starter Kit processes without impacting makers and end users.</li>
+</ul>
+<div class="IMPORTANT">
+<p>Important</p>
+<p>Using data export as a mechanism to retrieve inventory and telemetry is currently in preview. We recommend you test this feature in a dedicated test environment before using it in production.</p>
+</div>
+<h3 id="validate-data-policies">Validate data policies</h3>
+<p>The <a href="/en-us/power-platform/admin/wp-data-loss-prevention" data-linktype="absolute-path">data policy</a> applied to your CoE Starter Kit environment must allow the following connectors to be used together in the business group:</p>
+<ul>
+<li><a href="/en-us/connectors/approvals/" data-linktype="absolute-path">Approvals</a></li>
+<li><a href="/en-us/connectors/arm/" data-linktype="absolute-path">Azure Resource Manager</a></li>
+<li>HTTP</li>
+<li><a href="/en-us/connectors/webcontents/" data-linktype="absolute-path">HTTP with Microsoft Entra ID (preauthorized)</a></li>
+<li><a href="/en-us/connectors/commondataserviceforapps/" data-linktype="absolute-path">Microsoft Dataverse</a></li>
+<li><a href="/en-us/connectors/commondataservice/" data-linktype="absolute-path">Microsoft Dataverse (legacy)</a></li>
+<li><a href="/en-us/connectors/teams/" data-linktype="absolute-path">Microsoft Teams</a></li>
+<li><a href="/en-us/connectors/office365groups/" data-linktype="absolute-path">Office 365 Groups</a></li>
+<li><a href="/en-us/connectors/office365/" data-linktype="absolute-path">Office 365 Outlook</a></li>
+<li><a href="/en-us/connectors/office365users/" data-linktype="absolute-path">Office 365 Users</a></li>
+<li><a href="/en-us/connectors/powerappsforadmins/" data-linktype="absolute-path">Power Apps for Admins</a></li>
+<li><a href="/en-us/connectors/powerappsforappmakers/" data-linktype="absolute-path">Power Apps for Makers</a></li>
+<li><a href="/en-us/connectors/microsoftflowforadmins/" data-linktype="absolute-path">Power Automate for Admins</a></li>
+<li><a href="/en-us/connectors/flowmanagement/" data-linktype="absolute-path">Power Automate Management</a></li>
+<li><a href="/en-us/connectors/powerplatformforadmins/" data-linktype="absolute-path">Power Platform for Admins</a></li>
+<li><a href="/en-us/connectors/powerplatformadminv2/" data-linktype="absolute-path">Power Platform for Admins V2</a></li>
+<li><a href="/en-us/connectors/dataflows/" data-linktype="absolute-path">Power Query Dataflows</a></li>
+<li><a href="/en-us/connectors/rss/" data-linktype="absolute-path">RSS</a></li>
+</ul>
+<div class="NOTE">
+<p>Note</p>
+<p>The CoE Starter Kit collects information about who owns a resource, such as an app or a flow.</p>
+<ul>
+<li>If the resource is owned by an interactive user, the <a href="/en-us/connectors/office365users/" data-linktype="absolute-path">Office 365 Users</a> connector is used to collect the owner details.</li>
+<li>If the resource is owned by a service principal (app user), the <a href="/en-us/connectors/webcontents/" data-linktype="absolute-path">HTTP with Microsoft Entra ID (preauthorized)</a> connector makes a call to <a href="https://developer.microsoft.com/graph" data-linktype="external">Microsoft Graph</a> to retrieve the app user name to correctly mark ownership of resources to avoid them being marked as orphaned (without an owner).</li>
+</ul>
+</div>
+<ul>
+<li><p>The <strong>HTTP</strong> and <strong>HTTP with Microsoft Entra (preauthorized)</strong> connectors connect to <a href="https://developer.microsoft.com/graph" data-linktype="external">graph.microsoft.com</a> for commercial tenants.</p>
+<p>If your tenant is in Government Community Cloud (GCC), GCC High, or DoD, check your <a href="/en-us/graph/deployments#microsoft-graph-and-graph-explorer-service-root-endpoints" data-linktype="absolute-path">service root endpoint for Microsoft Graph</a>.</p>
+<p>You can't set up <a href="../../admin/connector-endpoint-filtering" data-linktype="relative-path">endpoint filtering</a> for these connectors, as data policies don't support dynamic endpoint evaluation.</p>
+</li>
+<li><p>Check that no other data policies apply to this environment. Learn more in <a href="../../admin/dlp-combined-effect-multiple-policies" data-linktype="relative-path">Combined effect of multiple data policies</a>.</p>
+</li>
+</ul>
+<h2 id="download-and-install">Download and install</h2>
+<p>If you haven't already, <a href="https://aka.ms/CoEStarterKitDownload" data-linktype="external">download the CoE Starter Kit solution and Power BI dashboard files</a>.</p>
+<p>The content package contains files that support various features of the CoE Starter Kit. The setup instructions walk you through when to use each file.</p>
+<table>
+<thead>
+<tr>
+<th>Filename</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>admintaskanalysis_core_x_xx_managed.zip</td>
+<td><a href="setup-admin-tasks-component" data-linktype="relative-path">Power Platform admin task planner components</a>.</td>
+</tr>
+<tr>
+<td>BYODL_CoEDashboard_MMMYYYY.pbit</td>
+<td><a href="power-bi" data-linktype="relative-path">CoE Dashboard Power BI</a> template file. Required during <a href="setup-powerbi" data-linktype="relative-path">configuration of the Power BI dashboard</a> if using experimental data export feature.</td>
+</tr>
+<tr>
+<td>CenterofExcellenceAuditComponents_x.xx_managed.zip</td>
+<td><a href="governance-components" data-linktype="relative-path">Governance components</a> solution file. Required during <a href="before-setup-gov" data-linktype="relative-path">setup of the governance components</a>. Has a dependency on <a href="core-components" data-linktype="relative-path">core components</a> being installed first.</td>
+</tr>
+<tr>
+<td>CenterofExcellenceCoreComponents_x.xx_managed.zip</td>
+<td><a href="core-components" data-linktype="relative-path">Core components</a> solution file. Required during <a href="setup-core-components" data-linktype="relative-path">setup of the core components</a> in a production environment.</td>
+</tr>
+<tr>
+<td>CenterofExcellenceInnovationBacklog_x.xx_managed.zip</td>
+<td><a href="innovationbacklog-components" data-linktype="relative-path">Innovation Backlog components</a> solution file. Required during <a href="setup-innovationbacklog" data-linktype="relative-path">setup of the Innovation Backlog</a> components.</td>
+</tr>
+<tr>
+<td>CenterofExcellenceNurtureComponents_x.xx_managed.zip</td>
+<td><a href="nurture-components" data-linktype="relative-path">Nurture components</a> solution file. Required during <a href="setup-nurture-components" data-linktype="relative-path">setup of the Nurture components</a>. Has a dependency on <a href="core-components" data-linktype="relative-path">core components</a> being installed first.</td>
+</tr>
+<tr>
+<td>MakerAssessmentStarterData.xlsx</td>
+<td>Provides a set of starter questions and answers for the <a href="nurture-components#maker-assessment-components" data-linktype="relative-path">Maker Assessment app</a>. Required during <a href="setup-nurture-components#set-up-maker-assessment-components" data-linktype="relative-path">configuration of the Maker Assessment app</a>.</td>
+</tr>
+<tr>
+<td>microsoft-video-hub-starter-data.xlsx</td>
+<td>Provides a set of starter videos for the <a href="nurture-components#video-hub-components" data-linktype="relative-path">Video hub</a> app.</td>
+</tr>
+<tr>
+<td>Power Platform Administration Planning.pbit</td>
+<td><a href="power-bi" data-linktype="relative-path">Power Platform admin task planner Power BI</a> template file. Required during <a href="setup-admin-tasks-component" data-linktype="relative-path">configuration of the Power Platform admin planning component</a>.</td>
+</tr>
+<tr>
+<td>PowerPlatformAdminAnalytics-DF-MMYYYY</td>
+<td>Dataflow file required during <a href="setup-powerbi" data-linktype="relative-path">configuration of the Power BI dashboard</a> if using experimental data export feature.</td>
+</tr>
+<tr>
+<td>PowerPlatformGovernance_CoEDashboard_MMMYYYY.pbit</td>
+<td><a href="power-bi-compliance" data-linktype="relative-path">CoE Governance and Compliance Dashboard Power BI</a> template file. Required during <a href="setup-powerbi" data-linktype="relative-path">configuration of the Power BI dashboard</a>.</td>
+</tr>
+<tr>
+<td>Production_CoEDashboard_MMMYYYY.pbit</td>
+<td><a href="power-bi" data-linktype="relative-path">CoE Dashboard Power BI</a> template file. Required during <a href="setup-powerbi" data-linktype="relative-path">configuration of the Power BI dashboard</a>.</td>
+</tr>
+<tr>
+<td>Pulse_CoEDashboard.pbit</td>
+<td><a href="nurture-components#pulse-survey-components" data-linktype="relative-path">Pulse survey Power BI</a> template file. Required during <a href="setup-nurture-components#set-up-pulse-feedback-survey" data-linktype="relative-path">configuration of Pulse survey</a> components.</td>
+</tr>
+<tr>
+<td>Sample-task-data.xlsx</td>
+<td>Provides a set of tasks for the <a href="admin-tasks-component" data-linktype="relative-path">Power Platform admin task planner components app</a>. Required during <a href="setup-admin-tasks-component" data-linktype="relative-path">configuration of the Power Platform admin planning component</a>.</td>
+</tr>
+<tr>
+<td>ToolIcons.zip</td>
+<td>Provides a set of starter icons for the <a href="innovationbacklog-components" data-linktype="relative-path">Innovation Backlog</a>. Required during <a href="setup-innovationbacklog" data-linktype="relative-path">configuration of the Innovation Backlog</a>.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="whats-next-after-installing-the-coe-starter-kit">What's next after installing the CoE Starter Kit?</h2>
+<div class="IMPORTANT">
+<p>Important</p>
+<p>We recommend upgrading the CoE Starter Kit solution at least <strong>every three months</strong>. With the fast pace of change for Power Platform, leaving updates longer than three months can result in unexpected issues with your next update.</p>
+</div>
+<p>If you already installed the CoE Starter Kit, check instructions to:</p>
+<ul>
+<li><a href="after-setup" data-linktype="relative-path">Update the CoE Starter Kit</a> with a new release.</li>
+<li><a href="modify-components" data-linktype="relative-path">Extend and customize CoE Starter Kit components</a>.</li>
+</ul>
+<h2 id="next-step">Next step</h2>
+<div class="nextstepaction">
+<p><a href="setup-core-components" data-linktype="relative-path">Set up inventory components</a></p>
+</div>
+</div>
+					
+		<div
+			id="ms--inline-notifications"
+			class="margin-block-xs"
+			data-bi-name="inline-notification"
+		></div>
+	 
+		<div
+			id="assertive-live-region"
+			role="alert"
+			aria-live="assertive"
+			class="visually-hidden"
+			aria-relevant="additions"
+			aria-atomic="true"
+		></div>
+		<div
+			id="polite-live-region"
+			role="status"
+			aria-live="polite"
+			class="visually-hidden"
+			aria-relevant="additions"
+			aria-atomic="true"
+		></div>
+	
+					
+		<!-- feedback section -->
+		<section
+			id="site-user-feedback-footer"
+			class="font-size-sm margin-top-md display-none-print display-none-desktop"
+			data-test-id="site-user-feedback-footer"
+			data-bi-name="site-feedback-section"
+		>
+			<hr class="hr" />
+			<h2 id="ms--feedback" class="title is-3">Feedback</h2>
+			<div class="display-flex flex-wrap-wrap align-items-center">
+				<p class="font-weight-semibold margin-xxs margin-left-none">
+					Was this page helpful?
+				</p>
+				<div class="buttons">
+					<button
+						class="thumb-rating-button like button button-primary button-sm"
+						data-test-id="footer-rating-yes"
+						data-binary-rating-response="rating-yes"
+						type="button"
+						title="This article is helpful"
+						data-bi-name="button-rating-yes"
+						aria-pressed="false"
+					>
+						<span class="icon" aria-hidden="true">
+							<span class="docon docon-like"></span>
+						</span>
+						<span>Yes</span>
+					</button>
+					<button
+						class="thumb-rating-button dislike button button-primary button-sm"
+						id="standard-rating-no-button"
+						hidden
+						data-test-id="footer-rating-no"
+						data-binary-rating-response="rating-no"
+						type="button"
+						title="This article is not helpful"
+						data-bi-name="button-rating-no"
+						aria-pressed="false"
+					>
+						<span class="icon" aria-hidden="true">
+							<span class="docon docon-dislike"></span>
+						</span>
+						<span>No</span>
+					</button>
+					<details
+						class="popover popover-top"
+						id="mobile-help-popover"
+						data-test-id="footer-feedback-popover"
+					>
+						<summary
+							class="thumb-rating-button dislike button button-primary button-sm"
+							data-test-id="details-footer-rating-no"
+							data-binary-rating-response="rating-no"
+							title="This article is not helpful"
+							data-bi-name="button-rating-no"
+							aria-pressed="false"
+							data-bi-an="feedback-unhelpful-popover"
+						>
+							<span class="icon" aria-hidden="true">
+								<span class="docon docon-dislike"></span>
+							</span>
+							<span>No</span>
+						</summary>
+						<div
+							class="popover-content width-200 width-300-tablet"
+							role="dialog"
+							aria-labelledby="popover-heading"
+							aria-describedby="popover-description"
+						>
+							<p id="popover-heading" class="font-size-lg margin-bottom-xxs font-weight-semibold">
+								Need help with this topic?
+							</p>
+							<p id="popover-description" class="font-size-sm margin-bottom-xs">
+								Want to try using Ask Learn to clarify or guide you through this topic?
+							</p>
+							
+		<div class="buttons flex-direction-row flex-wrap justify-content-center gap-xxs">
+			<div>
+		<button
+			class="button button-sm border inner-focus display-none margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-test-id="ask-learn-assistant-modal-entry-mobile-feedback"
+			data-ask-learn-modal-entry-feedback
+			data-bi-an=feedback-unhelpful-popover
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-label="Ask Learn"
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+		</button>
+		<button
+			class="button button-sm display-inline-flex display-none-desktop flex-shrink-0 margin-right-xxs border-color-ask-learn margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-bi-an=feedback-unhelpful-popover
+			data-test-id="ask-learn-assistant-modal-entry-tablet-feedback"
+			data-ask-learn-modal-entry-feedback
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+		<button
+			class="button button-sm display-none flex-shrink-0 display-inline-flex-desktop margin-right-xxs border-color-ask-learn margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-bi-an=feedback-unhelpful-popover
+			data-test-id="ask-learn-assistant-flyout-entry-feedback"
+			data-ask-learn-flyout-entry-show-only
+			data-flyout-button="toggle"
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-controls="ask-learn-flyout"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+	</div>
+			<button
+				type="button"
+				class="button button-sm margin-right-xxs"
+				data-help-option="suggest-fix"
+				data-bi-name="feedback-suggest"
+				data-bi-an="feedback-unhelpful-popover"
+				data-test-id="suggest-fix"
+			>
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-feedback"></span>
+				</span>
+				<span> Suggest a fix? </span>
+			</button>
+		</div>
+	
+						</div>
+					</details>
+				</div>
+			</div>
+		</section>
+		<!-- end feedback section -->
+	
+				</div>
+				
+		<div id="ms--additional-resources-mobile" class="display-none-print">
+			<hr class="hr" hidden />
+			<h2 id="ms--additional-resources-mobile-heading" class="title is-3" hidden>
+				Additional resources
+			</h2>
+			
+		<section
+			id="right-rail-recommendations-mobile"
+			class=""
+			data-bi-name="recommendations"
+			hidden
+		></section>
+	 
+		<section
+			id="right-rail-training-mobile"
+			class=""
+			data-bi-name="learning-resource-card"
+			hidden
+		></section>
+	 
+		<section
+			id="right-rail-events-mobile"
+			class=""
+			data-bi-name="events-card"
+			hidden
+		></section>
+	
+		</div>
+	 
+		<div
+			id="article-metadata-footer"
+			data-bi-name="article-metadata-footer"
+			data-test-id="article-metadata-footer"
+			class="page-metadata-container"
+		>
+			<hr class="hr" />
+			<ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
+				<li class="visibility-hidden-visual-diff">
+			<span class="badge badge-sm text-wrap-pretty">
+				<span>Last updated on <local-time format="twoDigitNumeric"
+		datetime="2026-04-20T08:00:00.000Z"
+		data-article-date-source="calculated"
+		class="is-invisible"
+	>
+		2026-04-20
+	</local-time></span>
+			</span>
+		</li>
+			</ul>
+		</div>
+	
+			</div>
+		
+				</main>
+				<aside
+					id="layout-body-aside"
+					class="layout-body-aside  "
+					data-bi-name="aside"
+					aria-label="Additional resources"
+			  >
+					
+		<div
+			id="ms--additional-resources"
+			class="right-container padding-sm display-none display-block-desktop height-full"
+			data-bi-name="pageactions"
+		>
+			<div id="affixed-right-container" data-bi-name="right-column">
+				
+		<nav
+			id="side-doc-outline"
+			class="doc-outline border-bottom padding-bottom-xs margin-bottom-xs scrollbar-width-thin"
+			data-bi-name="intopic toc"
+			aria-label="In this article"
+		>
+			<h3>In this article</h3>
+		</nav>
+	
+				<!-- Feedback -->
+				
+		<section
+			id="ms--site-user-feedback-right-rail"
+			class="font-size-sm display-none-print"
+			data-test-id="site-user-feedback-right-rail"
+			data-bi-name="site-feedback-right-rail"
+		>
+			<div class="display-flex flex-wrap-wrap align-items-center">
+				<p class="font-weight-semibold margin-xxs margin-left-none">
+					Was this page helpful?
+				</p>
+				<div class="display-flex flex-wrap-nowrap">
+					<button
+						class="thumb-rating-button like inner-focus"
+						data-test-id="right-rail-rating-yes"
+						data-binary-rating-response="rating-yes"
+						type="button"
+						title="This article is helpful"
+						aria-label="This article is helpful"
+						data-bi-name="button-rating-yes"
+						aria-pressed="false"
+					>
+						<span class="icon" aria-hidden="true">
+							<span class="docon docon-like"></span>
+						</span>
+					</button>
+					<button
+						class="thumb-rating-button dislike inner-focus"
+						id="right-rail-no-button"
+						hidden
+						data-test-id="right-rail-rating-no"
+						data-binary-rating-response="rating-no"
+						type="button"
+						title="This article is not helpful"
+						aria-label="This article is not helpful"
+						data-bi-name="button-rating-no"
+						aria-pressed="false"
+					>
+						<span class="icon" aria-hidden="true">
+							<span class="docon docon-dislike"></span>
+						</span>
+					</button>
+					<details class="popover popover-right" id="help-popover" data-test-id="feedback-popover">
+						<summary
+							tabindex="0"
+							class="thumb-rating-button dislike inner-focus"
+							data-test-id="details-right-rail-rating-no"
+							data-binary-rating-response="rating-no"
+							title="This article is not helpful"
+							aria-label="This article is not helpful"
+							data-bi-name="button-rating-no"
+							aria-pressed="false"
+							data-bi-an="feedback-unhelpful-popover"
+						>
+							<span class="icon" aria-hidden="true">
+								<span class="docon docon-dislike"></span>
+							</span>
+						</summary>
+						<div
+							class="popover-content width-200 width-300-tablet"
+							role="dialog"
+							aria-labelledby="popover-heading-right-rail"
+							aria-describedby="popover-description-right-rail"
+						>
+							<p
+								id="popover-heading-right-rail"
+								class="font-size-lg margin-bottom-xxs font-weight-semibold"
+							>
+								Need help with this topic?
+							</p>
+							<p id="popover-description-right-rail" class="font-size-sm margin-bottom-xs">
+								Want to try using Ask Learn to clarify or guide you through this topic?
+							</p>
+							
+		<div class="buttons flex-direction-row flex-wrap justify-content-center gap-xxs">
+			<div>
+		<button
+			class="button button-sm border inner-focus display-none margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-test-id="ask-learn-assistant-modal-entry-mobile-feedback"
+			data-ask-learn-modal-entry-feedback
+			data-bi-an=feedback-unhelpful-popover
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-label="Ask Learn"
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+		</button>
+		<button
+			class="button button-sm display-inline-flex display-none-desktop flex-shrink-0 margin-right-xxs border-color-ask-learn margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-bi-an=feedback-unhelpful-popover
+			data-test-id="ask-learn-assistant-modal-entry-tablet-feedback"
+			data-ask-learn-modal-entry-feedback
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+		<button
+			class="button button-sm display-none flex-shrink-0 display-inline-flex-desktop margin-right-xxs border-color-ask-learn margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-bi-an=feedback-unhelpful-popover
+			data-test-id="ask-learn-assistant-flyout-entry-feedback"
+			data-ask-learn-flyout-entry-show-only
+			data-flyout-button="toggle"
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-controls="ask-learn-flyout"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+	</div>
+			<button
+				type="button"
+				class="button button-sm margin-right-xxs"
+				data-help-option="suggest-fix"
+				data-bi-name="feedback-suggest"
+				data-bi-an="feedback-unhelpful-popover"
+				data-test-id="suggest-fix"
+			>
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-feedback"></span>
+				</span>
+				<span> Suggest a fix? </span>
+			</button>
+		</div>
+	
+						</div>
+					</details>
+				</div>
+			</div>
+		</section>
+	
+			</div>
+		</div>
+	
+			  </aside> <section
+					id="layout-body-flyout"
+					class="layout-body-flyout "
+					data-bi-name="flyout"
+			  >
+					 <div
+	class="height-full border-left background-color-body-medium"
+	id="ask-learn-flyout"
+></div>
+			  </section> <div class="layout-body-footer " data-bi-name="layout-footer">
+		<footer
+			id="footer"
+			data-test-id="footer"
+			data-bi-name="footer"
+			class="footer-layout padding-xs padding-sm-desktop has-default-focus border-top"
+			role="contentinfo"
+		>
+			<div class="display-flex gap-xs flex-wrap-wrap is-full-height padding-right-lg-desktop">
+				
+		<a
+			data-mscc-ic="false"
+			href="#"
+			data-bi-name="select-locale"
+			class="locale-selector-link flex-shrink-0 button button-sm button-clear external-link-indicator"
+			id=""
+			title=""
+			><span class="icon" aria-hidden="true"
+				><span class="docon docon-world"></span></span
+			><span class="local-selector-link-text">en-us</span></a
+		>
+	 <div class="ccpa-privacy-link" data-ccpa-privacy-link hidden>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://aka.ms/yourcaliforniaprivacychoices"
+			data-bi-name="your-privacy-choices"
+			class="button button-sm button-clear flex-shrink-0 external-link-indicator"
+			id=""
+			title=""
+			>
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 30 14"
+			xml:space="preserve"
+			height="16"
+			width="43"
+			aria-hidden="true"
+			focusable="false"
+		>
+			<path
+				d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z"
+				style="fill-rule:evenodd;clip-rule:evenodd;fill:#fff"
+			></path>
+			<path
+				d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z"
+				style="fill-rule:evenodd;clip-rule:evenodd;fill:#06f"
+			></path>
+			<path
+				d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z"
+				style="fill:#fff"
+			></path>
+			<path
+				d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z"
+				style="fill:#06f"
+			></path>
+		</svg>
+	
+			<span>Your Privacy Choices</span></a
+		>
+	
+	</div>
+				<div class="flex-shrink-0">
+		<div class="dropdown has-caret-up">
+			<button
+				data-test-id="theme-selector-button"
+				class="dropdown-trigger button button-clear button-sm inner-focus theme-dropdown-trigger"
+				aria-controls="{{ themeMenuId }}"
+				aria-haspopup="true"
+				aria-expanded="false"
+				data-bi-name="theme"
+			>
+				<span class="icon" aria-hidden="true"><span class="docon docon-sun"></span></span>
+				<span>Theme</span>
+				<span class="icon expanded-indicator" aria-hidden="true">
+					<span class="docon docon-chevron-down-light"></span>
+				</span>
+			</button>
+			<div class="dropdown-menu" id="{{ themeMenuId }}" role="menu">
+				<ul class="theme-selector padding-xxs" data-test-id="theme-dropdown-menu" role="none">
+					<li class="theme display-block" role="none">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							role="menuitemradio"
+							aria-checked="false"
+							data-theme-to="light"
+							tabindex="-1"
+						>
+							<span class="theme-light margin-right-xxs">
+								<span
+									class="theme-selector-icon border display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span> Light </span>
+						</button>
+					</li>
+					<li class="theme display-block" role="none">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							role="menuitemradio"
+							aria-checked="false"
+							data-theme-to="dark"
+							tabindex="-1"
+						>
+							<span class="theme-dark margin-right-xxs">
+								<span
+									class="border theme-selector-icon display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span> Dark </span>
+						</button>
+					</li>
+					<li class="theme display-block" role="none">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							role="menuitemradio"
+							aria-checked="false"
+							data-theme-to="high-contrast"
+							tabindex="-1"
+						>
+							<span class="theme-high-contrast margin-right-xxs">
+								<span
+									class="border theme-selector-icon display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span> High contrast </span>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+			</div>
+			<ul class="links" data-bi-name="footerlinks">
+				<li class="manage-cookies-holder" hidden=""></li>
+				<li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/principles-for-ai-generated-content"
+			data-bi-name="aiDisclaimer"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>AI Disclaimer</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/previous-versions/"
+			data-bi-name="archivelink"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Previous Versions</a
+		>
+	
+	</li> <li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://techcommunity.microsoft.com/t5/microsoft-learn-blog/bg-p/MicrosoftLearnBlog"
+			data-bi-name="bloglink"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Blog</a
+		>
+	
+	</li> <li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/contribute"
+			data-bi-name="contributorGuide"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Contribute</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://go.microsoft.com/fwlink/?LinkId=521839"
+			data-bi-name="privacy"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Privacy</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://go.microsoft.com/fwlink/?linkid=2259814"
+			data-bi-name="consumer-health-privacy"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Consumer Health Privacy</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/legal/termsofuse"
+			data-bi-name="termsofuse"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Terms of Use</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://www.microsoft.com/legal/intellectualproperty/Trademarks/"
+			data-bi-name="trademarks"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Trademarks</a
+		>
+	
+	</li>
+				<li>&copy; Microsoft 2026</li>
+			</ul>
+		</footer>
+	</footer>
+			<noscript><img src="https://learn.microsoft.com/akam/13/pixel_67abb7c0?a=dD0wZDgyMTM3ZjQ4MjcwMzJiNTZjZDg3YzM1OWU5NjRlM2M2NWM0ZDRiJmpzPW9mZg==" style="visibility: hidden; position: absolute; left: -999px; top: -999px;" /></noscript></body>
+		</html>

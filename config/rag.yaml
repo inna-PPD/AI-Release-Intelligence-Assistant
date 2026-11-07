@@ -1,0 +1,18 @@
+# Налаштування RAG (кейс 2). Моделі для генерації відповідей — у config/models.yaml.
+
+corpus:
+  sources: data/corpus/sources.json      # метадані документів (download_corpus.py + generate_contoso_docs.py)
+  processed_dir: data/processed           # chunks.jsonl, chunks_fixed.jsonl, manifest.json, chunking_comparison.md
+
+chunking:
+  strategy: structure     # основна стратегія; fixed — лише для порівняння
+  max_tokens: 300         # ліміт чанка (o200k_base); див. README — обґрунтування
+  min_tokens: 60          # дрібніші сусідні розділи об'єднуються
+  fixed:
+    size: 300
+    overlap: 50
+  comparison_docs:        # документи для ручного порівняння стратегій у chunking_comparison.md
+    - learn-cli-solution
+    - coe-release-february2026
+    - contoso-regression-test-plan-1.5
+    - contoso-install-guide-1.5

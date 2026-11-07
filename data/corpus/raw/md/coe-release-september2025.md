@@ -1,0 +1,101 @@
+## First Time Setup Instructions
+- Get started with the CoE Starter Kit Setup: https://docs.microsoft.com/en-us/power-platform/guidance/coe/setup
+
+## Upgrade Instructions
+- Ensure that the [Power Apps component framework feature](https://learn.microsoft.com/en-us/power-apps/developer/component-framework/component-framework-for-canvas-apps#enable-the-power-apps-component-framework-feature) is enabled on the environment before you upgrade.
+- Upgrading from the latest version of the CoE Starter Kit: https://docs.microsoft.com/power-platform/guidance/coe/after-setup
+
+## Customizing the CoE Starter Kit
+- Best practices on customizing and extending the CoE Starter Kit: https://docs.microsoft.com/en-us/power-platform/guidance/coe/modify-components
+
+## Change Log
+### 🐛 CoE Starter Kit - *BUGS* (87)
+  - #5996-[CoE Starter Kit - BUG] Parse Flow JSON issue with SYNC HELPER - Cloud Flows
+  - #6321-[CoE Starter Kit - BUG] Shimmer control stays visible when dialog is closed - Initial Setup - Setup and Upgrade Wizard
+  - #6569-[CoE Starter Kit - BUG] Azure Resource Manager connector and GCC
+  - #7469-[CoE Starter Kit - BUG] Env Request | Cleanup flow
+  - #8006-CoE is showing over 5,000 apps as deleted but when checking the environments they're still there. 
+  - #9243-[CoE Starter Kit - BUG] After Clearing all errors, apps are not being reflected properly in PowerBI
+  - #9434-Get Power Apps Shared with data
+  - #9458-[CoE Starter Kit - BUG] Solution Components Table is not available in core components
+  - #9459-[CoE Starter Kit - BUG] Audit Log Setup - Application Registration
+  - #9462-[CoE Starter Kit - BUG] Admin | Gather Tenant SRs - Errors in the flow
+  - #9470-[CoE Starter Kit - BUG] Admin | Inactivity notifications v2 (Clean Up and Delete) Flow fails
+  - #9471-[CoE Starter Kit - BUG] CoE not getting new data
+  - #9472-[CoE Starter Kit - BUG] ISSUE TITLE Audit Logs not populating
+  - #9474-[CoE Starter Kit - BUG] Unable to turn on driver flow
+  - #9477-M365 Group (Assigned) is not allowing to communicate or grant access to environment and Role to be assigned
+  - #9493-[CoE Starter Kit - BUG] Power BI Dashboard showing wrong numbers
+  - #9498-[CoE Starter Kit - BUG] I found that active flows are being marked as deleted in CoE
+  - #9500-[CoE Starter Kit - BUG] Set App permission and Set Flow Permission Apps are missing
+  - #9516-[CoE Starter Kit - BUG] Admin | Sync Template v4 (Driver) flow is failing
+  - #9523-[CoE Starter Kit - BUG] CLEANUP - Admin | Sync Template v3 (Check Deleted)
+  - #9535-[CoE Starter Kit - BUG] Updating CoE Starter Kit Failed with connectionreference(1ac96c28-e3f0-4348-8fc2-09e113d1c1be) component cannot be deleted because it is referenced by 17 other components
+  - #9542-[CoE Starter Kit - BUG] SYNC HELPER - Cloud Flows failing after update
+  - #9544-[CoE Starter Kit - BUG] Cannot find Environment maker security role users
+  - #9546-[CoE Starter Kit - BUG] Pagination Missing in Manage Permissions App
+  - #9551-[CoE Starter Kit - BUG] Business Area data not reflecting correctly
+  - #9560-[CoE Starter Kit - BUG] On DLP creation request, no email received by Admin
+  - #9561-[CoE Starter Kit - BUG] Configured Shared Policies Tab on CoE Admin Environment Request App does not launch 'Edit Policies in Admin Center'
+  - #9564-[CoE Starter Kit - BUG]Copy Policy not working on DLP Impact Analysis App- throwing an error
+  - #9568-[CoE Starter Kit - BUG Can't import solution into an Environment in Swedish region
+  - #9715-[CoE Starter Kit - BUG] User is repeatedly asked to republish the same canvas app.
+  - #9970-[CoE Starter Kit - BUG] : HELPER - Driver Escalation Check flow failing
+  - #10016-[CoE Starter Kit - BUG] Copilot Environment. Sync Template v4 (Driver) Flow failures
+  - #10029-[CoE Starter Kit - BUG] Core Components - Some Flows Will Not "Turn On"
+  - #10031-[CoE Starter Kit - BUG] Bug when upgrading from CoE 4.16 to 4.33, need to upgrade to June'25 directly?
+  - #10050-[CoE Starter Kit - BUG] Power BI Dashboards Upgrade not working
+  - #10064-[CoE Starter Kit - BUG] Unable to Select Configured Connections
+  - #10070-[CoE Starter Kit - BUG] Get Custom connector as admin failed
+  - #10073-[CoE Starter Kit - BUG] Admin | Sync Template v4 (Portals) bug
+  - #10085-[CoE Starter Kit - BUG] SYNC HELPER - Apps can't find App for Custom Pages
+  - #10092-Unable to get users shared with and unique users data for Powerapps and Flows
+  - #10097-**Admin | Add Maker to Group flow failed with insufficient privileges**
+  - #10108-[CoE Starter Kit - BUG] App latest launch data is not refreshing.
+  - #10110-[CoE Starter Kit - BUG]  - Some bots are appearing as 'Published', although I have not published them in my environment.
+  - #10111-[CoE Starter Kit - BUG] HELPER - CanvasAppOperations: action "Set App Owner" fails
+  - #10116-[CoE Starter Kit - BUG] ISSUE TITLE
+  - #10118-[CoE Starter Kit - BUG] Graph Audit Log Query Error in GCC High Environment
+  - #10122-[CoE Starter Kit - BUG] Power Bi report Power Platform Compliance and Governance
+  - #10123-[CoE Starter Kit - BUG] ISSUE TITLE
+  - #10125-[CoE Starter Kit - BUG] Power Platform Administration Planning Dashboard
+  - #10127-[CoE Starter Kit - BUG] AI metadata not populating in Admin View
+  - #10130-[CoE Starter Kit - BUG] DLP Impact Analysis Tool shows incorrect cached results across multiple tenants
+  - #10131-[CoE Starter Kit - BUG] ISSUE TITLE
+  - #10132-[CoE Starter Kit - BUG] - Permissions, turn off and delete flow dialogs empty
+  - #10133-[CoE Starter Kit - BUG] Cannot get Audit (Usage) Flows to work - NEED HELP
+  - #10136-[CoE Starter Kit - BUG] Request Orphaned Objects Reassigned Child Always Returns Success to Parent
+  - #10137-[CoE Starter Kit - BUG] ISSUE TITLE - Flow Last Run On Field is unavailable in the Power Bi DashBoards of CoE Solution
+  - #10146-[CoE Starter Kit - BUG] ISSUE TITLE - App Last Launched On is empty and Flow Last Run On is empty
+  - #10147-[CoE Starter Kit v4.5 - BUG] - the "Admin | Sync Template v4 (Driver)" solution flow is not completing Inventory for CareFirst BCBS
+  - #10148-[CoE Starter Kit - BUG] Admin | Inactivity notifications v2 (Clean Up and Delete) won't turn on
+  - #10149-[CoE Starter Kit - BUG] Admin | Sync Template v4 (Portals) - Resource not found for the segment 'adx_entitylists'
+  - #10150-[CoE Starter Kit - BUG] Admin | Sync Template v4 (PVA) - Entity 'admin_PVAComponentFlowLookup' With Id = 133a4e7a-7eb8-ef11-b8e8-6045bd8ae3eb Does Not Exist
+  - #10155-[CoE Starter Kit - BUG] ISSUE TITLE
+  - #10156-[CoE Starter Kit - BUG] Env Request | Create Approved Environments - Missing properties at Parse JSON step
+  - #10158-[CoE Starter Kit - BUG] Solution "Center of Excellence - Core Components" failed to import: ImportAsHolding failed with exception :The SavedQuery
+  - #10162-[CoE Starter Kit - BUG] ISSUE TITLE
+  - #10163-[CoE Starter Kit - BUG] - Env Request | Create Approved Environment failing due to new action added on update
+  - #10164-[CoE Starter Kit - Flow Pending Suspension information not populating
+  - #10167-[CoE Starter Kit - BUG] ISSUE TITLE
+  - #10168-[CoE Starter Kit - BUG] Unable to create environment using Environment Creation Request
+  - #10169-[CoE Starter Kit - BUG] COE inventory count is not updating
+  - #10172-[CoE Starter Kit - BUG] Admin | Sync Template v3 (Flow Action Details)
+  - #10174-[CoE Starter Kit - BUG] Pipeline PreDeployment Approvals
+  - #10175-[CoE Starter Kit - BUG] ISSUE TITLE
+  - #10177-[CoE Starter Kit - BUG] Data Policy Impact Analysis app not working
+  - #10178-[CoE Starter Kit - BUG] UI issues with App Catalog
+  - #10180-[CoE Starter Kit - BUG] ISSUE TITLE
+  - #10182-[CoE Starter Kit - BUG] ISSUE TITLE
+  - #10183-[CoE Starter Kit - BUG] Active MDA App is not displaying in Power Platform Admin View
+  - #10184-[CoE Starter Kit - BUG] Power BI Dashboard Sync Issue
+  - #10185-[CoE Starter Kit - BUG] Display Issue and Missing Buttons in CoE Maker Command Center and CoE Admin Environment Request apps.
+  - #10190-[CoE Starter Kit - BUG] DataFlow PowerPlatformAdminAnalytics-DF-Jan2024 fails with error "The evaluation reached the allowed cache entry size limit. Try increasing the allowed cache size"
+  - #10195-[CoE Starter Kit - BUG] CLEANUP HELPER - Solution Objects
+  - #10197-[CoE Starter Kit - BUG] ISSUE TITLE
+  - #10198-[CoE Starter Kit - BUG] ISSUE TITLE the Sync Audit Logs (V2) Flow
+  - #10202-[CoE Starter Kit - BUG] CLEANUP HELPER - Cloud Flow User Shared With
+  - #10207-[CoE Starter Kit - BUG] PowerBI COE Dashboard - Manage Flow Access - Environments drop down does not list all environments
+  - #10220-[CoE Starter Kit - BUG] In Power Plat form Admin View not seeing any app data
+### 🎉 CoE Starter Kit - *FEATURES* (1)
+  - #9861-[CoE Starter Kit - Feature]: Capture IsAuditingEnabled in Environment Table

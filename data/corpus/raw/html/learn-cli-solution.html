@@ -1,0 +1,2244 @@
+ <!DOCTYPE html>
+		<html
+			class="layout layout-holy-grail   show-table-of-contents conceptual show-breadcrumb default-focus"
+			lang="en-us"
+			dir="ltr"
+			data-authenticated="false"
+			data-auth-status-determined="false"
+			data-target="docs"
+			x-ms-format-detection="none"
+		>
+			
+		<head>
+			<title>Microsoft Power Platform CLI solution command group - Power Platform | Microsoft Learn</title>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<meta name="color-scheme" content="light dark" />
+
+			<meta name="description" content="Describes commands and parameters for the Microsoft Power Platform CLI solution command group." />
+			<link rel="canonical" href="https://learn.microsoft.com/en-us/power-platform/developer/cli/reference/solution" /> 
+
+			<!-- Non-customizable open graph and sharing-related metadata -->
+			<meta name="twitter:card" content="summary_large_image" />
+			<meta name="twitter:site" content="@MicrosoftLearn" />
+			<meta property="og:type" content="website" />
+			<meta property="og:image:alt" content="Microsoft Learn" />
+			<meta property="og:image" content="https://learn.microsoft.com/en-us/media/open-graph-image.png" />
+			<!-- Page specific open graph and sharing-related metadata -->
+			<meta property="og:title" content="Microsoft Power Platform CLI solution command group - Power Platform" />
+			<meta property="og:url" content="https://learn.microsoft.com/en-us/power-platform/developer/cli/reference/solution" />
+			<meta property="og:description" content="Describes commands and parameters for the Microsoft Power Platform CLI solution command group." />
+			<meta name="platform_id" content="147e5f8c-e8b3-6655-335a-c13315f88a47" /> <meta name="scope" content="Power Platform" />
+			<meta name="locale" content="en-us" />
+			 
+			<meta name="uhfHeaderId" content="MSDocsHeader-PowerPlatform" />
+
+			<meta name="page_type" content="conceptual" />
+
+			<!--page specific meta tags-->
+			
+
+			<!-- custom meta tags -->
+			
+		<meta name="breadcrumb_path" content="/power-platform/breadcrumb/toc.json" />
+	
+		<meta name="feedback_system" content="Standard" />
+	
+		<meta name="feedback_product_url" content="https://powerusers.microsoft.com/" />
+	
+		<meta name="recommendations" content="true" />
+	
+		<meta name="ms.service" content="power-platform" />
+	
+		<meta name="ms.date" content="2026-10-25T00:00:00Z" />
+	
+		<meta name="ms.subservice" content="developer" />
+	
+		<meta name="search.app" content="powerapps-docs" />
+	
+		<meta name="search.app" content="powerautomate-docs" />
+	
+		<meta name="search.app" content="dataverse-docs" />
+	
+		<meta name="search.app" content="powerpages-docs" />
+	
+		<meta name="search.app" content="powervirtualagents-docs" />
+	
+		<meta name="keywords" content="pac cli" />
+	
+		<meta name="author" content="laneswenka" />
+	
+		<meta name="ms.author" content="laswenka" />
+	
+		<meta name="ms.reviewer" content="jdaly" />
+	
+		<meta name="ms.topic" content="generated-reference" />
+	
+		<meta name="contributors" content="JimDaly" />
+	
+		<meta name="document_id" content="2467fc85-fead-2535-8903-833720f296c4" />
+	
+		<meta name="document_version_independent_id" content="2467fc85-fead-2535-8903-833720f296c4" />
+	
+		<meta name="updated_at" content="2026-04-02T19:05:00Z" />
+	
+		<meta name="original_content_git_url" content="https://github.com/MicrosoftDocs/power-platform-pr/blob/live/power-platform/developer/cli/reference/solution.md" />
+	
+		<meta name="gitcommit" content="https://github.com/MicrosoftDocs/power-platform-pr/blob/d6bad44d701a0f8245a42b3fd8428fb19146e446/power-platform/developer/cli/reference/solution.md" />
+	
+		<meta name="git_commit_id" content="d6bad44d701a0f8245a42b3fd8428fb19146e446" />
+	
+		<meta name="site_name" content="Docs" />
+	
+		<meta name="depot_name" content="MSDN.power-platform" />
+	
+		<meta name="schema" content="Conceptual" />
+	
+		<meta name="toc_rel" content="../../toc.json" />
+	
+		<meta name="pdf_url_template" content="https://learn.microsoft.com/pdfstore/en-us/MSDN.power-platform/{branchName}{pdfName}" />
+	
+		<meta name="feedback_help_link_type" content="" />
+	
+		<meta name="feedback_help_link_url" content="" />
+	
+		<meta name="word_count" content="4118" />
+	
+		<meta name="asset_id" content="developer/cli/reference/solution" />
+	
+		<meta name="moniker_range_name" content="" />
+	
+		<meta name="item_type" content="Content" />
+	
+		<meta name="source_path" content="power-platform/developer/cli/reference/solution.md" />
+	
+		<meta name="previous_tlsh_hash" content="425E92C251BDCA11EF954E4AA556A38451F09985A5B15E4C12291A6186CFFE3B47F5CCEAEF1167885372400303D0661CEFD1BB3EC1AC72AB225F5C58C6883053EB8D3EF6EB" />
+	
+		<meta name="github_feedback_content_git_url" content="https://github.com/MicrosoftDocs/power-platform/blob/main/power-platform/developer/cli/reference/solution.md" />
+	
+		<meta name="markdown_url" content="https://learn.microsoft.com/en-us/power-platform/developer/cli/reference/solution?accept=text/markdown" />
+	 
+		<meta name="cmProducts" content="https://microsoft-devrel.poolparty.biz/DevRelOfferingOntology/0ceb3227-2ff7-4d97-8e75-3d7b9ccc937a" data-source="generated" />
+	
+		<meta name="cmProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/64b65f6c-101f-411a-9b83-9f577fab52d0" data-source="generated" />
+	
+		<meta name="spProducts" content="https://microsoft-devrel.poolparty.biz/DevRelOfferingOntology/4d680e1a-c470-4772-a236-5c714bd09be0" data-source="generated" />
+	
+		<meta name="spProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/1a667fd1-8145-4b11-af0f-9f5de205a6e5" data-source="generated" />
+	
+
+			<!-- Apply persisted/system theme before first paint to prevent wrong-theme flash when scripts are deferred. -->
+			<script id="theme-preference">
+				(function () {
+			try {
+				var stored = localStorage.getItem('theme');
+				var theme = /^(light|dark|high-contrast)$/.test(stored)
+					? stored
+					: matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+				document.documentElement.classList.add('theme-' + theme);
+			} catch (e) {}
+		})();;
+			</script>
+
+			<script id="atlas-layout-preferences">
+				(function () {
+			try {
+				var state = JSON.parse(localStorage.getItem('atlas-layout-preferences') || '{}');
+				var view = state["docs-layout-persistence"] || {};
+				var excludesKey = "";
+				var blocked = {};
+				if (excludesKey) {
+					var exclusions = JSON.parse(localStorage.getItem('atlas-layout-exclusions') || '{}');
+					if (Object.prototype.hasOwnProperty.call(exclusions, excludesKey)) {
+						var scoped = exclusions[excludesKey];
+						if (scoped) {
+							if (typeof scoped === 'object') blocked = scoped;
+						}
+					}
+				}
+				var html = document.documentElement;
+				for (var c in view) {
+					if (Object.prototype.hasOwnProperty.call(blocked, c)) continue;
+					if (view[c]) html.classList.add(c);
+					else html.classList.remove(c);
+				}
+			} catch (e) {}
+		})();;
+			</script>
+
+			<!-- assets and js globals -->
+			
+			<link rel="stylesheet" href="/static/assets/0.4.03595.8353-c1321031/styles/site.css" />
+			
+			<script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+			<!-- Keep this URL in sync with oneDSScriptSelector in instrumentation/one-ds.ts. -->
+			<script async src="https://js.monitor.azure.com/scripts/c/ms.jsll-4.min.js"></script>
+			
+
+			<!-- msdocs global object -->
+			<script id="msdocs-script">
+		var msDocs = {
+  "environment": {
+    "accessLevel": "online",
+    "azurePortalHostname": "portal.azure.com",
+    "reviewFeatures": false,
+    "supportLevel": "production",
+    "systemContent": true,
+    "siteName": "learn",
+    "legacyHosting": false
+  },
+  "data": {
+    "contentLocale": "en-us",
+    "contentDir": "ltr",
+    "userLocale": "en-us",
+    "userDir": "ltr",
+    "pageTemplate": "Conceptual",
+    "layoutStateStorageKey": "docs-layout-persistence",
+    "brand": "",
+    "context": {},
+    "standardFeedback": true,
+    "showFeedbackReport": false,
+    "feedbackHelpLinkType": "",
+    "feedbackHelpLinkUrl": "",
+    "feedbackSystem": "Standard",
+    "feedbackGitHubRepo": "",
+    "feedbackProductUrl": "https://powerusers.microsoft.com/",
+    "extendBreadcrumb": false,
+    "isEditDisplayable": true,
+    "isPrivateUnauthorized": false,
+    "hideViewSource": false,
+    "isPermissioned": false,
+    "hasRecommendations": true
+  },
+  "functions": {}
+};;
+	</script>
+
+			<!-- base scripts, msdocs global should be before this -->
+			<script
+				src="/static/assets/0.4.03595.8353-c1321031/scripts/en-us/index-docs.js"
+				async
+			></script>
+			
+
+			<!-- json-ld -->
+			
+		<script >bazadebezolkohpepadr="1739306214"</script><script type="text/javascript" src="https://learn.microsoft.com/akam/13/67abb7c0"  defer></script></head>
+	
+			<body
+				id="body"
+				data-bi-name="body"
+				class="layout-body "
+				lang="en-us"
+				dir="ltr"
+			>
+				<header class="layout-body-header background-color-body-medium">
+		<div class="header-holder has-default-focus">
+			
+		<a
+			href="#main"
+			
+			style="z-index: 1070"
+			class="outline-color-text visually-hidden-until-focused position-fixed inner-focus focus-visible top-0 left-0 right-0 padding-xs text-align-center background-color-body"
+			
+		>
+			Skip to main content
+		</a>
+	
+		<a
+			href="#"
+			data-skip-to-ask-learn
+			style="z-index: 1070"
+			class="outline-color-text visually-hidden-until-focused position-fixed inner-focus focus-visible top-0 left-0 right-0 padding-xs text-align-center background-color-body"
+			hidden
+		>
+			Skip to Ask Learn chat experience
+		</a>
+	
+
+			<div hidden id="cookie-consent-holder" data-test-id="cookie-consent-container"></div>
+			<!-- Unsupported browser warning -->
+			<div
+				id="unsupported-browser"
+				style="background-color: white; color: black; padding: 16px; border-bottom: 1px solid grey;"
+				hidden
+			>
+				<div style="max-width: 800px; margin: 0 auto;">
+					<p style="font-size: 24px">This browser is no longer supported.</p>
+					<p style="font-size: 16px; margin-top: 16px;">
+						Upgrade to Microsoft Edge to take advantage of the latest features, security updates, and technical support.
+					</p>
+					<div style="margin-top: 12px;">
+						<a
+							href="https://go.microsoft.com/fwlink/p/?LinkID=2092881 "
+							style="background-color: #0078d4; border: 1px solid #0078d4; color: white; padding: 6px 12px; border-radius: 2px; display: inline-block;"
+						>
+							Download Microsoft Edge
+						</a>
+						<a
+							href="https://learn.microsoft.com/en-us/lifecycle/faq/internet-explorer-microsoft-edge"
+							style="background-color: white; padding: 6px 12px; border: 1px solid #505050; color: #171717; border-radius: 2px; display: inline-block;"
+						>
+							More info about Internet Explorer and Microsoft Edge
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- site header -->
+			<div
+				id="ms--site-header"
+				data-test-id="site-header-wrapper"
+				itemscope="itemscope"
+				itemtype="http://schema.org/Organization"
+			>
+				<div
+					id="ms--mobile-nav"
+					class="site-header display-none-tablet padding-inline-none gap-none"
+					data-bi-name="mobile-header"
+					data-test-id="mobile-header"
+				></div>
+				<div
+					id="ms--primary-nav"
+					class="site-header display-none display-flex-tablet"
+					data-bi-name="L1-header"
+					data-test-id="primary-header"
+				></div>
+				<div
+					id="ms--secondary-nav"
+					class="site-header display-none display-flex-tablet"
+					data-bi-name="L2-header"
+					data-test-id="secondary-header"
+					
+				></div>
+			</div>
+			
+		<!-- banner -->
+		<div data-banner>
+			<div id="disclaimer-holder"></div>
+			
+		</div>
+		<!-- banner end -->
+	
+		</div>
+	</header>
+				 <section
+					id="layout-body-menu"
+					class="layout-body-menu border-right display-flex background-color-body-medium"
+					data-bi-name="menu"
+			  >
+					
+		<div
+			id="left-container"
+			class="left-container display-none padding-none display-block-tablet width-full display-none-until-layout-restored"
+			data-toc-container="true"
+		>
+			<div
+				id="ms--toc-content"
+				class="padding-left-sm padding-right-none padding-bottom-sm height-full"
+			>
+				<nav
+					id="affixed-left-container"
+					class="margin-top-xxs-tablet position-sticky display-flex flex-direction-column width-full"
+					aria-label="Primary"
+					data-bi-name="left-toc"
+					role="navigation"
+				>
+					<div
+						id="ms--collapsible-toc-header"
+						class="display-flex flex-direction-row-reverse justify-content-center align-items-center margin-bottom-xxs margin-right-xxs"
+					>
+						<button
+							type="button"
+							class="button button-clear button-sm inner-focus"
+							data-collapsible-toc-toggle
+							aria-expanded="true"
+							hidden
+							aria-controls="ms--toc-content"
+							aria-label="Table of contents"
+						>
+							<span class="icon icon-mirrored-rtl" aria-hidden="true">
+								<span
+									class="docon docon-panel-left-contract display-none-layout-menu-collapsed"
+								></span>
+								<span
+									class="docon docon-panel-left-expand display-none display-inline-layout-menu-collapsed"
+								></span>
+							</span>
+						</button>
+						<div
+							id="ms--collapsible-toc-moniker-slot"
+							class="flex-grow-1 display-none-layout-menu-collapsed"
+						></div>
+					</div>
+				</nav>
+			</div>
+		</div>
+	
+			  </section>
+
+				<main
+					id="main"
+					role="main"
+					class="layout-body-main "
+					data-bi-name="content"
+					lang="en-us"
+					dir="ltr"
+				>
+					
+			<div
+		id="ms--content-header"
+		class="content-header default-focus border-bottom-none"
+		data-bi-name="content-header"
+	>
+		<div class="content-header-controls margin-xxs margin-inline-sm-tablet">
+			<button
+				type="button"
+				class="contents-button button button-sm margin-right-xxs"
+				data-bi-name="contents-expand"
+				aria-haspopup="true"
+				data-contents-button
+			>
+				<span class="icon" aria-hidden="true"><span class="docon docon-menu"></span></span>
+				<span class="contents-expand-title"> Table of contents </span>
+			</button>
+			<button
+				type="button"
+				class="ap-collapse-behavior ap-expanded button button-sm"
+				data-bi-name="ap-collapse"
+				aria-controls="action-panel"
+			>
+				<span class="icon" aria-hidden="true"><span class="docon docon-exit-mode"></span></span>
+				<span>Exit editor mode</span>
+			</button>
+		</div>
+	</div> 
+		<div
+			id="action-panel"
+			role="region"
+			aria-label="Action Panel"
+			class="action-panel"
+			tabindex="-1"
+		></div>
+	
+			<div
+				data-main-column
+				class="reading-width margin-inline-auto layout-padding padding-top-none padding-top-sm-tablet padding-bottom-sm"
+			>
+				<div>
+					
+		<div id="article-header" class="background-color-body margin-bottom-xs display-none-print">
+			<div class="display-flex align-items-center justify-content-space-between">
+				
+		<details
+			id="article-header-breadcrumbs-overflow-popover"
+			class="popover popover-left"
+			data-for="article-header-breadcrumbs"
+		>
+			<summary
+				class="button button-clear button-primary button-sm inner-focus"
+				aria-label="All breadcrumbs"
+			>
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-more"></span>
+				</span>
+			</summary>
+			<div id="article-header-breadcrumbs-overflow" class="popover-content"></div>
+		</details>
+
+		<bread-crumbs
+			id="article-header-breadcrumbs"
+			role="group"
+			aria-label="Breadcrumbs"
+			data-test-id="article-header-breadcrumbs"
+			class="overflow-hidden flex-grow-1 margin-right-sm margin-right-md-tablet margin-right-lg-desktop margin-left-negative-xxs padding-left-xxs"
+		></bread-crumbs>
+	 
+		<div
+			id="article-header-page-actions"
+			class="opacity-none margin-left-auto display-flex flex-wrap-no-wrap align-items-stretch"
+		>
+			
+		<button
+			class="button button-sm border-none inner-focus display-none-tablet flex-shrink-0 "
+			data-bi-name="ask-learn-assistant-entry"
+			data-test-id="ask-learn-assistant-modal-entry-mobile"
+			data-ask-learn-modal-entry
+			
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-label="Ask Learn"
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+		</button>
+		<button
+			class="button button-sm display-none display-inline-flex-tablet display-none-desktop flex-shrink-0 margin-right-xxs border-color-ask-learn "
+			data-bi-name="ask-learn-assistant-entry"
+			
+			data-test-id="ask-learn-assistant-modal-entry-tablet"
+			data-ask-learn-modal-entry
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+		<button
+			class="button button-sm display-none flex-shrink-0 display-inline-flex-desktop margin-right-xxs border-color-ask-learn "
+			data-bi-name="ask-learn-assistant-entry"
+			
+			data-test-id="ask-learn-assistant-flyout-entry"
+			data-ask-learn-flyout-entry
+			data-flyout-button="toggle"
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-controls="ask-learn-flyout"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+	 
+
+			<details class="popover popover-right" id="article-header-page-actions-overflow">
+				<summary
+					class="justify-content-flex-start button button-clear button-sm button-primary inner-focus"
+					aria-label="More actions"
+					aria-expanded="false"
+					title="More actions"
+				>
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-more-vertical"></span>
+					</span>
+				</summary>
+				<div class="popover-content">
+					
+		<button
+			type="button"
+			id="ms--focus-mode-button"
+			data-focus-mode
+			data-bi-name="focus-mode-entry"
+			data-page-action-item="overflow-all"
+			data-popover-close
+			class="button button-clear button-sm button-block justify-content-flex-start text-align-left inner-focus display-none display-inline-flex-tablet"
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-glasses"></span>
+			</span>
+			<span>Reading mode</span>
+		</button>
+	 
+		<button
+			data-page-action-item="overflow-mobile"
+			type="button"
+			class="display-block-layout-menu-collapsed button-block button-sm inner-focus button button-clear display-none-tablet justify-content-flex-start text-align-left"
+			data-bi-name="contents-expand"
+			data-contents-button
+			data-popover-close
+		>
+			<span class="icon" aria-hidden="true"
+				><span class="docon docon-editor-list-bullet"></span
+			></span>
+			<span class="contents-expand-title">Table of contents</span>
+		</button>
+	 
+		<a
+			id="lang-link-overflow"
+			class="button-sm inner-focus button button-clear button-block justify-content-flex-start text-align-left"
+			data-bi-name="language-toggle"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-read-in-link
+			href="#"
+			hidden
+		>
+			<span class="icon" aria-hidden="true" data-read-in-link-icon>
+				<span class="docon docon-locale-globe"></span>
+			</span>
+			<span data-read-in-link-text>Read in English</span>
+		</a>
+	
+					
+		<button
+			type="button"
+			class="collection button button-clear button-sm button-block justify-content-flex-start text-align-left inner-focus"
+			data-list-type="collection"
+			data-bi-name="collection"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-popover-close
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-circle-addition"></span>
+			</span>
+			<span class="collection-status">Add</span>
+		</button>
+	 
+		<button
+			type="button"
+			class="collection button button-block button-clear button-sm justify-content-flex-start text-align-left inner-focus"
+			data-list-type="plan"
+			data-bi-name="plan"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			data-popover-close
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-circle-addition"></span>
+			</span>
+			<span class="plan-status">Add to Plans</span>
+		</button>
+	 
+					
+		<a
+			data-contenteditbtn
+			class="button button-clear button-block button-sm inner-focus justify-content-flex-start text-align-left text-decoration-none"
+			data-bi-name="edit"
+			data-page-action-item="overflow-all"
+			data-check-hidden="true"
+			
+			href="https://github.com/MicrosoftDocs/power-platform/blob/main/power-platform/developer/cli/reference/solution.md"
+			data-original_content_git_url="https://github.com/MicrosoftDocs/power-platform-pr/blob/live/power-platform/developer/cli/reference/solution.md"
+			data-original_content_git_url_template="{repo}/blob/{branch}/power-platform/developer/cli/reference/solution.md"
+			data-pr_repo=""
+			data-pr_branch=""
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-edit-outline"></span>
+			</span>
+			<span>Edit</span>
+		</a>
+	  
+		<hr class="margin-block-xxs" />
+		
+				<button
+					class="button button-block button-clear button-sm justify-content-flex-start text-align-left inner-focus"
+					type="button"
+					data-bi-name="copy-markdown"
+					data-page-action-item="overflow-all"
+					data-copy-markdown
+					data-copy-state="idle"
+					data-check-hidden="true"
+				>
+					<span class="icon color-primary" aria-hidden="true">
+						<span data-show-when="idle" class="docon docon-code-lang"></span>
+						<span data-show-when="loading" class="loader" hidden></span>
+						<span data-show-when="success" class="docon docon-check-mark" hidden></span>
+					</span>
+					<span>Copy Markdown</span>
+				</button>
+		   
+				<button
+					class="button button-block button-clear button-sm justify-content-flex-start text-align-left inner-focus"
+					type="button"
+					data-bi-name="print"
+					data-page-action-item="overflow-all"
+					data-popover-close
+					data-print-page
+					data-check-hidden="true"
+				>
+					<span class="icon color-primary" aria-hidden="true">
+						<span class="docon docon-print"></span>
+					</span>
+					<span>Print</span>
+				</button>
+		  
+	
+				</div>
+			</details>
+		</div>
+	
+			</div>
+		</div>
+	  
+		<!-- privateUnauthorizedTemplate is hidden by default -->
+		<div unauthorized-private-section data-bi-name="permission-content-unauthorized-private" hidden>
+			<hr class="hr margin-top-xs margin-bottom-sm" />
+			<div class="notification notification-info">
+				<div class="notification-content">
+					<p class="margin-top-none notification-title">
+						<span class="icon" aria-hidden="true"
+							><span class="docon docon-exclamation-circle-solid"></span
+						></span>
+						<span>Note</span>
+					</p>
+					<p class="margin-top-none authentication-determined not-authenticated">
+						Access to this page requires authorization. You can try <a class="docs-sign-in" href="#" data-bi-name="permission-content-sign-in">signing in</a> or <a  class="docs-change-directory" data-bi-name="permisson-content-change-directory">changing directories</a>.
+					</p>
+					<p class="margin-top-none authentication-determined authenticated">
+						Access to this page requires authorization. You can try <a class="docs-change-directory" data-bi-name="permisson-content-change-directory">changing directories</a>.
+					</p>
+				</div>
+			</div>
+		</div>
+	
+					<div class="content"><h1 id="pac-solution">pac solution</h1></div>
+					
+		<div
+			id="article-metadata"
+			data-bi-name="article-metadata"
+			data-test-id="article-metadata"
+			class="page-metadata-container display-flex gap-xxs justify-content-space-between align-items-center flex-wrap-wrap"
+		>
+			 
+				<div
+					id="user-feedback"
+					class="margin-block-xxs display-none display-none-print"
+					hidden
+					data-hide-on-archived
+				>
+					
+		<button
+			id="user-feedback-button"
+			data-test-id="conceptual-feedback-button"
+			class="button button-sm button-clear button-primary display-none"
+			type="button"
+			data-bi-name="user-feedback-button"
+			data-user-feedback-button
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-like"></span>
+			</span>
+			<span>Feedback</span>
+		</button>
+	
+				</div>
+		  
+		</div>
+	 
+		<div data-id="ai-summary" class="display-none-print">
+			<div id="ms--ai-summary-cta" class="margin-top-xs display-flex align-items-center">
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-sparkle-fill gradient-text-vivid"></span>
+				</span>
+				<button
+					id="ms--ai-summary"
+					type="button"
+					class="tag tag-sm tag-suggestion margin-left-xxs"
+					data-test-id="ai-summary-cta"
+					data-bi-name="ai-summary-cta"
+					data-an="ai-summary"
+				>
+					<span class="ai-summary-cta-text">
+						Summarize this article for me
+					</span>
+				</button>
+			</div>
+			<!-- Slot where the client will render the summary card after the user clicks the CTA -->
+			<div id="ms--ai-summary-header" class="margin-top-xs"></div>
+		</div>
+	 
+		<nav
+			id="center-doc-outline"
+			class="doc-outline display-none-desktop display-none-print margin-bottom-sm"
+			data-bi-name="intopic toc"
+			aria-label="In this article"
+		>
+			<h2 id="ms--in-this-article" class="title is-6 margin-block-xs">
+				In this article
+			</h2>
+		</nav>
+	 <div class="content"><!-- 
+Do not edit this file. 
+This file is generated by a program and any changes will be overwritten when this topic is re-generated.
+Use the include files to add additional content to this topic.
+-->
+<p>Commands for working with Dataverse solution projects.</p>
+<!-- 
+Instructions: Remove comments and this line. Add any content needed to introduce this command group
+
+-->
+<h2 id="commands">Commands</h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#pac-solution-add-license" data-linktype="self-bookmark">pac solution add-license</a></td>
+<td>Add license and plan info to the solution.</td>
+</tr>
+<tr>
+<td><a href="#pac-solution-add-reference" data-linktype="self-bookmark">pac solution add-reference</a></td>
+<td>Adds a reference from the project in the current directory to the project at 'path'</td>
+</tr>
+<tr>
+<td><a href="#pac-solution-add-solution-component" data-linktype="self-bookmark">pac solution add-solution-component</a></td>
+<td>Add one or more solution components to the target unmanaged solution in Dataverse.</td>
+</tr>
+<tr>
+<td><a href="#pac-solution-check" data-linktype="self-bookmark">pac solution check</a></td>
+<td>Upload a Dataverse solution project to run against the Power Apps Checker service.</td>
+</tr>
+<tr>
+<td><a href="#pac-solution-clone" data-linktype="self-bookmark">pac solution clone</a></td>
+<td>Create a solution project based on an existing solution in your organization.</td>
+</tr>
+<tr>
+<td><a href="#pac-solution-create-settings" data-linktype="self-bookmark">pac solution create-settings</a></td>
+<td>Create a settings file from solution zip or solution folder.</td>
+</tr>
+<tr>
+<td><a href="#pac-solution-delete" data-linktype="self-bookmark">pac solution delete</a></td>
+<td>Delete a solution from Dataverse in the current environment.</td>
+</tr>
+<tr>
+<td><a href="#pac-solution-export" data-linktype="self-bookmark">pac solution export</a></td>
+<td>Export a solution from Dataverse.</td>
+</tr>
+<tr>
+<td><a href="#pac-solution-import" data-linktype="self-bookmark">pac solution import</a></td>
+<td>Import the solution into Dataverse.</td>
+</tr>
+<tr>
+<td><a href="#pac-solution-init" data-linktype="self-bookmark">pac solution init</a></td>
+<td>Initializes a directory with a new Dataverse solution project</td>
+</tr>
+<tr>
+<td><a href="#pac-solution-list" data-linktype="self-bookmark">pac solution list</a></td>
+<td>List all Solutions from the current Dataverse organization</td>
+</tr>
+<tr>
+<td><a href="#pac-solution-online-version" data-linktype="self-bookmark">pac solution online-version</a></td>
+<td>Gets or sets version for solution loaded in Dataverse.</td>
+</tr>
+<tr>
+<td><a href="#pac-solution-pack" data-linktype="self-bookmark">pac solution pack</a></td>
+<td>Package solution components on local filesystem into solution.zip (SolutionPackager).</td>
+</tr>
+<tr>
+<td><a href="#pac-solution-publish" data-linktype="self-bookmark">pac solution publish</a></td>
+<td>Publishes all customizations</td>
+</tr>
+<tr>
+<td><a href="#pac-solution-sync" data-linktype="self-bookmark">pac solution sync</a></td>
+<td>Sync the current Dataverse solution project to the current state of the solution in your organization.</td>
+</tr>
+<tr>
+<td><a href="#pac-solution-unpack" data-linktype="self-bookmark">pac solution unpack</a></td>
+<td>Extract solution components from solution.zip onto local filesystem (SolutionPackager).</td>
+</tr>
+<tr>
+<td><a href="#pac-solution-upgrade" data-linktype="self-bookmark">pac solution upgrade</a></td>
+<td>Apply solution upgrade</td>
+</tr>
+<tr>
+<td><a href="#pac-solution-version" data-linktype="self-bookmark">pac solution version</a></td>
+<td>Update build or revision version for the solution.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="pac-solution-add-license">pac solution add-license</h2>
+<p>Add license and plan info to the solution.</p>
+<h3 id="example">Example</h3>
+<p>This example shows how to add licensing info to a solution.</p>
+<pre><code class="lang-powershell">pac solution add-license --planDefinitionFile ../ISV_Plan_Definition.csv --planMappingFile ../ISV_Plan_Mapping.csv
+</code></pre>
+<h4 id="plan-definition-file">Plan Definition File</h4>
+<p>Below you'll find an example of the plan definition file:</p>
+<pre><code class="lang-csv">ServiceID,Display name,More info URL
+test_isvconnect1599092224747.d365_isvconnect_prod_licensable.bronzeplan,Fabrikam Bronze Plan,http://www.microsoft.com
+test_isvconnect1599092224747.d365_isvconnect_prod_licensable.silverplan,Fabrikam Silver Plan,http://www.microsoft.com
+test_isvconnect1599092224747.d365_isvconnect_prod_licensable.goldplan,Fabrikam Gold Plan,http://www.microsoft.com
+</code></pre>
+<h4 id="plan-mapping-file">Plan Mapping File</h4>
+<p>Below you'll find an example of the plan mapping file:</p>
+<pre><code class="lang-csv">Service ID,Component name
+test_isvconnect1599092224747.d365_isvconnect_prod_licensable.bronzeplan,crf36_BronzeApp
+test_isvconnect1599092224747.d365_isvconnect_prod_licensable.silverplan,crf36_BronzeApp
+test_isvconnect1599092224747.d365_isvconnect_prod_licensable.silverplan,crf36_SilverApp
+test_isvconnect1599092224747.d365_isvconnect_prod_licensable.goldplan,crf36_BronzeApp
+test_isvconnect1599092224747.d365_isvconnect_prod_licensable.goldplan,crf36_SilverApp
+test_isvconnect1599092224747.d365_isvconnect_prod_licensable.goldplan,crf36_GoldApp
+</code></pre>
+<h3 id="required-parameters-for-solution-add-license">Required Parameters for solution add-license</h3>
+<h4 id="--plandefinitionfile--pd"><code>--planDefinitionFile</code> <code>-pd</code></h4>
+<p>License plan definition file in CSV format; expected columns: Service ID, Display name, More info URL.</p>
+<h4 id="--planmappingfile--pm"><code>--planMappingFile</code> <code>-pm</code></h4>
+<p>License plan mapping file in CSV format; expected columns: Service ID, Component name</p>
+<!-- 
+Instructions: Remove comments and this line. Add appropriate remarks below
+
+### Remarks
+
+Add remarks here...
+
+-->
+<h2 id="pac-solution-add-reference">pac solution add-reference</h2>
+<p>Adds a reference from the project in the current directory to the project at 'path'</p>
+<h3 id="example">Example</h3>
+<pre><code class="lang-powershell">pac solution add-reference --path c:\Users\Downloads\SampleComponent
+</code></pre>
+<h3 id="required-parameters-for-solution-add-reference">Required Parameters for solution add-reference</h3>
+<h4 id="--path--p"><code>--path</code> <code>-p</code></h4>
+<p>The path to the referenced project</p>
+<!-- 
+Instructions: Remove comments and this line. Add appropriate remarks below
+
+### Remarks
+
+Add remarks here...
+
+-->
+<h2 id="pac-solution-add-solution-component">pac solution add-solution-component</h2>
+<p>Add one or more solution components to the target unmanaged solution in Dataverse.</p>
+<h3 id="example">Example</h3>
+<p>This example shows how to add a solution component to a solution. In this case, we're adding the contact table to the solution <code>SampleSolution</code>. A table is component type 1.</p>
+<pre><code class="lang-powershell">pac solution add-solution-component --solutionUniqueName SampleSolution --component contact --componentType 1
+</code></pre>
+<h3 id="required-parameters-for-solution-add-solution-component">Required Parameters for solution add-solution-component</h3>
+<h4 id="--component--c"><code>--component</code> <code>-c</code></h4>
+<p>The schema name or ID of the component to add to the target solution.</p>
+<h4 id="--componenttype--ct"><code>--componentType</code> <code>-ct</code></h4>
+<p>The value that represents the solution component that you're adding.</p>
+<h4 id="--solutionuniquename--sn"><code>--solutionUniqueName</code> <code>-sn</code></h4>
+<p>Name of the solution.</p>
+<h3 id="optional-parameters-for-solution-add-solution-component">Optional Parameters for solution add-solution-component</h3>
+<h4 id="--addrequiredcomponents--arc"><code>--AddRequiredComponents</code> <code>-arc</code></h4>
+<p>Indicates whether other solution components required by the solution component that you're adding should also be added to the unmanaged solution.</p>
+<p>This parameter requires no value. It's a switch.</p>
+<h4 id="--async--a"><code>--async</code> <code>-a</code></h4>
+<p>Imports the solution asynchronously.</p>
+<p>This parameter requires no value. It's a switch.</p>
+<h4 id="--environment--env"><code>--environment</code> <code>-env</code></h4>
+<p>Environment URL or ID of the target environment.</p>
+<!-- 
+Instructions: Remove comments and this line. Add appropriate remarks below
+
+### Remarks
+
+Add remarks here...
+
+-->
+<h2 id="pac-solution-check">pac solution check</h2>
+<p>Upload a Dataverse solution project to run against the Power Apps Checker service.</p>
+<h3 id="example">Example</h3>
+<pre><code class="lang-powershell">pac solution check --path c:\Users\Documents\Solution.zip --outputDirectory c:\samplepackage --geo UnitedStates
+</code></pre>
+<h3 id="optional-parameters-for-solution-check">Optional Parameters for solution check</h3>
+<h4 id="--clearcache--cc"><code>--clearCache</code> <code>-cc</code></h4>
+<p>Clears the solution checker enforcement cache, for your tenant, of all records that pertain to past results for your solutions.</p>
+<p>This parameter requires no value. It's a switch.</p>
+<h4 id="--customendpoint--ce"><code>--customEndpoint</code> <code>-ce</code></h4>
+<p>Specify a custom URL as the Power Apps Checker endpoint.</p>
+<h4 id="--environment--env-1"><code>--environment</code> <code>-env</code></h4>
+<p>Specifies the target Dataverse. The value may be a Guid or absolute https URL. When not specified, the active organization selected for the current auth profile will be used.</p>
+<h4 id="--excludedfiles--ef"><code>--excludedFiles</code> <code>-ef</code></h4>
+<p>Exclude Files from the Analysis. Pass as comma-separated values</p>
+<h4 id="--geo--g"><code>--geo</code> <code>-g</code></h4>
+<p>Which geographical instance of the Power Apps Checker service to use.</p>
+<p>Use one of these values:</p>
+<ul>
+<li><code>PreviewUnitedStates</code></li>
+<li><code>UnitedStates</code></li>
+<li><code>Europe</code></li>
+<li><code>Asia</code></li>
+<li><code>Australia</code></li>
+<li><code>Japan</code></li>
+<li><code>India</code></li>
+<li><code>Canada</code></li>
+<li><code>SouthAmerica</code></li>
+<li><code>UnitedKingdom</code></li>
+<li><code>France</code></li>
+<li><code>SouthAfrica</code></li>
+<li><code>Germany</code></li>
+<li><code>UnitedArabEmirates</code></li>
+<li><code>Switzerland</code></li>
+<li><code>Norway</code></li>
+<li><code>Singapore</code></li>
+<li><code>Korea</code></li>
+<li><code>Sweden</code></li>
+<li><code>Italy</code></li>
+<li><code>Poland</code></li>
+<li><code>NewZealand</code></li>
+<li><code>USGovernment</code></li>
+<li><code>USGovernmentL4</code></li>
+<li><code>USGovernmentL5DoD</code></li>
+<li><code>China</code></li>
+</ul>
+<h4 id="--outputdirectory--o"><code>--outputDirectory</code> <code>-o</code></h4>
+<p>Output directory</p>
+<h4 id="--path--p-1"><code>--path</code> <code>-p</code></h4>
+<p>Path where one or more solution files to be checked exist. The path can contain glob/wildcard characters.</p>
+<h4 id="--ruleleveloverride--rl"><code>--ruleLevelOverride</code> <code>-rl</code></h4>
+<p>Path to a file containing a JSON array rules and levels to override. Accepted values for OverrideLevel are: Critical, High, Medium, Low, Informational. Example: [{"Id":"meta-remove-dup-reg","OverrideLevel":"Medium"},{"Id":"il-avoid-specialized-update-ops","OverrideLevel":"Medium"}]</p>
+<h4 id="--ruleset--rs"><code>--ruleSet</code> <code>-rs</code></h4>
+<p>Select a rule set that is executed as part of this build. Values: A valid Guid, "AppSource Certification", "Solution Checker" (default).</p>
+<h4 id="--saveresults--sav"><code>--saveResults</code> <code>-sav</code></h4>
+<p>Uses current environment to store solution analysis results that can be seen in Solution Health Hub App. By default, this argument is set to false.</p>
+<p>This parameter requires no value. It's a switch.</p>
+<h4 id="--solutionurl--u"><code>--solutionUrl</code> <code>-u</code></h4>
+<p>SAS Uri pointing to solution.zip to be analyzed</p>
+<!-- 
+Instructions: Remove comments and this line. Add appropriate remarks below
+
+### Remarks
+
+Add remarks here...
+
+-->
+<h2 id="pac-solution-clone">pac solution clone</h2>
+<p>Create a solution project based on an existing solution in your organization.</p>
+<h3 id="examples">Examples</h3>
+<p>The following examples show the use of the <code>pac solution clone</code> command.</p>
+<ul>
+<li><a href="#basic-clone" data-linktype="self-bookmark">Basic clone</a></li>
+<li><a href="#clone-with-general-and-auto-numbering-settings-included" data-linktype="self-bookmark">Clone with general and auto numbering settings included</a></li>
+</ul>
+<h4 id="basic-clone">Basic clone</h4>
+<p>This example clones the solution <code>sampleSolution</code> to the current directory.</p>
+<pre><code class="lang-powershell">pac solution clone --name sampleSolution
+</code></pre>
+<h4 id="clone-with-general-and-auto-numbering-settings-included">Clone with general and auto numbering settings included</h4>
+<p>This example clones the solution <code>sampleSolution</code> to the current directory with the general and auto numbering settings included.</p>
+<pre><code class="lang-powershell">pac solution clone --name sampleSolution --include general,autonumbering
+</code></pre>
+<h3 id="required-parameters-for-solution-clone">Required Parameters for solution clone</h3>
+<h4 id="--name--n"><code>--name</code> <code>-n</code></h4>
+<p>The name of the solution to be exported.</p>
+<h3 id="optional-parameters-for-solution-clone">Optional Parameters for solution clone</h3>
+<h4 id="--async--a-1"><code>--async</code> <code>-a</code></h4>
+<p>Exports the solution asynchronously.</p>
+<p>This parameter requires no value. It's a switch.</p>
+<h4 id="--environment--env-2"><code>--environment</code> <code>-env</code></h4>
+<p>Specifies the target Dataverse. The value may be a Guid or absolute https URL. When not specified, the active organization selected for the current auth profile will be used.</p>
+<h4 id="--include--i"><code>--include</code> <code>-i</code></h4>
+<p>Which settings should be included in the solution being exported.</p>
+<p>Use one or more of these values separated by commas:</p>
+<ul>
+<li><code>autonumbering</code></li>
+<li><code>calendar</code></li>
+<li><code>customization</code></li>
+<li><code>emailtracking</code></li>
+<li><code>externalapplications</code></li>
+<li><code>general</code></li>
+<li><code>isvconfig</code></li>
+<li><code>marketing</code></li>
+<li><code>outlooksynchronization</code></li>
+<li><code>relationshiproles</code></li>
+<li><code>sales</code></li>
+</ul>
+<h4 id="--localize--loc"><code>--localize</code> <code>-loc</code></h4>
+<p>Extract or merge all string resources into .resx files.</p>
+<p>This parameter requires no value. It's a switch.</p>
+<h4 id="--map--m"><code>--map</code> <code>-m</code></h4>
+<p>The full path to a mapping xml file from which to read component folders to pack.</p>
+<h4 id="--max-async-wait-time--wt"><code>--max-async-wait-time</code> <code>-wt</code></h4>
+<p>Max asynchronous wait time in minutes. The default value is 60 minutes.</p>
+<h4 id="--outputdirectory--o-1"><code>--outputDirectory</code> <code>-o</code></h4>
+<p>Output directory</p>
+<h4 id="--packagetype--p"><code>--packagetype</code> <code>-p</code></h4>
+<p>Specifies the extraction type for the solution. Can be: 'Unmanaged', 'Managed' or 'Both'. The default value is: 'Both'.</p>
+<h4 id="--targetversion--v"><code>--targetversion</code> <code>-v</code></h4>
+<p><strong>Deprecated</strong>: This parameter is ignored.</p>
+<!-- 
+Instructions: Remove comments and this line. Add appropriate remarks below
+
+### Remarks
+
+Add remarks here...
+
+-->
+<h2 id="pac-solution-create-settings">pac solution create-settings</h2>
+<p>Create a settings file from solution zip or solution folder.</p>
+<h3 id="example">Example</h3>
+<pre><code class="lang-powershell">pac solution create-settings --solution-zip C:\SampleSolution.zip --settings-file .\SampleDeploymentSettingsDev.json
+</code></pre>
+<h3 id="optional-parameters-for-solution-create-settings">Optional Parameters for solution create-settings</h3>
+<h4 id="--settings-file--s"><code>--settings-file</code> <code>-s</code></h4>
+<p>The .json file with the deployment settings for connection references and environment variables.</p>
+<h4 id="--solution-folder--f"><code>--solution-folder</code> <code>-f</code></h4>
+<p>Path to the local, unpacked solution folder: either the root of the 'Other/Solution.xml' file or a folder with a .cdsproj file.</p>
+<h4 id="--solution-zip--z"><code>--solution-zip</code> <code>-z</code></h4>
+<p>Path to solution zip file.</p>
+<!-- 
+Instructions: Remove comments and this line. Add appropriate remarks below
+
+### Remarks
+
+Add remarks here...
+
+-->
+<h2 id="pac-solution-delete">pac solution delete</h2>
+<p>Delete a solution from Dataverse in the current environment.</p>
+<h3 id="example">Example</h3>
+<pre><code class="lang-powershell">pac solution delete --solution-name Samplesolution
+</code></pre>
+<h3 id="required-parameters-for-solution-delete">Required Parameters for solution delete</h3>
+<h4 id="--solution-name--sn"><code>--solution-name</code> <code>-sn</code></h4>
+<p>Name of the solution.</p>
+<h3 id="optional-parameters-for-solution-delete">Optional Parameters for solution delete</h3>
+<h4 id="--environment--env-3"><code>--environment</code> <code>-env</code></h4>
+<p>Specifies the target Dataverse. The value may be a Guid or absolute https URL. When not specified, the active organization selected for the current auth profile will be used.</p>
+<!-- 
+Instructions: Remove comments and this line. Add appropriate remarks below
+
+### Remarks
+
+Add remarks here...
+
+-->
+<h2 id="pac-solution-export">pac solution export</h2>
+<p>Export a solution from Dataverse.</p>
+<h3 id="example">Example</h3>
+<pre><code class="lang-powershell">pac solution export --path c:\Users\Documents\Solution.zip --name SampleComponentSolution --managed true --include general
+</code></pre>
+<h3 id="required-parameters-for-solution-export">Required Parameters for solution export</h3>
+<h4 id="--name--n-1"><code>--name</code> <code>-n</code></h4>
+<p>The name of the solution to be exported.</p>
+<h3 id="optional-parameters-for-solution-export">Optional Parameters for solution export</h3>
+<h4 id="--async--a-2"><code>--async</code> <code>-a</code></h4>
+<p>Exports the solution asynchronously.</p>
+<p>This parameter requires no value. It's a switch.</p>
+<h4 id="--environment--env-4"><code>--environment</code> <code>-env</code></h4>
+<p>Specifies the target Dataverse. The value may be a Guid or absolute https URL. When not specified, the active organization selected for the current auth profile will be used.</p>
+<h4 id="--include--i-1"><code>--include</code> <code>-i</code></h4>
+<p>Which settings should be included in the solution being exported.</p>
+<p>Use one or more of these values separated by commas:</p>
+<ul>
+<li><code>autonumbering</code></li>
+<li><code>calendar</code></li>
+<li><code>customization</code></li>
+<li><code>emailtracking</code></li>
+<li><code>externalapplications</code></li>
+<li><code>general</code></li>
+<li><code>isvconfig</code></li>
+<li><code>marketing</code></li>
+<li><code>outlooksynchronization</code></li>
+<li><code>relationshiproles</code></li>
+<li><code>sales</code></li>
+</ul>
+<h4 id="--managed--m"><code>--managed</code> <code>-m</code></h4>
+<p>Whether the solution should be exported as a managed solution.</p>
+<p>This parameter requires no value. It's a switch.</p>
+<h4 id="--max-async-wait-time--wt-1"><code>--max-async-wait-time</code> <code>-wt</code></h4>
+<p>Max asynchronous wait time in minutes. The default value is 60 minutes.</p>
+<h4 id="--overwrite--ow"><code>--overwrite</code> <code>-ow</code></h4>
+<p>The exported solution file can overwrite the solution zip file on the local file system.</p>
+<p>This parameter requires no value. It's a switch.</p>
+<h4 id="--path--p-2"><code>--path</code> <code>-p</code></h4>
+<p>Path where the exported solution zip file is written.</p>
+<h4 id="--targetversion--v-1"><code>--targetversion</code> <code>-v</code></h4>
+<p><strong>Deprecated</strong>: This parameter is ignored.</p>
+<!-- 
+Instructions: Remove comments and this line. Add appropriate remarks below
+
+### Remarks
+
+Add remarks here...
+
+-->
+<h2 id="pac-solution-import">pac solution import</h2>
+<p>Import the solution into Dataverse.</p>
+<h3 id="example">Example</h3>
+<pre><code class="lang-powershell">pac solution import --path c:\Users\Documents\Solution.zip
+</code></pre>
+<h3 id="optional-parameters-for-solution-import">Optional Parameters for solution import</h3>
+<h4 id="--activate-plugins--ap"><code>--activate-plugins</code> <code>-ap</code></h4>
+<p>Activate plug-ins and workflows on the solution.</p>
+<p>This parameter requires no value. It's a switch.</p>
+<h4 id="--async--a-3"><code>--async</code> <code>-a</code></h4>
+<p>Imports the solution asynchronously.</p>
+<p>This parameter requires no value. It's a switch.</p>
+<h4 id="--environment--env-5"><code>--environment</code> <code>-env</code></h4>
+<p>Specifies the target Dataverse. The value may be a Guid or absolute https URL. When not specified, the active organization selected for the current auth profile will be used.</p>
+<h4 id="--force-overwrite--f"><code>--force-overwrite</code> <code>-f</code></h4>
+<p>Force an overwrite of unmanaged customizations</p>
+<p>This parameter requires no value. It's a switch.</p>
+<h4 id="--import-as-holding--h"><code>--import-as-holding</code> <code>-h</code></h4>
+<p>Import the solution as a holding solution.</p>
+<p>This parameter requires no value. It's a switch.</p>
+<h4 id="--max-async-wait-time--wt-2"><code>--max-async-wait-time</code> <code>-wt</code></h4>
+<p>Max asynchronous wait time in minutes. The default value is 60 minutes.</p>
+<h4 id="--path--p-3"><code>--path</code> <code>-p</code></h4>
+<p>Path to solution zip file. If not specified, assumes the current folder is a cdsproj project.</p>
+<h4 id="--publish-changes--pc"><code>--publish-changes</code> <code>-pc</code></h4>
+<p>Publish your changes upon a successful import.</p>
+<p>This parameter requires no value. It's a switch.</p>
+<h4 id="--settings-file"><code>--settings-file</code></h4>
+<p>The .json file with the deployment settings for connection references and environment variables.</p>
+<h4 id="--skip-dependency-check--s"><code>--skip-dependency-check</code> <code>-s</code></h4>
+<p>Skip dependency check against dependencies flagged as product update</p>
+<p>This parameter requires no value. It's a switch.</p>
+<h4 id="--skip-lower-version--slv"><code>--skip-lower-version</code> <code>-slv</code></h4>
+<p>Skip solution import if same or higher version is present in current environment.</p>
+<p>This parameter requires no value. It's a switch.</p>
+<h4 id="--stage-and-upgrade--up"><code>--stage-and-upgrade</code> <code>-up</code></h4>
+<p>Import and upgrade the solution.</p>
+<p>This parameter requires no value. It's a switch.</p>
+<h3 id="remarks">Remarks</h3>
+<p>You be connected to an environment using the <a href="auth" data-linktype="relative-path">pac auth</a> command to use <code>pac solution import</code>.</p>
+<h4 id="pac-solution-import">pac solution import</h4>
+<p>When <code>Path</code> parameter is not specified, it assumes the current folder is a cdsproj project. If the <code>SolutionPackageType</code> property in cdsproj file is set to <code>Both</code>, the managed solution is used by default.</p>
+<h2 id="pac-solution-init">pac solution init</h2>
+<p>Initializes a directory with a new Dataverse solution project</p>
+<h3 id="example">Example</h3>
+<pre><code class="lang-powershell">pac solution init --publisher-name developer --publisher-prefix dev
+</code></pre>
+<h3 id="required-parameters-for-solution-init">Required Parameters for solution init</h3>
+<h4 id="--publisher-name--pn"><code>--publisher-name</code> <code>-pn</code></h4>
+<p>Name of the Dataverse solution publisher</p>
+<p><strong>Note</strong>: Only characters within the ranges [A - Z], [a - z], [0 - 9], or _ are allowed. The first character may only be in the ranges [A - Z], [a - z], or _.</p>
+<h4 id="--publisher-prefix--pp"><code>--publisher-prefix</code> <code>-pp</code></h4>
+<p>Customization prefix value for the Dataverse solution publisher</p>
+<p><strong>Note</strong>: The prefix must be 2 to 8 characters long, can only consist of alpha-numerics, must start with a letter, and can't start with 'mscrm'.</p>
+<h3 id="optional-parameters-for-solution-init">Optional Parameters for solution init</h3>
+<h4 id="--outputdirectory--o-2"><code>--outputDirectory</code> <code>-o</code></h4>
+<p>Output directory</p>
+<!-- 
+Instructions: Remove comments and this line. Add appropriate remarks below
+
+### Remarks
+
+Add remarks here...
+
+-->
+<h2 id="pac-solution-list">pac solution list</h2>
+<p>List all Solutions from the current Dataverse organization</p>
+<h3 id="example">Example</h3>
+<pre><code class="lang-powershell">pac solution list
+</code></pre>
+<h3 id="optional-parameters-for-solution-list">Optional Parameters for solution list</h3>
+<h4 id="--environment--env-6"><code>--environment</code> <code>-env</code></h4>
+<p>Specifies the target Dataverse. The value may be a Guid or absolute https URL. When not specified, the active organization selected for the current auth profile will be used.</p>
+<h4 id="--includesystemsolutions"><code>--includeSystemSolutions</code></h4>
+<p>Include system solutions like those published by Microsoft</p>
+<p>This parameter requires no value. It's a switch.</p>
+<h4 id="--json"><code>--json</code></h4>
+<p>Returns the output of the command as a JSON formatted string.</p>
+<h2 id="pac-solution-online-version">pac solution online-version</h2>
+<p>Gets or sets version for solution loaded in Dataverse.</p>
+<h3 id="example">Example</h3>
+<pre><code class="lang-powershell">pac solution online-version --solution-name Samplesolution --solution-version 1.0.0.2
+</code></pre>
+<h3 id="required-parameters-for-solution-online-version">Required Parameters for solution online-version</h3>
+<h4 id="--solution-name--sn-1"><code>--solution-name</code> <code>-sn</code></h4>
+<p>Name of the solution.</p>
+<h3 id="optional-parameters-for-solution-online-version">Optional Parameters for solution online-version</h3>
+<h4 id="--environment--env-7"><code>--environment</code> <code>-env</code></h4>
+<p>Specifies the target Dataverse. The value may be a Guid or absolute https URL. When not specified, the active organization selected for the current auth profile will be used.</p>
+<h4 id="--solution-version--sv"><code>--solution-version</code> <code>-sv</code></h4>
+<p>Specify the solution version number. If omitted, the current online solution version is returned.</p>
+<!-- 
+Instructions: Remove comments and this line. Add appropriate remarks below
+
+### Remarks
+
+Add remarks here...
+
+-->
+<h2 id="pac-solution-pack">pac solution pack</h2>
+<p>Package solution components on local filesystem into solution.zip (SolutionPackager).</p>
+<h3 id="example">Example</h3>
+<pre><code class="lang-powershell">pac solution pack --zipfile C:\SampleSolution.zip --folder .\SampleSolutionUnpacked\.
+</code></pre>
+<h3 id="required-parameters-for-solution-pack">Required Parameters for solution pack</h3>
+<h4 id="--zipfile--z"><code>--zipfile</code> <code>-z</code></h4>
+<p>The full path to the solution ZIP file</p>
+<h3 id="optional-parameters-for-solution-pack">Optional Parameters for solution pack</h3>
+<h4 id="--allowdelete--ad"><code>--allowDelete</code> <code>-ad</code></h4>
+<p>Dictates if delete operations may occur. The default value is 'false'.</p>
+<p>This parameter requires no value. It's a switch.</p>
+<h4 id="--allowwrite--aw"><code>--allowWrite</code> <code>-aw</code></h4>
+<p>Dictates if write operations may occur. The default value is 'false'.</p>
+<p>This parameter requires no value. It's a switch.</p>
+<h4 id="--clobber--c"><code>--clobber</code> <code>-c</code></h4>
+<p>Enables that files marked read-only can be deleted or overwritten. The default value is 'false'.</p>
+<p>This parameter requires no value. It's a switch.</p>
+<h4 id="--disablepluginremap--dpm"><code>--disablePluginRemap</code> <code>-dpm</code></h4>
+<p>Disabled plug-in fully qualified type name remapping. The default value is 'false'.</p>
+<p>This parameter requires no value. It's a switch.</p>
+<h4 id="--errorlevel--e"><code>--errorlevel</code> <code>-e</code></h4>
+<p>Minimum logging level for log output [Verbose|Info|Warning|Error|Off]. The default value is 'Info'.</p>
+<h4 id="--folder--f"><code>--folder</code> <code>-f</code></h4>
+<p>The path to the root folder on the local filesystem. When unpacking or extracting, this is written to. When packing this is read from.</p>
+<h4 id="--localize--loc-1"><code>--localize</code> <code>-loc</code></h4>
+<p>Extract or merge all string resources into .resx files.</p>
+<p>This parameter requires no value. It's a switch.</p>
+<h4 id="--log--l"><code>--log</code> <code>-l</code></h4>
+<p>The path to the log file.</p>
+<h4 id="--map--m-1"><code>--map</code> <code>-m</code></h4>
+<p>The full path to a mapping xml file from which to read component folders to pack.</p>
+<h4 id="--packagetype--p-1"><code>--packagetype</code> <code>-p</code></h4>
+<p>When unpacking or extracting, use to specify dual Managed and Unmanaged operation. When packing, use to specify Managed or Unmanaged from a previous unpack 'Both'. Can be: 'Unmanaged', 'Managed' or 'Both'. The default value is 'Unmanaged'.</p>
+<h4 id="--singlecomponent--sc"><code>--singleComponent</code> <code>-sc</code></h4>
+<p>Only perform action on a single component type [WebResource|Plugin|Workflow|None]. The default value is 'None'.</p>
+<h4 id="--sourceloc--src"><code>--sourceLoc</code> <code>-src</code></h4>
+<p>Generates a template resource file. Valid only on extract. Possible values are 'auto', or language code of the language you wish to export. You can use Language Code Identifier (LCID), or International Organization for Standardization (ISO) language code formats. When present, this extracts the string resources from the given locale as a neutral .resx. If 'auto' or just the long or short form of the switch is specified, the base locale for the solution is used.</p>
+<h4 id="--uselcid--lcid"><code>--useLcid</code> <code>-lcid</code></h4>
+<p>Use Language Code Identifier (LCID) values (1033) rather than International Organization for Standardization (ISO) codes (en-US) for language files.</p>
+<p>This parameter requires no value. It's a switch.</p>
+<h4 id="--useunmanagedfileformissingmanaged--same"><code>--useUnmanagedFileForMissingManaged</code> <code>-same</code></h4>
+<p>Use the same XML source file when packaging for Managed and only Unmanaged XML file is found; applies to AppModuleSiteMap, AppModuleMap, FormXml files.</p>
+<p>This parameter requires no value. It's a switch.</p>
+<h3 id="solution-pack-remarks"><code>solution pack</code> remarks</h3>
+<p><code>pac solution pack</code> supports two source folder layouts when reading component files: the <strong>XML format</strong> (legacy) and the <strong>YAML source control format</strong>.</p>
+<div class="IMPORTANT">
+<p>Important</p>
+<p>YAML source control format support requires <strong>Microsoft.PowerApps.CLI version 2.4.1 or later</strong>. Download from <a href="https://www.nuget.org/packages/Microsoft.PowerApps.CLI/2.4.1" data-linktype="external">NuGet</a> or update with <code>pac install latest</code>.</p>
+</div>
+<p>The format is auto-detected based on the folder contents:</p>
+<ul>
+<li>If the folder contains a <code>solutions/</code> subdirectory with <code>*solution.yml</code> files → <strong>YAML format</strong> is used.</li>
+<li>If no <code>solutions/</code> subdirectory is found → <strong>XML format</strong> (legacy) is used, which requires <code>Other\Solution.xml</code> and <code>Other\Customizations.xml</code>.</li>
+</ul>
+<p><strong>YAML format example:</strong></p>
+<pre><code class="lang-powershell">pac solution pack --zipfile C:\output\MySolution.zip --folder C:\repos\myrepo
+</code></pre>
+<p><strong>Working with a multi-solution repository:</strong></p>
+<p>When the folder contains more than one solution under <code>solutions/*/solution.yml</code>, use the SolutionPackager.exe directly with <code>/SolutionName</code>:</p>
+<pre><code>SolutionPackager.exe /action:Pack /zipfile:SolutionA.zip /folder:C:\repos\myrepo /SolutionName:SolutionA
+</code></pre>
+<div class="NOTE">
+<p>Note</p>
+<p>The YAML source control format is the format written by native <a href="../../../alm/git-integration/overview" data-linktype="relative-path">Dataverse Git integration</a> when you commit solutions from Power Apps. If you're manually packing a folder from a Git-integrated repository, use <code>pac solution pack</code> with the <code>--folder</code> pointing at the repository root.</p>
+</div>
+<p>For more information about the YAML folder structure and which components are supported, see <a href="../../../alm/solution-packager-tool#source-control-file-formats" data-linktype="relative-path">SolutionPackager tool — Source control file formats</a>.</p>
+<h2 id="pac-solution-publish">pac solution publish</h2>
+<p>Publishes all customizations</p>
+<h3 id="example">Example</h3>
+<pre><code class="lang-powershell">pac solution publish
+</code></pre>
+<h3 id="optional-parameters-for-solution-publish">Optional Parameters for solution publish</h3>
+<h4 id="--async--a-4"><code>--async</code> <code>-a</code></h4>
+<p>Publishes all customizations asynchronously</p>
+<p>This parameter requires no value. It's a switch.</p>
+<h4 id="--environment--env-8"><code>--environment</code> <code>-env</code></h4>
+<p>Specifies the target Dataverse. The value may be a Guid or absolute https URL. When not specified, the active organization selected for the current auth profile will be used.</p>
+<h4 id="--max-async-wait-time--wt-3"><code>--max-async-wait-time</code> <code>-wt</code></h4>
+<p>Max asynchronous wait time in minutes. The default value is 60 minutes.</p>
+<!-- 
+Instructions: Remove comments and this line. Add appropriate remarks below
+
+### Remarks
+
+Add remarks here...
+
+-->
+<h2 id="pac-solution-sync">pac solution sync</h2>
+<p>Sync the current Dataverse solution project to the current state of the solution in your organization.</p>
+<h3 id="examples">Examples</h3>
+<p>The following examples show the use of the <code>pac solution sync</code> command.</p>
+<h4 id="basic-sync">Basic sync</h4>
+<p>This example syncs the solution to the current directory.</p>
+<pre><code class="lang-powershell">pac solution sync
+</code></pre>
+<h3 id="optional-parameters-for-solution-sync">Optional Parameters for solution sync</h3>
+<h4 id="--async--a-5"><code>--async</code> <code>-a</code></h4>
+<p>Exports the solution asynchronously.</p>
+<p>This parameter requires no value. It's a switch.</p>
+<h4 id="--environment--env-9"><code>--environment</code> <code>-env</code></h4>
+<p>Specifies the target Dataverse. The value may be a Guid or absolute https URL. When not specified, the active organization selected for the current auth profile will be used.</p>
+<h4 id="--include--i-2"><code>--include</code> <code>-i</code></h4>
+<p>Which settings should be included in the solution being exported.</p>
+<p>Use one or more of these values separated by commas:</p>
+<ul>
+<li><code>autonumbering</code></li>
+<li><code>calendar</code></li>
+<li><code>customization</code></li>
+<li><code>emailtracking</code></li>
+<li><code>externalapplications</code></li>
+<li><code>general</code></li>
+<li><code>isvconfig</code></li>
+<li><code>marketing</code></li>
+<li><code>outlooksynchronization</code></li>
+<li><code>relationshiproles</code></li>
+<li><code>sales</code></li>
+</ul>
+<h4 id="--localize--loc-2"><code>--localize</code> <code>-loc</code></h4>
+<p>Extract or merge all string resources into .resx files.</p>
+<p>This parameter requires no value. It's a switch.</p>
+<h4 id="--map--m-2"><code>--map</code> <code>-m</code></h4>
+<p>The full path to a mapping xml file from which to read component folders to pack.</p>
+<h4 id="--max-async-wait-time--wt-4"><code>--max-async-wait-time</code> <code>-wt</code></h4>
+<p>Max asynchronous wait time in minutes. The default value is 60 minutes.</p>
+<h4 id="--packagetype--p-2"><code>--packagetype</code> <code>-p</code></h4>
+<p>When unpacking or extracting, use to specify dual Managed and Unmanaged operation. When packing, use to specify Managed or Unmanaged from a previous unpack 'Both'. Can be: 'Unmanaged', 'Managed' or 'Both'. The default value is: 'Both'.</p>
+<h4 id="--solution-folder--f-1"><code>--solution-folder</code> <code>-f</code></h4>
+<p>Path to the local, unpacked solution folder: either the root of the 'Other/Solution.xml' file or a folder with a .cdsproj file.</p>
+<!-- 
+Instructions: Remove comments and this line. Add appropriate remarks below
+
+### Remarks
+
+Add remarks here...
+
+-->
+<h2 id="pac-solution-unpack">pac solution unpack</h2>
+<p>Extract solution components from solution.zip onto local filesystem (SolutionPackager).</p>
+<h3 id="example">Example</h3>
+<pre><code class="lang-powershell">pac solution unpack --zipfile C:\SampleSolution.zip --folder .\SampleSolutionUnpacked\.
+</code></pre>
+<h3 id="required-parameters-for-solution-unpack">Required Parameters for solution unpack</h3>
+<h4 id="--zipfile--z-1"><code>--zipfile</code> <code>-z</code></h4>
+<p>The full path to the solution ZIP file</p>
+<h3 id="optional-parameters-for-solution-unpack">Optional Parameters for solution unpack</h3>
+<h4 id="--allowdelete--ad-1"><code>--allowDelete</code> <code>-ad</code></h4>
+<p>Dictates if delete operations may occur. The default value is 'false'.</p>
+<p>This parameter requires no value. It's a switch.</p>
+<h4 id="--allowwrite--aw-1"><code>--allowWrite</code> <code>-aw</code></h4>
+<p>Dictates if write operations may occur. The default value is 'false'.</p>
+<p>This parameter requires no value. It's a switch.</p>
+<h4 id="--clobber--c-1"><code>--clobber</code> <code>-c</code></h4>
+<p>Enables that files marked read-only can be deleted or overwritten. The default value is 'false'.</p>
+<p>This parameter requires no value. It's a switch.</p>
+<h4 id="--disablepluginremap--dpm-1"><code>--disablePluginRemap</code> <code>-dpm</code></h4>
+<p>Disabled plug-in fully qualified type name remapping. The default value is 'false'.</p>
+<p>This parameter requires no value. It's a switch.</p>
+<h4 id="--errorlevel--e-1"><code>--errorlevel</code> <code>-e</code></h4>
+<p>Minimum logging level for log output [Verbose|Info|Warning|Error|Off]. The default value is 'Info'.</p>
+<h4 id="--folder--f-1"><code>--folder</code> <code>-f</code></h4>
+<p>The path to the root folder on the local filesystem. When unpacking or extracting, this is written to. When packing this is read from.</p>
+<h4 id="--localize--loc-3"><code>--localize</code> <code>-loc</code></h4>
+<p>Extract or merge all string resources into .resx files.</p>
+<p>This parameter requires no value. It's a switch.</p>
+<h4 id="--log--l-1"><code>--log</code> <code>-l</code></h4>
+<p>The path to the log file.</p>
+<h4 id="--map--m-3"><code>--map</code> <code>-m</code></h4>
+<p>The full path to a mapping xml file from which to read component folders to pack.</p>
+<h4 id="--packagetype--p-3"><code>--packagetype</code> <code>-p</code></h4>
+<p>When unpacking or extracting, use to specify dual Managed and Unmanaged operation. When packing, use to specify Managed or Unmanaged from a previous unpack 'Both'. Can be: 'Unmanaged', 'Managed' or 'Both'. The default value is 'Unmanaged'.</p>
+<h4 id="--singlecomponent--sc-1"><code>--singleComponent</code> <code>-sc</code></h4>
+<p>Only perform action on a single component type [WebResource|Plugin|Workflow|None]. The default value is 'None'.</p>
+<h4 id="--sourceloc--src-1"><code>--sourceLoc</code> <code>-src</code></h4>
+<p>Generates a template resource file. Valid only on extract. Possible values are 'auto', or language code of the language you wish to export. You can use Language Code Identifier (LCID), or International Organization for Standardization (ISO) language code formats. When present, this extracts the string resources from the given locale as a neutral .resx. If 'auto' or just the long or short form of the switch is specified, the base locale for the solution is used.</p>
+<h4 id="--uselcid--lcid-1"><code>--useLcid</code> <code>-lcid</code></h4>
+<p>Use Language Code Identifier (LCID) values (1033) rather than International Organization for Standardization (ISO) codes (en-US) for language files.</p>
+<p>This parameter requires no value. It's a switch.</p>
+<h4 id="--useunmanagedfileformissingmanaged--same-1"><code>--useUnmanagedFileForMissingManaged</code> <code>-same</code></h4>
+<p>Use the same XML source file when packaging for Managed and only Unmanaged XML file is found; applies to AppModuleSiteMap, AppModuleMap, FormXml files.</p>
+<p>This parameter requires no value. It's a switch.</p>
+<h3 id="solution-unpack-remarks"><code>solution unpack</code> remarks</h3>
+<p>By default, <code>pac solution unpack</code> extracts solution components from a <code>.zip</code> file into the <strong>XML format</strong>, creating an <code>Other\Solution.xml</code> hierarchy.</p>
+<div class="IMPORTANT">
+<p>Important</p>
+<p>YAML source control format support requires <strong>Microsoft.PowerApps.CLI version 2.4.1 or later</strong>. Download from <a href="https://www.nuget.org/packages/Microsoft.PowerApps.CLI/2.4.1" data-linktype="external">NuGet</a> or update with <code>pac install latest</code>.</p>
+</div>
+<p>When you work with solutions managed through native <a href="../../../alm/git-integration/overview" data-linktype="relative-path">Dataverse Git integration</a> or extracted by using <code>pac solution clone</code>, the resulting folder uses the <strong>YAML source control format</strong> instead:</p>
+<pre><code>&lt;folder&gt;/
+├── solutions/
+│   └── &lt;SolutionUniqueName&gt;/
+│       ├── solution.yml
+│       ├── solutioncomponents.yml
+│       ├── rootcomponents.yml
+│       └── missingdependencies.yml
+├── publishers/
+│   └── &lt;PublisherUniqueName&gt;/
+│       └── publisher.yml
+└── [component folders — entities/, workflows/, canvasapps/, ...]
+</code></pre>
+<p>To repack a folder in this YAML layout, use <code>pac solution pack --folder &lt;rootFolder&gt;</code>. The presence of the <code>solutions/</code> subdirectory automatically signals the YAML format.</p>
+<div class="IMPORTANT">
+<p>Important</p>
+<p>If you list a component in <code>rootcomponents.yml</code> but don't include its source files in the folder (for example, a canvas app <code>.msapp</code> file under <code>canvasapps/&lt;name&gt;/</code>), the pack operation still succeeds but omits that component from the output <code>.zip</code>. To ensure all component files are present, re-export and unpack the full solution from Dataverse.</p>
+</div>
+<p>For more information about the YAML folder structure and component support, see <a href="../../../alm/solution-packager-tool#source-control-file-formats" data-linktype="relative-path">SolutionPackager tool — Source control file formats</a>.</p>
+<h2 id="pac-solution-upgrade">pac solution upgrade</h2>
+<p>Apply solution upgrade</p>
+<h3 id="example">Example</h3>
+<pre><code class="lang-powershell">pac solution upgrade --solution-name SampleSolution --async --max-async-wait-time 60
+</code></pre>
+<h3 id="required-parameters-for-solution-upgrade">Required Parameters for solution upgrade</h3>
+<h4 id="--solution-name--sn-2"><code>--solution-name</code> <code>-sn</code></h4>
+<p>Name of the solution.</p>
+<h3 id="optional-parameters-for-solution-upgrade">Optional Parameters for solution upgrade</h3>
+<h4 id="--async--a-6"><code>--async</code> <code>-a</code></h4>
+<p>Upgrades solution asynchronously</p>
+<p>This parameter requires no value. It's a switch.</p>
+<h4 id="--environment--env-10"><code>--environment</code> <code>-env</code></h4>
+<p>Specifies the target Dataverse. The value may be a Guid or absolute https URL. When not specified, the active organization selected for the current auth profile will be used.</p>
+<h4 id="--max-async-wait-time--wt-5"><code>--max-async-wait-time</code> <code>-wt</code></h4>
+<p>Max asynchronous wait time in minutes. The default value is 60 minutes.</p>
+<!-- 
+Instructions: Remove comments and this line. Add appropriate remarks below
+
+### Remarks
+
+Add remarks here...
+
+-->
+<h2 id="pac-solution-version">pac solution version</h2>
+<p>Update build or revision version for the solution.</p>
+<h3 id="example">Example</h3>
+<pre><code class="lang-powershell">pac solution version --patchversion 2
+</code></pre>
+<pre><code class="lang-powershell">pac solution version --strategy gittags
+</code></pre>
+<h3 id="optional-parameters-for-solution-version">Optional Parameters for solution version</h3>
+<h4 id="--buildversion--bv"><code>--buildversion</code> <code>-bv</code></h4>
+<p>Build version for the solution.</p>
+<p><strong>Note</strong>: The value must be an integer with minimum value of 0.</p>
+<h4 id="--filename--fn"><code>--filename</code> <code>-fn</code></h4>
+<p>Tracker CSV file name to be used when using filetracking as a strategy. The default value is 'ControlsStateVersionInfo.csv'.</p>
+<h4 id="--patchversion--pv"><code>--patchversion</code> <code>-pv</code></h4>
+<p><strong>Deprecated</strong>: This parameter is ignored.</p>
+<h4 id="--revisionversion--rv"><code>--revisionversion</code> <code>-rv</code></h4>
+<p>Revision version for the solution.</p>
+<p><strong>Note</strong>: The value must be an integer with minimum value of 0.</p>
+<h4 id="--solutionpath--sp"><code>--solutionPath</code> <code>-sp</code></h4>
+<p>Path to Dataverse solution directory or Solution.xml file.</p>
+<h4 id="--strategy--s"><code>--strategy</code> <code>-s</code></h4>
+<p>Updates build version for 'Solution.xml' file using specified strategy. If using gittags, set personal access token in the following environment variable "PacCli.PAT"</p>
+<p>Use one of these values:</p>
+<ul>
+<li><code>None</code></li>
+<li><code>GitTags</code></li>
+<li><code>FileTracking</code></li>
+<li><code>Solution</code></li>
+</ul>
+<!-- 
+Instructions: Remove comments and this line. Add appropriate remarks below
+
+### Remarks
+
+Add remarks here...
+
+-->
+<h2 id="differences-between-pac-solution-clone-and-export">Differences between pac solution clone and export</h2>
+<p>There are situations where you're unsure when to use <code>pac solution clone</code> or <code>pac solution export</code> command. You can use one of the commands in the following scenarios:</p>
+<ul>
+<li>Use <code>pac solution clone</code> when you need to add new components to the solution.</li>
+<li>Use <code>pac solution export</code> when you want to modify the existing content in a solution file but not adding any new components to the solution.</li>
+</ul>
+<h3 id="pac-solution-clone">pac solution clone</h3>
+<p>The exported solution looks like a Visual Studio project when you export the solution using the <code>pac solution clone</code> command. Instead of a <code>.csproj</code> (as in Visual Studio), you'll see a <code>cdsproj</code> file. The <code>cdsproj</code> file has all the components information that is required to build the project. The build output is a solution zip file, which you can import into different environments.</p>
+<p><span class="mx-imgBorder">
+<a href="../media/pac-solution-clone.png#lightbox" data-linktype="relative-path">
+<img src="../media/pac-solution-clone.png" alt="Pac solution clone." data-linktype="relative-path">
+</a>
+</span>
+</p>
+<p>The developer doesn't have to unpack the cloned solution because it's rendered in an unpacked format within the src (source) folder.</p>
+<p><span class="mx-imgBorder">
+<a href="../media/pac-solution-unpack.png#lightbox" data-linktype="relative-path">
+<img src="../media/pac-solution-unpack.png" alt="Pac solution unpack." data-linktype="relative-path">
+</a>
+</span>
+</p>
+<p>Now, if you want to associate a newly created plug-in with this solution, with the solution unpacked, you can use the <code>pac solution add-reference</code> command to update the <code>.cdsproj</code> file to add the new plug-in. Then, you can build the project using either <code>dotnet build</code> or <code>msbuild</code>.</p>
+<p>It's recommended to do a build restore first before building the project. A build restore (dotnet build does a restore first automatically) will restore the required .NET libraries to generate a packed solution.</p>
+<h3 id="pac-solution-export">pac solution export</h3>
+<p>When you export the solution using <code>pac solution export</code> you feel like exporting the solution using the maker portal, and the resulting output is a solution zip file.</p>
+<p><span class="mx-imgBorder">
+<a href="../media/pac-solution-export.png#lightbox" data-linktype="relative-path">
+<img src="../media/pac-solution-export.png" alt="Pac solution export." data-linktype="relative-path">
+</a>
+</span>
+</p>
+<p>When you unpack the solution zip file (we don't recommend that you open the zip with standard tools and use the appropriate command from CLI). The resulting directory structure is similar to the structure in <code>pac solution clone</code>. The only difference is that you can't add references to this unpacked solution, as it doesn't have the <code>.cdsproj</code> project file.</p>
+<p><span class="mx-imgBorder">
+<a href="../media/pac-solution-structure.png#lightbox" data-linktype="relative-path">
+<img src="../media/pac-solution-structure.png" alt="Pac solution structure." data-linktype="relative-path">
+</a>
+</span>
+</p>
+<p>You can modify the relevant set of files that you want to update and then proceed with the solution pack, which generates the solution zip file again to facilitate importing the solution into the target environment. The result from the action is a solution zip file with updated contents and an updated timestamp.</p>
+<h3 id="see-also">See also</h3>
+<p><a href="./" data-linktype="relative-path">Microsoft Power Platform CLI Command Groups</a><br>
+<a href="../introduction" data-linktype="relative-path">Microsoft Power Platform CLI overview</a></p>
+</div>
+					
+		<div
+			id="ms--inline-notifications"
+			class="margin-block-xs"
+			data-bi-name="inline-notification"
+		></div>
+	 
+		<div
+			id="assertive-live-region"
+			role="alert"
+			aria-live="assertive"
+			class="visually-hidden"
+			aria-relevant="additions"
+			aria-atomic="true"
+		></div>
+		<div
+			id="polite-live-region"
+			role="status"
+			aria-live="polite"
+			class="visually-hidden"
+			aria-relevant="additions"
+			aria-atomic="true"
+		></div>
+	
+					
+		<!-- feedback section -->
+		<section
+			id="site-user-feedback-footer"
+			class="font-size-sm margin-top-md display-none-print display-none-desktop"
+			data-test-id="site-user-feedback-footer"
+			data-bi-name="site-feedback-section"
+		>
+			<hr class="hr" />
+			<h2 id="ms--feedback" class="title is-3">Feedback</h2>
+			<div class="display-flex flex-wrap-wrap align-items-center">
+				<p class="font-weight-semibold margin-xxs margin-left-none">
+					Was this page helpful?
+				</p>
+				<div class="buttons">
+					<button
+						class="thumb-rating-button like button button-primary button-sm"
+						data-test-id="footer-rating-yes"
+						data-binary-rating-response="rating-yes"
+						type="button"
+						title="This article is helpful"
+						data-bi-name="button-rating-yes"
+						aria-pressed="false"
+					>
+						<span class="icon" aria-hidden="true">
+							<span class="docon docon-like"></span>
+						</span>
+						<span>Yes</span>
+					</button>
+					<button
+						class="thumb-rating-button dislike button button-primary button-sm"
+						id="standard-rating-no-button"
+						hidden
+						data-test-id="footer-rating-no"
+						data-binary-rating-response="rating-no"
+						type="button"
+						title="This article is not helpful"
+						data-bi-name="button-rating-no"
+						aria-pressed="false"
+					>
+						<span class="icon" aria-hidden="true">
+							<span class="docon docon-dislike"></span>
+						</span>
+						<span>No</span>
+					</button>
+					<details
+						class="popover popover-top"
+						id="mobile-help-popover"
+						data-test-id="footer-feedback-popover"
+					>
+						<summary
+							class="thumb-rating-button dislike button button-primary button-sm"
+							data-test-id="details-footer-rating-no"
+							data-binary-rating-response="rating-no"
+							title="This article is not helpful"
+							data-bi-name="button-rating-no"
+							aria-pressed="false"
+							data-bi-an="feedback-unhelpful-popover"
+						>
+							<span class="icon" aria-hidden="true">
+								<span class="docon docon-dislike"></span>
+							</span>
+							<span>No</span>
+						</summary>
+						<div
+							class="popover-content width-200 width-300-tablet"
+							role="dialog"
+							aria-labelledby="popover-heading"
+							aria-describedby="popover-description"
+						>
+							<p id="popover-heading" class="font-size-lg margin-bottom-xxs font-weight-semibold">
+								Need help with this topic?
+							</p>
+							<p id="popover-description" class="font-size-sm margin-bottom-xs">
+								Want to try using Ask Learn to clarify or guide you through this topic?
+							</p>
+							
+		<div class="buttons flex-direction-row flex-wrap justify-content-center gap-xxs">
+			<div>
+		<button
+			class="button button-sm border inner-focus display-none margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-test-id="ask-learn-assistant-modal-entry-mobile-feedback"
+			data-ask-learn-modal-entry-feedback
+			data-bi-an=feedback-unhelpful-popover
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-label="Ask Learn"
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+		</button>
+		<button
+			class="button button-sm display-inline-flex display-none-desktop flex-shrink-0 margin-right-xxs border-color-ask-learn margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-bi-an=feedback-unhelpful-popover
+			data-test-id="ask-learn-assistant-modal-entry-tablet-feedback"
+			data-ask-learn-modal-entry-feedback
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+		<button
+			class="button button-sm display-none flex-shrink-0 display-inline-flex-desktop margin-right-xxs border-color-ask-learn margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-bi-an=feedback-unhelpful-popover
+			data-test-id="ask-learn-assistant-flyout-entry-feedback"
+			data-ask-learn-flyout-entry-show-only
+			data-flyout-button="toggle"
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-controls="ask-learn-flyout"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+	</div>
+			<button
+				type="button"
+				class="button button-sm margin-right-xxs"
+				data-help-option="suggest-fix"
+				data-bi-name="feedback-suggest"
+				data-bi-an="feedback-unhelpful-popover"
+				data-test-id="suggest-fix"
+			>
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-feedback"></span>
+				</span>
+				<span> Suggest a fix? </span>
+			</button>
+		</div>
+	
+						</div>
+					</details>
+				</div>
+			</div>
+		</section>
+		<!-- end feedback section -->
+	
+				</div>
+				
+		<div id="ms--additional-resources-mobile" class="display-none-print">
+			<hr class="hr" hidden />
+			<h2 id="ms--additional-resources-mobile-heading" class="title is-3" hidden>
+				Additional resources
+			</h2>
+			
+		<section
+			id="right-rail-recommendations-mobile"
+			class=""
+			data-bi-name="recommendations"
+			hidden
+		></section>
+	 
+		<section
+			id="right-rail-training-mobile"
+			class=""
+			data-bi-name="learning-resource-card"
+			hidden
+		></section>
+	 
+		<section
+			id="right-rail-events-mobile"
+			class=""
+			data-bi-name="events-card"
+			hidden
+		></section>
+	
+		</div>
+	 
+		<div
+			id="article-metadata-footer"
+			data-bi-name="article-metadata-footer"
+			data-test-id="article-metadata-footer"
+			class="page-metadata-container"
+		>
+			<hr class="hr" />
+			<ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
+				<li class="visibility-hidden-visual-diff">
+			<span class="badge badge-sm text-wrap-pretty">
+				<span>Last updated on <local-time format="twoDigitNumeric"
+		datetime="2026-10-25T08:00:00.000Z"
+		data-article-date-source="calculated"
+		class="is-invisible"
+	>
+		2026-10-25
+	</local-time></span>
+			</span>
+		</li>
+			</ul>
+		</div>
+	
+			</div>
+		
+				</main>
+				<aside
+					id="layout-body-aside"
+					class="layout-body-aside  "
+					data-bi-name="aside"
+					aria-label="Additional resources"
+			  >
+					
+		<div
+			id="ms--additional-resources"
+			class="right-container padding-sm display-none display-block-desktop height-full"
+			data-bi-name="pageactions"
+		>
+			<div id="affixed-right-container" data-bi-name="right-column">
+				
+		<nav
+			id="side-doc-outline"
+			class="doc-outline border-bottom padding-bottom-xs margin-bottom-xs scrollbar-width-thin"
+			data-bi-name="intopic toc"
+			aria-label="In this article"
+		>
+			<h3>In this article</h3>
+		</nav>
+	
+				<!-- Feedback -->
+				
+		<section
+			id="ms--site-user-feedback-right-rail"
+			class="font-size-sm display-none-print"
+			data-test-id="site-user-feedback-right-rail"
+			data-bi-name="site-feedback-right-rail"
+		>
+			<div class="display-flex flex-wrap-wrap align-items-center">
+				<p class="font-weight-semibold margin-xxs margin-left-none">
+					Was this page helpful?
+				</p>
+				<div class="display-flex flex-wrap-nowrap">
+					<button
+						class="thumb-rating-button like inner-focus"
+						data-test-id="right-rail-rating-yes"
+						data-binary-rating-response="rating-yes"
+						type="button"
+						title="This article is helpful"
+						aria-label="This article is helpful"
+						data-bi-name="button-rating-yes"
+						aria-pressed="false"
+					>
+						<span class="icon" aria-hidden="true">
+							<span class="docon docon-like"></span>
+						</span>
+					</button>
+					<button
+						class="thumb-rating-button dislike inner-focus"
+						id="right-rail-no-button"
+						hidden
+						data-test-id="right-rail-rating-no"
+						data-binary-rating-response="rating-no"
+						type="button"
+						title="This article is not helpful"
+						aria-label="This article is not helpful"
+						data-bi-name="button-rating-no"
+						aria-pressed="false"
+					>
+						<span class="icon" aria-hidden="true">
+							<span class="docon docon-dislike"></span>
+						</span>
+					</button>
+					<details class="popover popover-right" id="help-popover" data-test-id="feedback-popover">
+						<summary
+							tabindex="0"
+							class="thumb-rating-button dislike inner-focus"
+							data-test-id="details-right-rail-rating-no"
+							data-binary-rating-response="rating-no"
+							title="This article is not helpful"
+							aria-label="This article is not helpful"
+							data-bi-name="button-rating-no"
+							aria-pressed="false"
+							data-bi-an="feedback-unhelpful-popover"
+						>
+							<span class="icon" aria-hidden="true">
+								<span class="docon docon-dislike"></span>
+							</span>
+						</summary>
+						<div
+							class="popover-content width-200 width-300-tablet"
+							role="dialog"
+							aria-labelledby="popover-heading-right-rail"
+							aria-describedby="popover-description-right-rail"
+						>
+							<p
+								id="popover-heading-right-rail"
+								class="font-size-lg margin-bottom-xxs font-weight-semibold"
+							>
+								Need help with this topic?
+							</p>
+							<p id="popover-description-right-rail" class="font-size-sm margin-bottom-xs">
+								Want to try using Ask Learn to clarify or guide you through this topic?
+							</p>
+							
+		<div class="buttons flex-direction-row flex-wrap justify-content-center gap-xxs">
+			<div>
+		<button
+			class="button button-sm border inner-focus display-none margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-test-id="ask-learn-assistant-modal-entry-mobile-feedback"
+			data-ask-learn-modal-entry-feedback
+			data-bi-an=feedback-unhelpful-popover
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-label="Ask Learn"
+			hidden
+		>
+			<span class="icon" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+		</button>
+		<button
+			class="button button-sm display-inline-flex display-none-desktop flex-shrink-0 margin-right-xxs border-color-ask-learn margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-bi-an=feedback-unhelpful-popover
+			data-test-id="ask-learn-assistant-modal-entry-tablet-feedback"
+			data-ask-learn-modal-entry-feedback
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+		<button
+			class="button button-sm display-none flex-shrink-0 display-inline-flex-desktop margin-right-xxs border-color-ask-learn margin-right-xxs"
+			data-bi-name="ask-learn-assistant-entry-troubleshoot"
+			data-bi-an=feedback-unhelpful-popover
+			data-test-id="ask-learn-assistant-flyout-entry-feedback"
+			data-ask-learn-flyout-entry-show-only
+			data-flyout-button="toggle"
+			type="button"
+			style="min-width: max-content;"
+			aria-expanded="false"
+			aria-controls="ask-learn-flyout"
+			hidden
+		>
+			<span class="icon font-size-lg" aria-hidden="true">
+				<span class="docon docon-chat-sparkle-fill gradient-ask-learn-logo"></span>
+			</span>
+			<span>Ask Learn</span>
+		</button>
+	</div>
+			<button
+				type="button"
+				class="button button-sm margin-right-xxs"
+				data-help-option="suggest-fix"
+				data-bi-name="feedback-suggest"
+				data-bi-an="feedback-unhelpful-popover"
+				data-test-id="suggest-fix"
+			>
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-feedback"></span>
+				</span>
+				<span> Suggest a fix? </span>
+			</button>
+		</div>
+	
+						</div>
+					</details>
+				</div>
+			</div>
+		</section>
+	
+			</div>
+		</div>
+	
+			  </aside> <section
+					id="layout-body-flyout"
+					class="layout-body-flyout "
+					data-bi-name="flyout"
+			  >
+					 <div
+	class="height-full border-left background-color-body-medium"
+	id="ask-learn-flyout"
+></div>
+			  </section> <div class="layout-body-footer " data-bi-name="layout-footer">
+		<footer
+			id="footer"
+			data-test-id="footer"
+			data-bi-name="footer"
+			class="footer-layout padding-xs padding-sm-desktop has-default-focus border-top"
+			role="contentinfo"
+		>
+			<div class="display-flex gap-xs flex-wrap-wrap is-full-height padding-right-lg-desktop">
+				
+		<a
+			data-mscc-ic="false"
+			href="#"
+			data-bi-name="select-locale"
+			class="locale-selector-link flex-shrink-0 button button-sm button-clear external-link-indicator"
+			id=""
+			title=""
+			><span class="icon" aria-hidden="true"
+				><span class="docon docon-world"></span></span
+			><span class="local-selector-link-text">en-us</span></a
+		>
+	 <div class="ccpa-privacy-link" data-ccpa-privacy-link hidden>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://aka.ms/yourcaliforniaprivacychoices"
+			data-bi-name="your-privacy-choices"
+			class="button button-sm button-clear flex-shrink-0 external-link-indicator"
+			id=""
+			title=""
+			>
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 30 14"
+			xml:space="preserve"
+			height="16"
+			width="43"
+			aria-hidden="true"
+			focusable="false"
+		>
+			<path
+				d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z"
+				style="fill-rule:evenodd;clip-rule:evenodd;fill:#fff"
+			></path>
+			<path
+				d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z"
+				style="fill-rule:evenodd;clip-rule:evenodd;fill:#06f"
+			></path>
+			<path
+				d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z"
+				style="fill:#fff"
+			></path>
+			<path
+				d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z"
+				style="fill:#06f"
+			></path>
+		</svg>
+	
+			<span>Your Privacy Choices</span></a
+		>
+	
+	</div>
+				<div class="flex-shrink-0">
+		<div class="dropdown has-caret-up">
+			<button
+				data-test-id="theme-selector-button"
+				class="dropdown-trigger button button-clear button-sm inner-focus theme-dropdown-trigger"
+				aria-controls="{{ themeMenuId }}"
+				aria-haspopup="true"
+				aria-expanded="false"
+				data-bi-name="theme"
+			>
+				<span class="icon" aria-hidden="true"><span class="docon docon-sun"></span></span>
+				<span>Theme</span>
+				<span class="icon expanded-indicator" aria-hidden="true">
+					<span class="docon docon-chevron-down-light"></span>
+				</span>
+			</button>
+			<div class="dropdown-menu" id="{{ themeMenuId }}" role="menu">
+				<ul class="theme-selector padding-xxs" data-test-id="theme-dropdown-menu" role="none">
+					<li class="theme display-block" role="none">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							role="menuitemradio"
+							aria-checked="false"
+							data-theme-to="light"
+							tabindex="-1"
+						>
+							<span class="theme-light margin-right-xxs">
+								<span
+									class="theme-selector-icon border display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span> Light </span>
+						</button>
+					</li>
+					<li class="theme display-block" role="none">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							role="menuitemradio"
+							aria-checked="false"
+							data-theme-to="dark"
+							tabindex="-1"
+						>
+							<span class="theme-dark margin-right-xxs">
+								<span
+									class="border theme-selector-icon display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span> Dark </span>
+						</button>
+					</li>
+					<li class="theme display-block" role="none">
+						<button
+							class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left"
+							role="menuitemradio"
+							aria-checked="false"
+							data-theme-to="high-contrast"
+							tabindex="-1"
+						>
+							<span class="theme-high-contrast margin-right-xxs">
+								<span
+									class="border theme-selector-icon display-inline-block has-body-background"
+									aria-hidden="true"
+								>
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background" />
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+									</svg>
+								</span>
+							</span>
+							<span> High contrast </span>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+			</div>
+			<ul class="links" data-bi-name="footerlinks">
+				<li class="manage-cookies-holder" hidden=""></li>
+				<li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/principles-for-ai-generated-content"
+			data-bi-name="aiDisclaimer"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>AI Disclaimer</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/previous-versions/"
+			data-bi-name="archivelink"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Previous Versions</a
+		>
+	
+	</li> <li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://techcommunity.microsoft.com/t5/microsoft-learn-blog/bg-p/MicrosoftLearnBlog"
+			data-bi-name="bloglink"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Blog</a
+		>
+	
+	</li> <li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/contribute"
+			data-bi-name="contributorGuide"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Contribute</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://go.microsoft.com/fwlink/?LinkId=521839"
+			data-bi-name="privacy"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Privacy</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://go.microsoft.com/fwlink/?linkid=2259814"
+			data-bi-name="consumer-health-privacy"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Consumer Health Privacy</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://learn.microsoft.com/en-us/legal/termsofuse"
+			data-bi-name="termsofuse"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Terms of Use</a
+		>
+	
+	</li><li>
+		
+		<a
+			data-mscc-ic="false"
+			href="https://www.microsoft.com/legal/intellectualproperty/Trademarks/"
+			data-bi-name="trademarks"
+			class=" external-link-indicator"
+			id=""
+			title=""
+			>Trademarks</a
+		>
+	
+	</li>
+				<li>&copy; Microsoft 2026</li>
+			</ul>
+		</footer>
+	</footer>
+			<noscript><img src="https://learn.microsoft.com/akam/13/pixel_67abb7c0?a=dD0wZDgyMTM3ZjQ4MjcwMzJiNTZjZDg3YzM1OWU5NjRlM2M2NWM0ZDRiJmpzPW9mZg==" style="visibility: hidden; position: absolute; left: -999px; top: -999px;" /></noscript></body>
+		</html>

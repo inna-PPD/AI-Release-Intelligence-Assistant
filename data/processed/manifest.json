@@ -1,0 +1,1121 @@
+{
+  "params": {
+    "strategy": "structure",
+    "max_tokens": 300,
+    "min_tokens": 60,
+    "fixed": {
+      "size": 300,
+      "overlap": 50
+    },
+    "comparison_docs": [
+      "learn-cli-solution",
+      "coe-release-february2026",
+      "contoso-regression-test-plan-1.5",
+      "contoso-install-guide-1.5"
+    ]
+  },
+  "totals": {
+    "documents": 42,
+    "documents_by_format": {
+      "docx": 6,
+      "html": 15,
+      "md": 18,
+      "pdf": 3
+    },
+    "duplicate_documents": 0,
+    "chunks": 404,
+    "duplicate_chunks_removed": 62
+  },
+  "documents": [
+    {
+      "doc_id": "learn-cli-introduction",
+      "title": "Install and Configure Microsoft Power Platform CLI",
+      "source": "microsoft_learn",
+      "format": "html",
+      "url": "https://learn.microsoft.com/en-us/power-platform/developer/cli/introduction",
+      "product": "pac CLI",
+      "version": null,
+      "date": "2026-08-04",
+      "license": "CC BY 4.0",
+      "path": "data/corpus/raw/html/learn-cli-introduction.html",
+      "raw_sha256": "e8b502500fec941b",
+      "doc_hash": "4a7dd4048ceae83b",
+      "blocks": 72,
+      "blocks_removed_as_noise": 6,
+      "tokens": 1501,
+      "status": "ok",
+      "chunks_before_dedup": 12,
+      "chunks": 12
+    },
+    {
+      "doc_id": "learn-cli-solution",
+      "title": "Microsoft Power Platform CLI solution command group",
+      "source": "microsoft_learn",
+      "format": "html",
+      "url": "https://learn.microsoft.com/en-us/power-platform/developer/cli/reference/solution",
+      "product": "pac CLI",
+      "version": null,
+      "date": "2026-10-25",
+      "license": "CC BY 4.0",
+      "path": "data/corpus/raw/html/learn-cli-solution.html",
+      "raw_sha256": "9a7df3e9508cbd8c",
+      "doc_hash": "21d34de27abd08a3",
+      "blocks": 505,
+      "blocks_removed_as_noise": 6,
+      "tokens": 6313,
+      "status": "ok",
+      "chunks_before_dedup": 78,
+      "chunks": 69
+    },
+    {
+      "doc_id": "learn-cli-package",
+      "title": "Microsoft Power Platform CLI package command group",
+      "source": "microsoft_learn",
+      "format": "html",
+      "url": "https://learn.microsoft.com/en-us/power-platform/developer/cli/reference/package",
+      "product": "pac CLI",
+      "version": null,
+      "date": "2026-10-25",
+      "license": "CC BY 4.0",
+      "path": "data/corpus/raw/html/learn-cli-package.html",
+      "raw_sha256": "8f1a91f0dac6ce95",
+      "doc_hash": "b39883015a5d5860",
+      "blocks": 199,
+      "blocks_removed_as_noise": 2,
+      "tokens": 2558,
+      "status": "ok",
+      "chunks_before_dedup": 36,
+      "chunks": 34
+    },
+    {
+      "doc_id": "learn-cli-pcf",
+      "title": "Microsoft Power Platform CLI pcf command group",
+      "source": "microsoft_learn",
+      "format": "html",
+      "url": "https://learn.microsoft.com/en-us/power-platform/developer/cli/reference/pcf",
+      "product": "pac CLI",
+      "version": null,
+      "date": "2026-10-25",
+      "license": "CC BY 4.0",
+      "path": "data/corpus/raw/html/learn-cli-pcf.html",
+      "raw_sha256": "6415dc21024bcc5b",
+      "doc_hash": "4faee9ee7977b10e",
+      "blocks": 92,
+      "blocks_removed_as_noise": 2,
+      "tokens": 967,
+      "status": "ok",
+      "chunks_before_dedup": 13,
+      "chunks": 13
+    },
+    {
+      "doc_id": "learn-alm-basics",
+      "title": "Application lifecycle management (ALM) basics with Microsoft Power Platform",
+      "source": "microsoft_learn",
+      "format": "html",
+      "url": "https://learn.microsoft.com/en-us/power-platform/alm/basics-alm",
+      "product": "ALM",
+      "version": null,
+      "date": "2025-01-04",
+      "license": "CC BY 4.0",
+      "path": "data/corpus/raw/html/learn-alm-basics.html",
+      "raw_sha256": "12d0116e0d5bc1b0",
+      "doc_hash": "07123e632fcc00b0",
+      "blocks": 62,
+      "blocks_removed_as_noise": 1,
+      "tokens": 1971,
+      "status": "ok",
+      "chunks_before_dedup": 14,
+      "chunks": 14
+    },
+    {
+      "doc_id": "learn-alm-solution-concepts",
+      "title": "Solution concepts with Power Platform",
+      "source": "microsoft_learn",
+      "format": "html",
+      "url": "https://learn.microsoft.com/en-us/power-platform/alm/solution-concepts-alm",
+      "product": "ALM",
+      "version": null,
+      "date": "2025-01-29",
+      "license": "CC BY 4.0",
+      "path": "data/corpus/raw/html/learn-alm-solution-concepts.html",
+      "raw_sha256": "d1d4818c677fc897",
+      "doc_hash": "21d59665ec9440ea",
+      "blocks": 50,
+      "blocks_removed_as_noise": 5,
+      "tokens": 1595,
+      "status": "ok",
+      "chunks_before_dedup": 10,
+      "chunks": 10
+    },
+    {
+      "doc_id": "learn-alm-solution-layers",
+      "title": "Solution layers and merge behavior in Power Platform",
+      "source": "microsoft_learn",
+      "format": "html",
+      "url": "https://learn.microsoft.com/en-us/power-platform/alm/solution-layers-alm",
+      "product": "ALM",
+      "version": null,
+      "date": "2025-01-30",
+      "license": "CC BY 4.0",
+      "path": "data/corpus/raw/html/learn-alm-solution-layers.html",
+      "raw_sha256": "f204c0ddbb08df3b",
+      "doc_hash": "1fd04219691351ee",
+      "blocks": 27,
+      "blocks_removed_as_noise": 4,
+      "tokens": 889,
+      "status": "ok",
+      "chunks_before_dedup": 6,
+      "chunks": 6
+    },
+    {
+      "doc_id": "learn-alm-update-solutions",
+      "title": "Create and update custom solutions for ALM in Power Platform",
+      "source": "microsoft_learn",
+      "format": "html",
+      "url": "https://learn.microsoft.com/en-us/power-platform/alm/update-solutions-alm",
+      "product": "ALM",
+      "version": null,
+      "date": "2025-02-04",
+      "license": "CC BY 4.0",
+      "path": "data/corpus/raw/html/learn-alm-update-solutions.html",
+      "raw_sha256": "ad2e1e6f01f42a41",
+      "doc_hash": "ef73bd3b1d24b30c",
+      "blocks": 43,
+      "blocks_removed_as_noise": 8,
+      "tokens": 1298,
+      "status": "ok",
+      "chunks_before_dedup": 9,
+      "chunks": 9
+    },
+    {
+      "doc_id": "learn-alm-environment-strategy",
+      "title": "ALM environment strategy considerations",
+      "source": "microsoft_learn",
+      "format": "html",
+      "url": "https://learn.microsoft.com/en-us/power-platform/alm/environment-strategy-alm",
+      "product": "ALM",
+      "version": null,
+      "date": "2024-05-23",
+      "license": "CC BY 4.0",
+      "path": "data/corpus/raw/html/learn-alm-environment-strategy.html",
+      "raw_sha256": "e09fb86c247912c9",
+      "doc_hash": "c194b5f81dda7939",
+      "blocks": 21,
+      "blocks_removed_as_noise": 2,
+      "tokens": 610,
+      "status": "ok",
+      "chunks_before_dedup": 6,
+      "chunks": 6
+    },
+    {
+      "doc_id": "learn-alm-source-control",
+      "title": "Source control with solution files with Microsoft Dataverse in Power Platform",
+      "source": "microsoft_learn",
+      "format": "html",
+      "url": "https://learn.microsoft.com/en-us/power-platform/alm/use-source-control-solution-files",
+      "product": "ALM",
+      "version": null,
+      "date": "2026-04-09",
+      "license": "CC BY 4.0",
+      "path": "data/corpus/raw/html/learn-alm-source-control.html",
+      "raw_sha256": "3ec1cbf898bef10a",
+      "doc_hash": "85df5787654de556",
+      "blocks": 45,
+      "blocks_removed_as_noise": 2,
+      "tokens": 1792,
+      "status": "ok",
+      "chunks_before_dedup": 9,
+      "chunks": 9
+    },
+    {
+      "doc_id": "learn-alm-build-tools",
+      "title": "Microsoft Power Platform Build Tools for Azure DevOps",
+      "source": "microsoft_learn",
+      "format": "html",
+      "url": "https://learn.microsoft.com/en-us/power-platform/alm/devops-build-tools",
+      "product": "Power Platform Build Tools",
+      "version": null,
+      "date": "2026-08-19",
+      "license": "CC BY 4.0",
+      "path": "data/corpus/raw/html/learn-alm-build-tools.html",
+      "raw_sha256": "f0a90b8d5f74abe9",
+      "doc_hash": "4aa882fc71d467cc",
+      "blocks": 73,
+      "blocks_removed_as_noise": 4,
+      "tokens": 1893,
+      "status": "ok",
+      "chunks_before_dedup": 11,
+      "chunks": 11
+    },
+    {
+      "doc_id": "learn-alm-pipelines",
+      "title": "Overview of pipelines in Power Platform",
+      "source": "microsoft_learn",
+      "format": "html",
+      "url": "https://learn.microsoft.com/en-us/power-platform/alm/pipelines",
+      "product": "Power Platform Pipelines",
+      "version": null,
+      "date": "2026-11-06",
+      "license": "CC BY 4.0",
+      "path": "data/corpus/raw/html/learn-alm-pipelines.html",
+      "raw_sha256": "f2c83b11084c3b5c",
+      "doc_hash": "40c02eab359216ec",
+      "blocks": 101,
+      "blocks_removed_as_noise": 6,
+      "tokens": 2704,
+      "status": "ok",
+      "chunks_before_dedup": 25,
+      "chunks": 25
+    },
+    {
+      "doc_id": "learn-coe-setup",
+      "title": "Set up the CoE Starter Kit: Prerequisites and instructions",
+      "source": "microsoft_learn",
+      "format": "html",
+      "url": "https://learn.microsoft.com/en-us/power-platform/guidance/coe/setup",
+      "product": "CoE Starter Kit",
+      "version": null,
+      "date": "2026-04-20",
+      "license": "CC BY 4.0",
+      "path": "data/corpus/raw/html/learn-coe-setup.html",
+      "raw_sha256": "999bb4fdecb87f17",
+      "doc_hash": "d63be4adae8131a0",
+      "blocks": 97,
+      "blocks_removed_as_noise": 3,
+      "tokens": 2241,
+      "status": "ok",
+      "chunks_before_dedup": 14,
+      "chunks": 14
+    },
+    {
+      "doc_id": "learn-coe-after-setup",
+      "title": "Update the Center of Excellence (CoE) Starter Kit",
+      "source": "microsoft_learn",
+      "format": "html",
+      "url": "https://learn.microsoft.com/en-us/power-platform/guidance/coe/after-setup",
+      "product": "CoE Starter Kit",
+      "version": null,
+      "date": "2026-04-20",
+      "license": "CC BY 4.0",
+      "path": "data/corpus/raw/html/learn-coe-after-setup.html",
+      "raw_sha256": "276b15d0547cb468",
+      "doc_hash": "a738764efde5b99a",
+      "blocks": 94,
+      "blocks_removed_as_noise": 0,
+      "tokens": 1675,
+      "status": "ok",
+      "chunks_before_dedup": 13,
+      "chunks": 13
+    },
+    {
+      "doc_id": "learn-coe-faq",
+      "title": "CoE Starter Kit tips and frequently asked questions",
+      "source": "microsoft_learn",
+      "format": "html",
+      "url": "https://learn.microsoft.com/en-us/power-platform/guidance/coe/faq",
+      "product": "CoE Starter Kit",
+      "version": null,
+      "date": "2026-04-20",
+      "license": "CC BY 4.0",
+      "path": "data/corpus/raw/html/learn-coe-faq.html",
+      "raw_sha256": "4b6d48fa280f5e70",
+      "doc_hash": "4b8048cc54d79bc7",
+      "blocks": 176,
+      "blocks_removed_as_noise": 3,
+      "tokens": 2860,
+      "status": "ok",
+      "chunks_before_dedup": 22,
+      "chunks": 22
+    },
+    {
+      "doc_id": "coe-release-february2026",
+      "title": "CoE Starter Kit release notes — February 2026",
+      "source": "github_release",
+      "format": "md",
+      "url": "https://github.com/microsoft/coe-starter-kit/releases/tag/CoEStarterKit-February2026",
+      "product": "CoE Starter Kit",
+      "version": "February 2026",
+      "date": "2026-02-10",
+      "license": "MIT",
+      "path": "data/corpus/raw/md/coe-release-february2026.md",
+      "raw_sha256": "1246ce04b6439649",
+      "doc_hash": "fa1582a319ebf585",
+      "blocks": 56,
+      "blocks_removed_as_noise": 0,
+      "tokens": 1225,
+      "status": "ok",
+      "chunks_before_dedup": 9,
+      "chunks": 9
+    },
+    {
+      "doc_id": "coe-release-january2026",
+      "title": "CoE Starter Kit release notes — January 2026",
+      "source": "github_release",
+      "format": "md",
+      "url": "https://github.com/microsoft/coe-starter-kit/releases/tag/CoEStarterKit-January2026",
+      "product": "CoE Starter Kit",
+      "version": "January 2026",
+      "date": "2026-01-13",
+      "license": "MIT",
+      "path": "data/corpus/raw/md/coe-release-january2026.md",
+      "raw_sha256": "1d1d0c6db11f9a42",
+      "doc_hash": "8ba099c4958f47cd",
+      "blocks": 70,
+      "blocks_removed_as_noise": 0,
+      "tokens": 1480,
+      "status": "ok",
+      "chunks_before_dedup": 9,
+      "chunks": 7
+    },
+    {
+      "doc_id": "coe-release-december2025",
+      "title": "CoE Starter Kit release notes — December 2025",
+      "source": "github_release",
+      "format": "md",
+      "url": "https://github.com/microsoft/coe-starter-kit/releases/tag/CoEStarterKit-December2025",
+      "product": "CoE Starter Kit",
+      "version": "December 2025",
+      "date": "2025-12-09",
+      "license": "MIT",
+      "path": "data/corpus/raw/md/coe-release-december2025.md",
+      "raw_sha256": "64d38ddd0f499858",
+      "doc_hash": "5361264335bd4eff",
+      "blocks": 81,
+      "blocks_removed_as_noise": 0,
+      "tokens": 1811,
+      "status": "ok",
+      "chunks_before_dedup": 9,
+      "chunks": 6
+    },
+    {
+      "doc_id": "coe-release-november2025",
+      "title": "CoE Starter Kit release notes — November 2025",
+      "source": "github_release",
+      "format": "md",
+      "url": "https://github.com/microsoft/coe-starter-kit/releases/tag/CoEStarterKit-November2025",
+      "product": "CoE Starter Kit",
+      "version": "November 2025",
+      "date": "2025-11-11",
+      "license": "MIT",
+      "path": "data/corpus/raw/md/coe-release-november2025.md",
+      "raw_sha256": "efd3a53b6d468f64",
+      "doc_hash": "e5a08f9e4c289988",
+      "blocks": 106,
+      "blocks_removed_as_noise": 0,
+      "tokens": 2254,
+      "status": "ok",
+      "chunks_before_dedup": 13,
+      "chunks": 10
+    },
+    {
+      "doc_id": "coe-release-october2025",
+      "title": "CoE Starter Kit release notes — October 2025",
+      "source": "github_release",
+      "format": "md",
+      "url": "https://github.com/microsoft/coe-starter-kit/releases/tag/CoEStarterKit-October2025",
+      "product": "CoE Starter Kit",
+      "version": "October 2025",
+      "date": "2025-10-15",
+      "license": "MIT",
+      "path": "data/corpus/raw/md/coe-release-october2025.md",
+      "raw_sha256": "2526235f55a4aa61",
+      "doc_hash": "5b19119698d03945",
+      "blocks": 126,
+      "blocks_removed_as_noise": 0,
+      "tokens": 2765,
+      "status": "ok",
+      "chunks_before_dedup": 14,
+      "chunks": 11
+    },
+    {
+      "doc_id": "coe-release-september2025",
+      "title": "CoE Starter Kit release notes — September 2025",
+      "source": "github_release",
+      "format": "md",
+      "url": "https://github.com/microsoft/coe-starter-kit/releases/tag/CoEStarterKit-September2025",
+      "product": "CoE Starter Kit",
+      "version": "September 2025",
+      "date": "2025-09-10",
+      "license": "MIT",
+      "path": "data/corpus/raw/md/coe-release-september2025.md",
+      "raw_sha256": "28c7cfa9766119da",
+      "doc_hash": "e678e62d37d9fb2f",
+      "blocks": 98,
+      "blocks_removed_as_noise": 0,
+      "tokens": 2172,
+      "status": "ok",
+      "chunks_before_dedup": 12,
+      "chunks": 11
+    },
+    {
+      "doc_id": "coe-release-august2025",
+      "title": "CoE Starter Kit release notes — August 2025",
+      "source": "github_release",
+      "format": "md",
+      "url": "https://github.com/microsoft/coe-starter-kit/releases/tag/CoEStarterKit-August2025",
+      "product": "CoE Starter Kit",
+      "version": "August 2025",
+      "date": "2025-08-12",
+      "license": "MIT",
+      "path": "data/corpus/raw/md/coe-release-august2025.md",
+      "raw_sha256": "e126e109600e2e7b",
+      "doc_hash": "ce759f6e37d0b934",
+      "blocks": 38,
+      "blocks_removed_as_noise": 0,
+      "tokens": 779,
+      "status": "ok",
+      "chunks_before_dedup": 6,
+      "chunks": 3
+    },
+    {
+      "doc_id": "coe-release-july2025",
+      "title": "CoE Starter Kit release notes — July 2025",
+      "source": "github_release",
+      "format": "md",
+      "url": "https://github.com/microsoft/coe-starter-kit/releases/tag/CoEStarterKit-July2025",
+      "product": "CoE Starter Kit",
+      "version": "July 2025",
+      "date": "2025-07-08",
+      "license": "MIT",
+      "path": "data/corpus/raw/md/coe-release-july2025.md",
+      "raw_sha256": "c96a627f5d01c173",
+      "doc_hash": "7503322e0f5c6153",
+      "blocks": 9,
+      "blocks_removed_as_noise": 0,
+      "tokens": 1520,
+      "status": "ok",
+      "chunks_before_dedup": 8,
+      "chunks": 5
+    },
+    {
+      "doc_id": "coe-release-june2025",
+      "title": "CoE Starter Kit release notes — June 2025",
+      "source": "github_release",
+      "format": "md",
+      "url": "https://github.com/microsoft/coe-starter-kit/releases/tag/CoEStarterKit-June2025",
+      "product": "CoE Starter Kit",
+      "version": "June 2025",
+      "date": "2025-06-10",
+      "license": "MIT",
+      "path": "data/corpus/raw/md/coe-release-june2025.md",
+      "raw_sha256": "6350a347519ccb4b",
+      "doc_hash": "24046f9deeba9fd6",
+      "blocks": 8,
+      "blocks_removed_as_noise": 0,
+      "tokens": 1480,
+      "status": "ok",
+      "chunks_before_dedup": 8,
+      "chunks": 6
+    },
+    {
+      "doc_id": "coe-release-may2025",
+      "title": "CoE Starter Kit release notes — May 2025",
+      "source": "github_release",
+      "format": "md",
+      "url": "https://github.com/microsoft/coe-starter-kit/releases/tag/CoEStarterKit-may2025",
+      "product": "CoE Starter Kit",
+      "version": "May 2025",
+      "date": "2025-05-13",
+      "license": "MIT",
+      "path": "data/corpus/raw/md/coe-release-may2025.md",
+      "raw_sha256": "a7479ae72924f88d",
+      "doc_hash": "d53fbf275dbcc41f",
+      "blocks": 10,
+      "blocks_removed_as_noise": 0,
+      "tokens": 1366,
+      "status": "ok",
+      "chunks_before_dedup": 9,
+      "chunks": 6
+    },
+    {
+      "doc_id": "coe-release-april25",
+      "title": "CoE Starter Kit release notes — April 2025",
+      "source": "github_release",
+      "format": "md",
+      "url": "https://github.com/microsoft/coe-starter-kit/releases/tag/CoEStarterKit-April25",
+      "product": "CoE Starter Kit",
+      "version": "April 2025",
+      "date": "2025-04-15",
+      "license": "MIT",
+      "path": "data/corpus/raw/md/coe-release-april25.md",
+      "raw_sha256": "b12482a51159b140",
+      "doc_hash": "9a0f00454596bd08",
+      "blocks": 11,
+      "blocks_removed_as_noise": 0,
+      "tokens": 1974,
+      "status": "ok",
+      "chunks_before_dedup": 11,
+      "chunks": 7
+    },
+    {
+      "doc_id": "coe-release-march2025",
+      "title": "CoE Starter Kit release notes — March 2025",
+      "source": "github_release",
+      "format": "md",
+      "url": "https://github.com/microsoft/coe-starter-kit/releases/tag/CoEStarterKit-March2025",
+      "product": "CoE Starter Kit",
+      "version": "March 2025",
+      "date": "2025-03-09",
+      "license": "MIT",
+      "path": "data/corpus/raw/md/coe-release-march2025.md",
+      "raw_sha256": "205b37d7c844d3a9",
+      "doc_hash": "b3646ce2c8194ee2",
+      "blocks": 11,
+      "blocks_removed_as_noise": 0,
+      "tokens": 1079,
+      "status": "ok",
+      "chunks_before_dedup": 8,
+      "chunks": 4
+    },
+    {
+      "doc_id": "coe-release-february2025",
+      "title": "CoE Starter Kit release notes — February 2025",
+      "source": "github_release",
+      "format": "md",
+      "url": "https://github.com/microsoft/coe-starter-kit/releases/tag/CoEStarterKit-February2025",
+      "product": "CoE Starter Kit",
+      "version": "February 2025",
+      "date": "2025-02-14",
+      "license": "MIT",
+      "path": "data/corpus/raw/md/coe-release-february2025.md",
+      "raw_sha256": "f8958117b7cc647d",
+      "doc_hash": "7d55fc54e5411ee3",
+      "blocks": 11,
+      "blocks_removed_as_noise": 0,
+      "tokens": 720,
+      "status": "ok",
+      "chunks_before_dedup": 6,
+      "chunks": 2
+    },
+    {
+      "doc_id": "coe-release-november2024",
+      "title": "CoE Starter Kit release notes — November 2024",
+      "source": "github_release",
+      "format": "md",
+      "url": "https://github.com/microsoft/coe-starter-kit/releases/tag/CoEStarterKit-November2024",
+      "product": "CoE Starter Kit",
+      "version": "November 2024",
+      "date": "2024-11-01",
+      "license": "MIT",
+      "path": "data/corpus/raw/md/coe-release-november2024.md",
+      "raw_sha256": "b0cc277c56f7e533",
+      "doc_hash": "8b850acfba9e8a3f",
+      "blocks": 13,
+      "blocks_removed_as_noise": 0,
+      "tokens": 833,
+      "status": "ok",
+      "chunks_before_dedup": 7,
+      "chunks": 3
+    },
+    {
+      "doc_id": "coe-release-september2024",
+      "title": "CoE Starter Kit release notes — September 2024",
+      "source": "github_release",
+      "format": "md",
+      "url": "https://github.com/microsoft/coe-starter-kit/releases/tag/CoEStarterKit-September2024",
+      "product": "CoE Starter Kit",
+      "version": "September 2024",
+      "date": "2024-09-11",
+      "license": "MIT",
+      "path": "data/corpus/raw/md/coe-release-september2024.md",
+      "raw_sha256": "993f6b4ac8db9e5d",
+      "doc_hash": "8a68e7a65f65f60e",
+      "blocks": 14,
+      "blocks_removed_as_noise": 0,
+      "tokens": 338,
+      "status": "ok",
+      "chunks_before_dedup": 6,
+      "chunks": 3
+    },
+    {
+      "doc_id": "coe-release-july2024",
+      "title": "CoE Starter Kit release notes — July 2024",
+      "source": "github_release",
+      "format": "md",
+      "url": "https://github.com/microsoft/coe-starter-kit/releases/tag/CoEStarterKit-July2024",
+      "product": "CoE Starter Kit",
+      "version": "July 2024",
+      "date": "2024-07-08",
+      "license": "MIT",
+      "path": "data/corpus/raw/md/coe-release-july2024.md",
+      "raw_sha256": "4161015e2a1d3a9f",
+      "doc_hash": "2b31cbb11777129e",
+      "blocks": 36,
+      "blocks_removed_as_noise": 0,
+      "tokens": 694,
+      "status": "ok",
+      "chunks_before_dedup": 7,
+      "chunks": 4
+    },
+    {
+      "doc_id": "coe-release-august2024",
+      "title": "CoE Starter Kit release notes — August 2024",
+      "source": "github_release",
+      "format": "md",
+      "url": "https://github.com/microsoft/coe-starter-kit/releases/tag/CoEStarterKit-August2024",
+      "product": "CoE Starter Kit",
+      "version": "August 2024",
+      "date": "2024-08-07",
+      "license": "MIT",
+      "path": "data/corpus/raw/md/coe-release-august2024.md",
+      "raw_sha256": "ccb6b98a82da1f58",
+      "doc_hash": "9a7833ef0fd1fc8c",
+      "blocks": 16,
+      "blocks_removed_as_noise": 0,
+      "tokens": 1248,
+      "status": "ok",
+      "chunks_before_dedup": 9,
+      "chunks": 6
+    },
+    {
+      "doc_id": "coe-release-june2024",
+      "title": "CoE Starter Kit release notes — June 2024",
+      "source": "github_release",
+      "format": "md",
+      "url": "https://github.com/microsoft/coe-starter-kit/releases/tag/CoEStarterKit-June2024",
+      "product": "CoE Starter Kit",
+      "version": "June 2024",
+      "date": "2024-06-10",
+      "license": "MIT",
+      "path": "data/corpus/raw/md/coe-release-june2024.md",
+      "raw_sha256": "0ec1d0fd4b871b46",
+      "doc_hash": "1a947302694d572e",
+      "blocks": 59,
+      "blocks_removed_as_noise": 0,
+      "tokens": 1199,
+      "status": "ok",
+      "chunks_before_dedup": 9,
+      "chunks": 6
+    },
+    {
+      "doc_id": "contoso-release-notes-1.4.2",
+      "title": "Contoso Procurement — Release Notes 1.4.2",
+      "source": "synthetic",
+      "format": "docx",
+      "url": null,
+      "product": "Contoso Procurement",
+      "version": "1.4.2",
+      "date": "2026-03-17",
+      "license": "synthetic (this repo)",
+      "path": "data/corpus/raw/docx/contoso-release-notes-1.4.2.docx",
+      "raw_sha256": "3550f0c1a3ebef55",
+      "doc_hash": "49792c283d2ce989",
+      "blocks": 11,
+      "blocks_removed_as_noise": 0,
+      "tokens": 234,
+      "status": "ok",
+      "chunks_before_dedup": 3,
+      "chunks": 3
+    },
+    {
+      "doc_id": "contoso-release-notes-1.4.3",
+      "title": "Contoso Procurement — Release Notes 1.4.3",
+      "source": "synthetic",
+      "format": "docx",
+      "url": null,
+      "product": "Contoso Procurement",
+      "version": "1.4.3",
+      "date": "2026-04-21",
+      "license": "synthetic (this repo)",
+      "path": "data/corpus/raw/docx/contoso-release-notes-1.4.3.docx",
+      "raw_sha256": "cd1d6bbbfc4d0c7d",
+      "doc_hash": "4252c34c1d38daf2",
+      "blocks": 10,
+      "blocks_removed_as_noise": 0,
+      "tokens": 219,
+      "status": "ok",
+      "chunks_before_dedup": 4,
+      "chunks": 4
+    },
+    {
+      "doc_id": "contoso-release-notes-1.5.0",
+      "title": "Contoso Procurement — Release Notes 1.5.0",
+      "source": "synthetic",
+      "format": "docx",
+      "url": null,
+      "product": "Contoso Procurement",
+      "version": "1.5.0",
+      "date": "2026-06-09",
+      "license": "synthetic (this repo)",
+      "path": "data/corpus/raw/docx/contoso-release-notes-1.5.0.docx",
+      "raw_sha256": "896694f61f4c6806",
+      "doc_hash": "4bc6b3dd0cad455e",
+      "blocks": 12,
+      "blocks_removed_as_noise": 0,
+      "tokens": 259,
+      "status": "ok",
+      "chunks_before_dedup": 4,
+      "chunks": 4
+    },
+    {
+      "doc_id": "contoso-release-notes-1.5.1",
+      "title": "Contoso Procurement — Release Notes 1.5.1 (hotfix)",
+      "source": "synthetic",
+      "format": "docx",
+      "url": null,
+      "product": "Contoso Procurement",
+      "version": "1.5.1",
+      "date": "2026-07-02",
+      "license": "synthetic (this repo)",
+      "path": "data/corpus/raw/docx/contoso-release-notes-1.5.1.docx",
+      "raw_sha256": "8bf4581ee814c454",
+      "doc_hash": "90d5bee792499d9c",
+      "blocks": 8,
+      "blocks_removed_as_noise": 0,
+      "tokens": 196,
+      "status": "ok",
+      "chunks_before_dedup": 2,
+      "chunks": 2
+    },
+    {
+      "doc_id": "contoso-release-notes-1.5.2",
+      "title": "Contoso Procurement — Release Notes 1.5.2",
+      "source": "synthetic",
+      "format": "docx",
+      "url": null,
+      "product": "Contoso Procurement",
+      "version": "1.5.2",
+      "date": "2026-08-25",
+      "license": "synthetic (this repo)",
+      "path": "data/corpus/raw/docx/contoso-release-notes-1.5.2.docx",
+      "raw_sha256": "d1ca21e98ac8816b",
+      "doc_hash": "71d4a5f53f64b1c2",
+      "blocks": 10,
+      "blocks_removed_as_noise": 0,
+      "tokens": 229,
+      "status": "ok",
+      "chunks_before_dedup": 3,
+      "chunks": 3
+    },
+    {
+      "doc_id": "contoso-regression-test-plan-1.5",
+      "title": "Contoso Procurement — Регресійний тест-план 1.5",
+      "source": "synthetic",
+      "format": "docx",
+      "url": null,
+      "product": "Contoso Procurement",
+      "version": "1.5",
+      "date": "2026-08-18",
+      "license": "synthetic (this repo)",
+      "path": "data/corpus/raw/docx/contoso-regression-test-plan-1.5.docx",
+      "raw_sha256": "f33d41566c62da94",
+      "doc_hash": "078de18232f77a0f",
+      "blocks": 9,
+      "blocks_removed_as_noise": 0,
+      "tokens": 438,
+      "status": "ok",
+      "chunks_before_dedup": 3,
+      "chunks": 3
+    },
+    {
+      "doc_id": "contoso-install-guide-1.4",
+      "title": "Contoso Procurement — Інструкція зі встановлення 1.4 (застаріла)",
+      "source": "synthetic",
+      "format": "pdf",
+      "url": null,
+      "product": "Contoso Procurement",
+      "version": "1.4",
+      "date": "2026-03-10",
+      "license": "synthetic (this repo)",
+      "path": "data/corpus/raw/pdf/contoso-install-guide-1.4.pdf",
+      "raw_sha256": "32b776b10242a336",
+      "doc_hash": "425b5af7ac150375",
+      "blocks": 10,
+      "blocks_removed_as_noise": 0,
+      "tokens": 201,
+      "status": "ok",
+      "chunks_before_dedup": 3,
+      "chunks": 3
+    },
+    {
+      "doc_id": "contoso-install-guide-1.5",
+      "title": "Contoso Procurement — Інструкція зі встановлення 1.5",
+      "source": "synthetic",
+      "format": "pdf",
+      "url": null,
+      "product": "Contoso Procurement",
+      "version": "1.5",
+      "date": "2026-06-09",
+      "license": "synthetic (this repo)",
+      "path": "data/corpus/raw/pdf/contoso-install-guide-1.5.pdf",
+      "raw_sha256": "3b67c8174c1e429e",
+      "doc_hash": "12944845f2dda546",
+      "blocks": 12,
+      "blocks_removed_as_noise": 0,
+      "tokens": 337,
+      "status": "ok",
+      "chunks_before_dedup": 3,
+      "chunks": 3
+    },
+    {
+      "doc_id": "contoso-support-runbook",
+      "title": "Contoso Procurement — Runbook підтримки",
+      "source": "synthetic",
+      "format": "pdf",
+      "url": null,
+      "product": "Contoso Procurement",
+      "version": "1.5",
+      "date": "2026-09-01",
+      "license": "synthetic (this repo)",
+      "path": "data/corpus/raw/pdf/contoso-support-runbook.pdf",
+      "raw_sha256": "8d63c9d07df71a48",
+      "doc_hash": "76004e8174010759",
+      "blocks": 12,
+      "blocks_removed_as_noise": 0,
+      "tokens": 325,
+      "status": "ok",
+      "chunks_before_dedup": 3,
+      "chunks": 3
+    }
+  ],
+  "duplicate_chunks": [
+    {
+      "chunk_id": "learn-cli-solution#027",
+      "duplicate_of": "learn-cli-solution#019"
+    },
+    {
+      "chunk_id": "learn-cli-solution#056",
+      "duplicate_of": "learn-cli-solution#019"
+    },
+    {
+      "chunk_id": "learn-cli-solution#057",
+      "duplicate_of": "learn-cli-solution#020"
+    },
+    {
+      "chunk_id": "learn-cli-solution#062",
+      "duplicate_of": "learn-cli-solution#045"
+    },
+    {
+      "chunk_id": "learn-cli-solution#063",
+      "duplicate_of": "learn-cli-solution#046"
+    },
+    {
+      "chunk_id": "learn-cli-solution#064",
+      "duplicate_of": "learn-cli-solution#047"
+    },
+    {
+      "chunk_id": "learn-cli-solution#065",
+      "duplicate_of": "learn-cli-solution#048"
+    },
+    {
+      "chunk_id": "learn-cli-solution#066",
+      "duplicate_of": "learn-cli-solution#049"
+    },
+    {
+      "chunk_id": "learn-cli-solution#067",
+      "duplicate_of": "learn-cli-solution#050"
+    },
+    {
+      "chunk_id": "learn-cli-package#010",
+      "duplicate_of": "learn-cli-package#005"
+    },
+    {
+      "chunk_id": "learn-cli-package#011",
+      "duplicate_of": "learn-cli-package#006"
+    },
+    {
+      "chunk_id": "coe-release-january2026#000",
+      "duplicate_of": "coe-release-february2026#000"
+    },
+    {
+      "chunk_id": "coe-release-january2026#002",
+      "duplicate_of": "coe-release-february2026#002"
+    },
+    {
+      "chunk_id": "coe-release-december2025#000",
+      "duplicate_of": "coe-release-february2026#000"
+    },
+    {
+      "chunk_id": "coe-release-december2025#001",
+      "duplicate_of": "coe-release-january2026#001"
+    },
+    {
+      "chunk_id": "coe-release-december2025#002",
+      "duplicate_of": "coe-release-february2026#002"
+    },
+    {
+      "chunk_id": "coe-release-november2025#000",
+      "duplicate_of": "coe-release-february2026#000"
+    },
+    {
+      "chunk_id": "coe-release-november2025#001",
+      "duplicate_of": "coe-release-january2026#001"
+    },
+    {
+      "chunk_id": "coe-release-november2025#002",
+      "duplicate_of": "coe-release-february2026#002"
+    },
+    {
+      "chunk_id": "coe-release-october2025#000",
+      "duplicate_of": "coe-release-february2026#000"
+    },
+    {
+      "chunk_id": "coe-release-october2025#001",
+      "duplicate_of": "coe-release-january2026#001"
+    },
+    {
+      "chunk_id": "coe-release-october2025#002",
+      "duplicate_of": "coe-release-february2026#002"
+    },
+    {
+      "chunk_id": "coe-release-september2025#002",
+      "duplicate_of": "coe-release-february2026#002"
+    },
+    {
+      "chunk_id": "coe-release-august2025#000",
+      "duplicate_of": "coe-release-september2025#000"
+    },
+    {
+      "chunk_id": "coe-release-august2025#001",
+      "duplicate_of": "coe-release-september2025#001"
+    },
+    {
+      "chunk_id": "coe-release-august2025#002",
+      "duplicate_of": "coe-release-february2026#002"
+    },
+    {
+      "chunk_id": "coe-release-july2025#000",
+      "duplicate_of": "coe-release-september2025#000"
+    },
+    {
+      "chunk_id": "coe-release-july2025#001",
+      "duplicate_of": "coe-release-september2025#001"
+    },
+    {
+      "chunk_id": "coe-release-july2025#002",
+      "duplicate_of": "coe-release-february2026#002"
+    },
+    {
+      "chunk_id": "coe-release-june2025#000",
+      "duplicate_of": "coe-release-september2025#000"
+    },
+    {
+      "chunk_id": "coe-release-june2025#002",
+      "duplicate_of": "coe-release-february2026#002"
+    },
+    {
+      "chunk_id": "coe-release-may2025#001",
+      "duplicate_of": "coe-release-september2025#000"
+    },
+    {
+      "chunk_id": "coe-release-may2025#002",
+      "duplicate_of": "coe-release-june2025#001"
+    },
+    {
+      "chunk_id": "coe-release-may2025#003",
+      "duplicate_of": "coe-release-february2026#002"
+    },
+    {
+      "chunk_id": "coe-release-april25#000",
+      "duplicate_of": "coe-release-may2025#000"
+    },
+    {
+      "chunk_id": "coe-release-april25#001",
+      "duplicate_of": "coe-release-september2025#000"
+    },
+    {
+      "chunk_id": "coe-release-april25#002",
+      "duplicate_of": "coe-release-june2025#001"
+    },
+    {
+      "chunk_id": "coe-release-april25#003",
+      "duplicate_of": "coe-release-february2026#002"
+    },
+    {
+      "chunk_id": "coe-release-march2025#000",
+      "duplicate_of": "coe-release-may2025#000"
+    },
+    {
+      "chunk_id": "coe-release-march2025#001",
+      "duplicate_of": "coe-release-september2025#000"
+    },
+    {
+      "chunk_id": "coe-release-march2025#002",
+      "duplicate_of": "coe-release-june2025#001"
+    },
+    {
+      "chunk_id": "coe-release-march2025#003",
+      "duplicate_of": "coe-release-february2026#002"
+    },
+    {
+      "chunk_id": "coe-release-february2025#000",
+      "duplicate_of": "coe-release-may2025#000"
+    },
+    {
+      "chunk_id": "coe-release-february2025#001",
+      "duplicate_of": "coe-release-september2025#000"
+    },
+    {
+      "chunk_id": "coe-release-february2025#002",
+      "duplicate_of": "coe-release-june2025#001"
+    },
+    {
+      "chunk_id": "coe-release-february2025#003",
+      "duplicate_of": "coe-release-february2026#002"
+    },
+    {
+      "chunk_id": "coe-release-november2024#000",
+      "duplicate_of": "coe-release-may2025#000"
+    },
+    {
+      "chunk_id": "coe-release-november2024#001",
+      "duplicate_of": "coe-release-september2025#000"
+    },
+    {
+      "chunk_id": "coe-release-november2024#002",
+      "duplicate_of": "coe-release-june2025#001"
+    },
+    {
+      "chunk_id": "coe-release-november2024#003",
+      "duplicate_of": "coe-release-february2026#002"
+    },
+    {
+      "chunk_id": "coe-release-september2024#001",
+      "duplicate_of": "coe-release-september2025#000"
+    },
+    {
+      "chunk_id": "coe-release-september2024#002",
+      "duplicate_of": "coe-release-june2025#001"
+    },
+    {
+      "chunk_id": "coe-release-september2024#003",
+      "duplicate_of": "coe-release-february2026#002"
+    },
+    {
+      "chunk_id": "coe-release-july2024#000",
+      "duplicate_of": "coe-release-september2025#000"
+    },
+    {
+      "chunk_id": "coe-release-july2024#001",
+      "duplicate_of": "coe-release-june2025#001"
+    },
+    {
+      "chunk_id": "coe-release-july2024#002",
+      "duplicate_of": "coe-release-february2026#002"
+    },
+    {
+      "chunk_id": "coe-release-august2024#002",
+      "duplicate_of": "coe-release-september2025#000"
+    },
+    {
+      "chunk_id": "coe-release-august2024#003",
+      "duplicate_of": "coe-release-june2025#001"
+    },
+    {
+      "chunk_id": "coe-release-august2024#004",
+      "duplicate_of": "coe-release-february2026#002"
+    },
+    {
+      "chunk_id": "coe-release-june2024#001",
+      "duplicate_of": "coe-release-september2025#000"
+    },
+    {
+      "chunk_id": "coe-release-june2024#002",
+      "duplicate_of": "coe-release-june2025#001"
+    },
+    {
+      "chunk_id": "coe-release-june2024#003",
+      "duplicate_of": "coe-release-february2026#002"
+    }
+  ]
+}
