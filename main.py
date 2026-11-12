@@ -137,6 +137,11 @@ def main() -> int:
     se.add_argument("--filter", action="append", default=[], metavar="KEY=VALUE",
                     help="фільтр за метаданими, напр. product='CoE Starter Kit', source=synthetic, date_from=2025-01-01")
     sub.add_parser("retrieval-eval", help="кейс 2: recall@k / MRR для конфігурацій пошуку → evals/results/")
+    ask = sub.add_parser("ask", help="кейс 2: відповідь на питання з джерелами (RAG)")
+    ask.add_argument("question")
+    ask.add_argument("--filter", action="append", default=[], metavar="KEY=VALUE")
+    ask.add_argument("--prompt", help="версія промпту, напр. rag_answer/v1")
+    ask.add_argument("--json", action="store_true", help="повний результат: джерела, токени, вартість")
     args = parser.parse_args()
 
     if sys.stdout.encoding.lower() != "utf-8":
@@ -147,6 +152,8 @@ def main() -> int:
         return cmd_search(args)
     if args.command == "retrieval-eval":
         return cmd_retrieval_eval()
+    if args.command == "ask":
+        return cmd_ask(args)
     config = load_config()
     return cmd_run(args, config) if args.command == "run" else cmd_eval(args, config)
 
@@ -174,6 +181,23 @@ def cmd_search(args) -> int:
         print("   " + c["text"][:300].replace("\n", "\n   "))
     retriever.close()
     return 0
+
+
+def cmd_ask(args) -> int:
+    from src.ingest.pipeline import load_rag_config
+    from src.rag.answer import RagPipeline
+
+    pipeline = RagPipeline(load_rag_config(), prompt_id=args.prompt)
+    answer = pipeline.ask(args.question, filters=dict(f.split("=", 1) for f in args.filter) or None)
+    if args.json:
+        print(json.dumps(answer.to_dict(), ensure_ascii=False, indent=2))
+    else:
+        print(answer.render())
+        m = answer.meta
+        print(f"\n[{answer.status} · {m.get('model')} · {m.get('prompt_version')} · контекст {m.get('context_tokens', 0)} ток."
+              f" · ${m.get('cost_usd', 0):.5f} · {m.get('latency_ms')} мс]")
+    pipeline.retriever.close()
+    return 0 if answer.status != "failed" else 1
 
 
 def cmd_retrieval_eval() -> int:

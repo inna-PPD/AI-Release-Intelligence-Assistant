@@ -35,6 +35,16 @@ search:
   top_k: 5                # скільки чанків іде у відповідь
   reranker: BAAI/bge-reranker-v2-m3-int8   # багатомовний cross-encoder (INT8, CPU)
 
+answer:
+  prompt: rag_answer/v1
+  model: provider             # ключ моделі з config/models.yaml (gpt-4o-mini через OpenRouter)
+  candidates: 8               # скільки чанків після reranking розглядаємо для контексту
+  context_budget_tokens: 2500 # ліміт токенів на джерела в промпті; решта чанків відкидається
+  min_rerank_score: -1.0      # поріг «не знаю»: найкращий чанк нижче → відповідь без LLM. Калібрування (README):
+                              # відсікає 7/10 питань без відповіді, помилково — 1/25 питань з відповіддю
+  sampling: { temperature: 0.0, top_p: 1.0 }
+  max_tokens: 800
+
 retrieval_eval:
   questions: evals/retrieval_questions.jsonl
   ks: [1, 3, 5, 10]

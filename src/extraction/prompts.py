@@ -14,6 +14,7 @@ from src.config import ROOT
 
 PROMPTS_DIR = ROOT / "prompts"
 SECTION_RE = re.compile(r"^## (system|user)\s*$", re.M)
+PLACEHOLDER = re.compile(r"\{(\w+)\}")
 
 
 @dataclass
@@ -24,11 +25,13 @@ class Prompt:
     sha: str         # хеш файлу: якщо файл версії змінили без нової версії, це видно в results/
 
     def messages(self, text: str) -> list[dict]:
-        # replace, а не format: у баг-репортах трапляються фігурні дужки (JSON, стектрейси)
-        return [
-            {"role": "system", "content": self.system},
-            {"role": "user", "content": self.user_template.replace("{text}", text)},
-        ]
+        return self.messages_for(text=text)
+
+    def messages_for(self, **fields: str) -> list[dict]:
+        """Підставляє {назва} за один прохід: фігурні дужки всередині тексту (JSON, стектрейси, питання)
+        не обробляються повторно і не ламають шаблон — тому не str.format."""
+        user = PLACEHOLDER.sub(lambda m: fields.get(m[1], m[0]), self.user_template)
+        return [{"role": "system", "content": self.system}, {"role": "user", "content": user}]
 
 
 def load_prompt(prompt_id: str) -> Prompt:
