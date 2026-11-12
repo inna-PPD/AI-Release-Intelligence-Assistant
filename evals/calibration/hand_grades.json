@@ -6,7 +6,7 @@
       "question": "Яка мінімальна версія pac CLI потрібна для встановлення Contoso Procurement 1.5?",
       "reference": "pac CLI 1.44 або новіша (нижчі версії не підтримують пакування ContosoCore_Invoices).",
       "answer": "Мінімальна версія pac CLI, необхідна для встановлення Contoso Procurement 1.5, становить 1.44 або новіша [S1][S3].",
-      "human_verdict": null,
+      "human_verdict": "correct",
       "human_note": ""
     },
     {
@@ -14,7 +14,7 @@
       "question": "Чи можна в Contoso 1.5 використовувати особисте підключення Office 365 для Approval Flow v2?",
       "reference": "Ні. У версії 1.5 особисті підключення заборонені; connection reference cnt_sharedoffice365 прив'язується до сервісного акаунта svc-contoso-flows. Особисте підключення використовувалось лише в застарілій інструкції 1.4.",
       "answer": "У версії Contoso 1.5 особисті підключення заборонені для Approval Flow v2. Замість цього використовується connection reference cnt_sharedoffice365, який має бути прив'язаний до сервісного акаунта svc-contoso-flows [S5]. У попередніх версіях, таких як 1.4, було можливо використовувати особисте підключення Office 365 для Approval Flow v2 [S1].",
-      "human_verdict": null,
+      "human_verdict": "correct",
       "human_note": ""
     },
     {
@@ -22,7 +22,7 @@
       "question": "Який пакет треба імпортувати першим при встановленні Contoso 1.5 і чому?",
       "reference": "Першим імпортується ContosoCore_Invoices_managed.zip, інакше імпорт основного solution падає з помилкою missing dependency на cnt_invoice.",
       "answer": "Першим потрібно імпортувати пакет ContosoCore_Invoices_managed.zip, оскільки його відсутність призведе до помилки missing dependency на cnt_invoice. Це зазначено в інструкції зі встановлення Contoso 1.5 [S1] та підтверджується в релізних нотах [S3].",
-      "human_verdict": null,
+      "human_verdict": "correct",
       "human_note": ""
     },
     {
@@ -30,7 +30,7 @@
       "question": "У якому статусі тепер створюється клон погодженої заявки?",
       "reference": "У статусі Draft — це виправлено в релізі 1.5.2 (у 1.5.1 клон зберігав статус Approved).",
       "answer": "Клон погодженої заявки тепер створюється в статусі Draft, що є виправленням проблеми з версії 1.5.1, де клонування зберігало статус Approved [S1].",
-      "human_verdict": null,
+      "human_verdict": "correct",
       "human_note": ""
     },
     {
@@ -38,7 +38,7 @@
       "question": "Що виправили в Contoso 1.5.1 у flow LEO Task Sync?",
       "reference": "Додано повтор з експоненційною паузою при помилці 429 Too Many Requests.",
       "answer": "У релізі Contoso 1.5.1 для flow «LEO Task Sync» було додано повтор з експоненційною паузою при помилці 429 Too Many Requests [S1]. Це виправлення дозволяє уникнути падіння синхронізації задач у випадку перевищення ліміту запитів до API [S3].",
-      "human_verdict": null,
+      "human_verdict": "correct",
       "human_note": ""
     },
     {
@@ -46,7 +46,7 @@
       "question": "За який час потрібно відреагувати на інцидент Severity Critical?",
       "reference": "За 30 хвилин (критерій: зупинено погодження або оплату на PROD).",
       "answer": "На інцидент Severity Critical потрібно відреагувати протягом 30 хвилин, якщо він зупиняє погодження або оплату на PROD [S1].",
-      "human_verdict": null,
+      "human_verdict": "correct",
       "human_note": ""
     },
     {
@@ -54,7 +54,7 @@
       "question": "Які тест-кейси пріоритету High перевіряють Approval Flow v2?",
       "reference": "TC-110 (лист погоджувачу з посиланням) і TC-112 (повторний запуск з run history не створює дубль інвойсу).",
       "answer": "Тест-кейси пріоритету High, які перевіряють Approval Flow v2, включають: TC-110, що перевіряє погодження заявки з листом погоджувачу з посиланням, та TC-112, який перевіряє, що повторний запуск з run history не створює дубль інвойсу [S1].",
-      "human_verdict": null,
+      "human_verdict": "correct",
       "human_note": ""
     },
     {
@@ -62,7 +62,7 @@
       "question": "Чи можна імпортувати managed solution у середовище, де є його вихідний unmanaged solution?",
       "reference": "Ні, managed solution не можна імпортувати в те саме середовище, що містить вихідний unmanaged solution.",
       "answer": "Не можна імпортувати managed solution у середовище, де є його вихідний unmanaged solution. Для тестування managed solution потрібно використовувати окреме середовище для імпорту. Це є важливою практикою управління життєвим циклом рішень (ALM) [S1].",
-      "human_verdict": null,
+      "human_verdict": "correct",
       "human_note": ""
     },
     {
@@ -70,7 +70,7 @@
       "question": "Як часто виходять нові версії CoE Starter Kit?",
       "reference": "Щомісяця, зазвичай у перший повний тиждень місяця; зміни оголошуються в release notes на GitHub.",
       "answer": "Нова версія CoE Starter Kit виходить щомісяця, зазвичай у перший повний тиждень кожного місяця [S1][S2]. Це важливо знати для планування, організації та тестування останньої версії [S2]. Рекомендується оновлювати CoE Starter Kit принаймні раз на три місяці, щоб уникнути несподіваних проблем [S2][S5].",
-      "human_verdict": null,
+      "human_verdict": "correct",
       "human_note": ""
     },
     {
@@ -78,7 +78,7 @@
       "question": "У якому релізі CoE Starter Kit виправили issue #9508?",
       "reference": "У релізі February 2026 (лютий 2026).",
       "answer": "Issue #9508 було виправлено в релізі CoE Starter Kit у лютому 2026 року [S1].",
-      "human_verdict": null,
+      "human_verdict": "correct",
       "human_note": ""
     },
     {
@@ -86,7 +86,7 @@
       "question": "Скільки багів виправили в релізі CoE Starter Kit за січень 2026?",
       "reference": "38 багів (розділ «CoE Starter Kit - BUGS (38)» у release notes January 2026).",
       "answer": "У релізі CoE Starter Kit за січень 2026 виправили 38 багів [S1].",
-      "human_verdict": null,
+      "human_verdict": "correct",
       "human_note": ""
     },
     {
@@ -94,7 +94,7 @@
       "question": "Що робить параметр --packagetype у команді pac solution clone?",
       "reference": "Задає тип витягування solution: Unmanaged, Managed або Both; за замовчуванням — Both.",
       "answer": "Параметр --packagetype у команді pac solution clone визначає тип витягування для рішення. Можливі значення: 'Unmanaged', 'Managed' або 'Both', причому значення за замовчуванням — 'Both' [S1].",
-      "human_verdict": null,
+      "human_verdict": "correct",
       "human_note": ""
     },
     {
@@ -102,7 +102,7 @@
       "question": "Що потрібно зробити перед оновленням CoE Starter Kit, якщо ви змінювали його flows?",
       "reference": "Прибрати unmanaged layers зі змінених flows: компоненти з unmanaged layer не отримують оновлень. Flows «Admin | Sync Template» не варто кастомізувати.",
       "answer": "Перед оновленням CoE Starter Kit, якщо ви змінювали його flows, потрібно видалити всі unmanaged layers. Якщо ви хочете зберегти свої зміни, вам слід ознайомитися з тим, як розширити CoE Starter Kit. Якщо ж ви не хочете зберігати зміни, видаліть всі unmanaged layers перед оновленням. Ви можете перевірити наявність unmanaged layers за допомогою програми CoE Admin Command Center, вибравши CoE flows з навігаційного меню та перевіривши, чи є у flows значок шару, що вказує на наявність unmanaged layers [S1][S2].",
-      "human_verdict": null,
+      "human_verdict": "correct",
       "human_note": ""
     },
     {
@@ -110,7 +110,7 @@
       "question": "Який ліміт запитів до API LEO PPM?",
       "reference": "1 000 запитів на годину на тенант.",
       "answer": "Ліміт запитів до API LEO PPM становить 1 000 запитів на годину на тенант [S1].",
-      "human_verdict": null,
+      "human_verdict": "correct",
       "human_note": ""
     },
     {
@@ -118,7 +118,7 @@
       "question": "Що треба налаштувати після імпорту solution у Contoso 1.5, щоб запрацювали flows?",
       "reference": "Прив'язати connection reference cnt_sharedoffice365 до сервісного акаунта svc-contoso-flows, заповнити environment variables cnt_LeoApiKey і cnt_LeoBaseUrl, потім увімкнути Approval Flow v2 і LEO Task Sync.",
       "answer": "Після імпорту рішення Contoso 1.5 потрібно налаштувати кілька параметрів, щоб запрацювали flows. По-перше, необхідно прив'язати connection reference cnt_sharedoffice365 до сервісного акаунта svc-contoso-flows. По-друге, потрібно заповнити environment variables cnt_LeoApiKey і cnt_LeoBaseUrl. Нарешті, слід увімкнути flows «Approval Flow v2» і «LEO Task Sync» [S1].",
-      "human_verdict": null,
+      "human_verdict": "correct",
       "human_note": ""
     },
     {
@@ -126,7 +126,7 @@
       "question": "Які середовища, крім production, Microsoft радить мати для ALM?",
       "reference": "Окремі середовища розробки, а також test, UAT, SIT і pre-production.",
       "answer": "Microsoft рекомендує мати окрім production середовища також тестове, UAT (User Acceptance Testing), SIT (System Integration Testing) та передвиробниче середовище. Це дозволяє проводити тестування додатків і валідацію розгортання перед переходом у production. Принаймні, для здорової практики ALM слід мати тестове середовище, відокремлене від розробки та production [S1][S3].",
-      "human_verdict": null,
+      "human_verdict": "correct",
       "human_note": ""
     },
     {
@@ -134,8 +134,9 @@
       "question": "Яка мінімальна версія pac CLI була потрібна для встановлення Contoso 1.4?",
       "reference": "pac CLI 1.32 або новіша (за застарілою інструкцією 1.4).",
       "answer": "Мінімальна версія pac CLI, необхідна для встановлення Contoso 1.4, становить 1.32 або новіша [S1].",
-      "human_verdict": null,
+      "human_verdict": "correct",
       "human_note": ""
     }
-  ]
+  ],
+  "graded_by": "автор проєкту, 12.11.2026"
 }
