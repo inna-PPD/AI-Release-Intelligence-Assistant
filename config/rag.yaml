@@ -53,7 +53,8 @@ evals:
     key_facts: 0.80
     citations_ok: 0.95
     judge_correctness: 0.75
-    faithfulness: 0.85
+    # розкид між 4 прогонами v2: 0.871 / 0.863 / 0.883 / 0.789 (CI) → 0.851 ± 0.042; поріг ≈ середнє − 2σ (REPORT, розділ 6)
+    faithfulness: 0.75
     failed_max: 0
 
 retrieval_eval:

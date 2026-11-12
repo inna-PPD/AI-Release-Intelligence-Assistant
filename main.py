@@ -145,6 +145,7 @@ def main() -> int:
     re_ = sub.add_parser("rag-eval", help="кейс 2: тестсет → відповіді → оцінки → evals/results/rag_metrics.md")
     re_.add_argument("--ci", action="store_true", help="код виходу 1, якщо метрика нижче порогу (для GitHub Actions)")
     sub.add_parser("calibrate", help="кейс 2: згода LLM-судді з ручною розміткою → evals/results/judge_calibration.md")
+    sub.add_parser("case2", help="кейс 2 однією командою: ingest → якість пошуку → evals відповідей")
     args = parser.parse_args()
 
     if sys.stdout.encoding.lower() != "utf-8":
@@ -159,6 +160,9 @@ def main() -> int:
         return cmd_ask(args)
     if args.command == "rag-eval":
         return cmd_rag_eval(args)
+    if args.command == "case2":
+        args.ci = True
+        return cmd_ingest() or cmd_retrieval_eval() or cmd_rag_eval(args)
     if args.command == "calibrate":
         from src.rag.evals import calibrate
         print(calibrate())

@@ -33,7 +33,7 @@ sampling:
 extraction:
   prompt: extract_defect/v2   # production-версія; v1 — baseline, запуск: --prompt extract_defect/v1
   timeout_s: 60
-  retries: 2            # повтори при мережевих помилках / timeout
+  retries: 4            # повтори при мережевих помилках / timeout (паузи 1, 2, 4, 8 с); 2 повтори не вистачило — 2 APIConnectionError у прогоні evals
   repair_attempts: 1    # спроби виправити невалідний JSON
   max_tokens: 1024
 

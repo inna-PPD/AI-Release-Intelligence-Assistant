@@ -1,0 +1,36 @@
+{
+  "summary": {
+    "questions": 23,
+    "refusal_accuracy": 0.9130434782608695,
+    "correct_refusals": 1.0,
+    "false_refusals": 0.11764705882352944,
+    "source_hit": 0.8823529411764706,
+    "key_facts": 0.8823529411764706,
+    "no_forbidden": 1.0,
+    "citations_ok": 1.0,
+    "judge_correctness": 0.8235294117647058,
+    "faithfulness": 0.8833333333333333,
+    "failed": 2,
+    "judge_errors": 0,
+    "latency_p50_ms": 14955,
+    "latency_p95_ms": 30048,
+    "cost_per_1000_questions_usd": 0.4107326086956522,
+    "judge_cost_usd": 0.005185899999999999,
+    "prompt": "rag_answer/v2",
+    "prompt_sha": "283b34560cb1",
+    "model": "openai/gpt-4o-mini",
+    "judge": "anthropic/claude-haiku-5.5"
+  },
+  "thresholds": {
+    "refusal_accuracy": 0.85,
+    "source_hit": 0.85,
+    "key_facts": 0.8,
+    "citations_ok": 0.95,
+    "judge_correctness": 0.75,
+    "faithfulness": 0.85,
+    "failed_max": 0
+  },
+  "failures": [
+    "failed = 2 > 0"
+  ]
+}

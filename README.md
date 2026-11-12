@@ -22,6 +22,8 @@ AI-система, яка аналізує релізну документаці
 Документи → очищення → чанки з метаданими → hybrid search → відповідь з джерелами → evals у CI.
 Корпус — 42 документи у 4 форматах (HTML, Markdown, DOCX, PDF): Microsoft Learn, release notes CoE Starter Kit, синтетичні документи Contoso. Деталі й ліцензії — [data/corpus/README.md](data/corpus/README.md).
 
+**Запуск кейсу 2 однією командою:** `python main.py case2` (або `make case2`) — ingestion → якість пошуку → evals відповідей; код виходу 1, якщо метрика нижче порогу. Окреме питання: `python main.py ask "..."`. Опис папки з тестсетами й результатами — [evals/README.md](evals/README.md).
+
 ### Ingestion (крок 1)
 
 `python main.py ingest` → `data/processed/chunks.jsonl` + `manifest.json`:
