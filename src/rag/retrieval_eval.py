@@ -31,6 +31,12 @@ def first_relevant_rank(hits, question: dict) -> int | None:
     return next((rank for rank, h in enumerate(hits, 1) if is_relevant(h.chunk, question)), None)
 
 
+def metrics(ranks: dict[str, int | None], ks: list[int]) -> dict:
+    n = max(len(ranks), 1)
+    return {**{f"recall@{k}": sum(r is not None and r <= k for r in ranks.values()) / n for k in ks},
+            "mrr@10": sum(1 / r for r in ranks.values() if r) / n}
+
+
 def evaluate(cfg: dict) -> list[dict]:
     rc = cfg["retrieval_eval"]
     questions = load_questions(ROOT / rc["questions"])
@@ -40,15 +46,14 @@ def evaluate(cfg: dict) -> list[dict]:
         retriever = Retriever(cfg, strategy=strategy, prompts=prompts)
         for mode in modes:
             ranks = {q["id"]: first_relevant_rank(retriever.search(q["question"], mode=mode, k=max_k), q) for q in questions}
-            row = {
-                "strategy": strategy, "prompts": prompts, "mode": mode, "questions": len(questions),
-                **{f"recall@{k}": sum(r is not None and r <= k for r in ranks.values()) / len(questions) for k in rc["ks"]},
-                "mrr@10": sum(1 / r for r in ranks.values() if r) / len(questions),
-                "ranks": ranks,
-            }
+            row = {"strategy": strategy, "prompts": prompts, "mode": mode, "questions": len(questions),
+                   **metrics(ranks, rc["ks"]), "ranks": ranks,
+                   "by_set": {s: metrics({q["id"]: ranks[q["id"]] for q in questions if q.get("set", "base") == s}, rc["ks"])
+                              for s in sorted({q.get("set", "base") for q in questions})}}
             results.append(row)
+            sets = " · ".join(f"{s}: MRR {m['mrr@10']:.2f}" for s, m in row["by_set"].items())
             print(f"  {strategy:9} prompts={prompts!s:5} {mode:13} recall@1 {row['recall@1']:.2f} "
-                  f"@5 {row['recall@5']:.2f} @10 {row['recall@10']:.2f} MRR {row['mrr@10']:.2f}")
+                  f"@5 {row['recall@5']:.2f} MRR {row['mrr@10']:.2f} | {sets}")
         retriever.close()
     return results
 
@@ -62,11 +67,20 @@ def report(results: list[dict], questions: list[dict], ks: list[int]) -> str:
     for r in results:
         lines.append(f"| {r['strategy']} | {'так' if r['prompts'] else 'ні'} | {r['mode']} | "
                      + " | ".join(f"{r[f'recall@{k}']:.2f}" for k in ks) + f" | {r['mrr@10']:.2f} |")
+    sets = sorted({q.get("set", "base") for q in questions})
+    counts = {s: sum(q.get("set", "base") == s for q in questions) for s in sets}
+    lines += ["", "## Базові vs складні питання", "",
+              "Складні: схожі розділи в різних релізах, той самий параметр у різних командах, перефразування без ключових слів, кілька правильних чанків.", "",
+              "| Chunking | Промпти | Пошук | " + " | ".join(f"{s} ({counts[s]}): recall@1 / recall@5 / MRR" for s in sets) + " |",
+              "|---|---|---|" + "---|" * len(sets)]
+    for r in results:
+        lines.append(f"| {r['strategy']} | {'так' if r['prompts'] else 'ні'} | {r['mode']} | " + " | ".join(
+            f"{r['by_set'][s]['recall@1']:.2f} / {r['by_set'][s]['recall@5']:.2f} / {r['by_set'][s]['mrr@10']:.2f}" for s in sets) + " |")
     lines += ["", "## Ранг першого правильного чанка по питаннях (— = не знайдено в top-10)", "",
               "| Питання | Тип | " + " | ".join(f"{r['strategy'][:6]}·{r['mode']}{'' if r['prompts'] else '·plain'}" for r in results) + " |",
               "|---|---|" + "---|" * len(results)]
     for q in questions:
-        lines.append(f"| {q['id']} {q['question'][:60]} | {q['type']} | "
+        lines.append(f"| {q['id']} {q['question'][:60]} | {q.get('set', 'base')} · {q['type']} | "
                      + " | ".join(str(r["ranks"][q["id"]] or "—") for r in results) + " |")
     return "\n".join(lines) + "\n"
 

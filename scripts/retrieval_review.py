@@ -19,6 +19,8 @@ TYPES = {
     "table": "відповідь у таблиці",
     "similar_docs": "є схожий документ-пастка",
     "version_trap": "є застаріла версія документа",
+    "paraphrase": "перефразоване питання без ключових слів документа",
+    "multi_relevant": "правильних чанків кілька",
 }
 
 
@@ -38,7 +40,10 @@ def main():
         "Виправлення — у `evals/retrieval_questions.jsonl`, потім `python scripts/retrieval_review.py`.",
     ]
     for q in questions:
-        parts += ["", "---", "", f"## {q['id']} · {TYPES.get(q['type'], q['type'])}", "", f"**Питання:** {q['question']}", ""]
+        status = "✅" if q.get("reviewed") else "⏳ не перевірено"
+        level = "складне" if q.get("set") == "hard" else "базове"
+        parts += ["", "---", "", f"## {q['id']} · {level} · {TYPES.get(q['type'], q['type'])} · {status}", "",
+                  f"**Питання:** {q['question']}", ""]
         for rel in q["relevant"]:
             found = [c for c in chunks if c["doc_id"] == rel["doc_id"] and rel["contains"].lower() in c["text"].lower()]
             parts.append(f"**Очікується:** документ `{rel['doc_id']}`, чанк містить «{rel['contains']}» — знайдено чанків: {len(found)}")

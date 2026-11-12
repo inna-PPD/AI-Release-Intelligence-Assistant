@@ -1,12 +1,12 @@
 # Питання для оцінки пошуку — перевірка
 
-Перевірено автором: **15 з 15**.
+Перевірено автором: **15 з 25**.
 Для кожного питання: чи це реалістичне питання користувача і чи справді показаний чанк на нього відповідає.
 Виправлення — у `evals/retrieval_questions.jsonl`, потім `python scripts/retrieval_review.py`.
 
 ---
 
-## r01 · є застаріла версія документа
+## r01 · базове · є застаріла версія документа · ✅
 
 **Питання:** Яка мінімальна версія pac CLI потрібна для встановлення Contoso Procurement 1.5?
 
@@ -28,7 +28,7 @@
 
 ---
 
-## r02 · мова питання = мова документа
+## r02 · базове · мова питання = мова документа · ✅
 
 **Питання:** Який пакет треба імпортувати першим при встановленні версії 1.5?
 
@@ -47,7 +47,7 @@
 
 ---
 
-## r03 · є схожий документ-пастка
+## r03 · базове · є схожий документ-пастка · ✅
 
 **Питання:** Що виправили в hotfix 1.5.1 для синхронізації з LEO при помилці 429?
 
@@ -68,7 +68,7 @@
 
 ---
 
-## r04 · відповідь у таблиці
+## r04 · базове · відповідь у таблиці · ✅
 
 **Питання:** За який час треба відреагувати на інцидент Critical?
 
@@ -89,7 +89,7 @@ Low | Косметичні проблеми | Наступний реліз
 
 ---
 
-## r05 · відповідь у таблиці
+## r05 · базове · відповідь у таблиці · ✅
 
 **Питання:** Який тест-кейс перевіряє лист погоджувачу в Approval Flow v2?
 
@@ -113,7 +113,7 @@ TC-134 | Project Hub | Форма проєкту відкривається ме
 
 ---
 
-## r06 · мова питання = мова документа
+## r06 · базове · мова питання = мова документа · ✅
 
 **Питання:** How do I package solution components from a local folder into a solution.zip with pac?
 
@@ -160,7 +160,7 @@ The full path to the solution ZIP file
 
 ---
 
-## r07 · питання українською, документ англійською
+## r07 · базове · питання українською, документ англійською · ✅
 
 **Питання:** Чи можна імпортувати managed solution у середовище, де є його вихідний unmanaged solution?
 
@@ -177,7 +177,7 @@ Important
 
 ---
 
-## r08 · точний ідентифікатор (номер issue)
+## r08 · базове · точний ідентифікатор (номер issue) · ✅
 
 **Питання:** Which CoE Starter Kit release fixed issue #9508 about the Environments with no Apps or Flows report?
 
@@ -202,7 +202,7 @@ Important
 
 ---
 
-## r09 · мова питання = мова документа
+## r09 · базове · мова питання = мова документа · ✅
 
 **Питання:** Які environment variables треба заповнити під час встановлення Contoso 1.5?
 
@@ -233,7 +233,7 @@ Important
 
 ---
 
-## r10 · є схожий документ-пастка
+## r10 · базове · є схожий документ-пастка · ✅
 
 **Питання:** У якому статусі тепер створюється клон погодженої заявки?
 
@@ -251,7 +251,7 @@ Important
 
 ---
 
-## r11 · мова питання = мова документа
+## r11 · базове · мова питання = мова документа · ✅
 
 **Питання:** Which connectors must the data policy allow for the CoE Starter Kit environment?
 
@@ -288,7 +288,7 @@ The CoE Starter Kit collects information about who owns a resource, such as an a
 
 ---
 
-## r12 · питання українською, документ англійською
+## r12 · базове · питання українською, документ англійською · ✅
 
 **Питання:** Яка команда pac відправляє PCF-компонент у середовище Dataverse?
 
@@ -321,7 +321,7 @@ Specifies the target Dataverse. The value may be a Guid or absolute https URL. W
 
 ---
 
-## r13 · мова питання = мова документа
+## r13 · базове · мова питання = мова документа · ✅
 
 **Питання:** Який ліміт запитів до API LEO PPM на годину?
 
@@ -338,7 +338,7 @@ Specifies the target Dataverse. The value may be a Guid or absolute https URL. W
 
 ---
 
-## r14 · питання українською, документ англійською
+## r14 · базове · питання українською, документ англійською · ✅
 
 **Питання:** Як часто виходять нові версії CoE Starter Kit?
 
@@ -354,7 +354,7 @@ Updates (bug fixes, enhancements, new features, and deprecations) are announced 
 
 ---
 
-## r15 · питання українською, документ англійською
+## r15 · базове · питання українською, документ англійською · ✅
 
 **Питання:** Які середовища, крім production, Microsoft радить мати для ALM?
 
@@ -368,3 +368,275 @@ You should also answer the question, "Which types of non-development environment
 For example, in addition to your production environment, you might need separate test, UAT, SIT, and pre-production environments. Notice that, at a minimum, any healthy ALM practice should include using a test environment prior to deploying anything to the production environment. This ensures that you have a place to test your app, but also ensures that the deployment itself can be tested.
 More information: Establishing an environment strategy for Microsoft Power Platform
 ~~~~
+
+---
+
+## r16 · складне · є схожий документ-пастка · ⏳ не перевірено
+
+**Питання:** Скільки багів виправили в релізі CoE Starter Kit за січень 2026?
+
+**Очікується:** документ `coe-release-january2026`, чанк містить «BUGS (38)» — знайдено чанків: 1
+
+`coe-release-january2026#003` · CoE Starter Kit release notes — January 2026 › Change Log (+1)
+
+~~~~text
+## Change Log
+### 🐛 CoE Starter Kit - BUGS (38)
+- #8576-[CoE Starter Kit - BUG] Sys Admin PIM workaround not working with GCC
+- #8913-[CoE Starter Kit - BUG] CustomControlDefaultConfig error - can't import Core Components solution
+- #9740-[CoE Starter Kit - BUG] Clean Up App URL in email notification not working
+- #9763-[CoE Starter Kit - BUG] Agents missing in admin_PVA table
+- #10002-Flow Admin | Sync Template v4 (Driver) never finishes in GCC High Tenant
+- #10005-[CoE Starter Kit - BUG] Production Apps are marked as Deleted in Cloud Flow Inventory in Power Platform Admin View App
+- #10044-[CoE Starter Kit - BUG] Admin | Sync Template v3 (Environment Properties) Flow Missing after Core Components 4.50.1
+- #10282-[CoE Starter Kit - BUG] ISSUE TITLE
+- #10300-[CoE Starter Kit - BUG] ISSUE TITLE: Error on "Configure welcome emails" in Setup wizard
+- #10395-[CoE Starter Kit - BUG] Issues with Flow Permission Center
+- #10405-[CoE Starter Kit - BUG] SYNC HELPER - Get Security Role Users - 'admin_EnvironmentSecurityRolePermission' With Id '' Does Not Exist
+~~~~
+
+> **Примітка:** заголовок «BUGS (N)» є в кожному з 18 релізів — треба вибрати правильний місяць
+
+---
+
+## r17 · складне · є схожий документ-пастка · ⏳ не перевірено
+
+**Питання:** In which CoE Starter Kit release was the Sync Audit Logs (V2) bug 'Start time and end time must both be specified' fixed?
+
+**Очікується:** документ `coe-release-december2025`, чанк містить «Start time and end time must both be specified» — знайдено чанків: 1
+
+`coe-release-december2025#003` · CoE Starter Kit release notes — December 2025 › Change Log (+1)
+
+~~~~text
+## Change Log
+### 🐛 CoE Starter Kit - BUGS (57)
+- #9058-[CoE Starter Kit - BUG] Data Policy Impact Analysis - inconsistent reporting of non-business connector group
+- #9622-[CoE Starter Kit - BUG] Parse Inventory Action for 5 Flows fails with error - Invalid Type. Expected String but got Null.
+- #9683-[CoE Starter Kit - BUG] Failed to Upgrade CoE (Core Components) with "the same key has already been added" Error
+- #9911-[CoE Starter Kit - BUG] Admin | Audit Logs | Sync Audit Logs (V2) - Start time and end time must both be specified
+- #9953-[CoE Starter Kit - BUG] Advisory ticket. We would like to transfer account owning the CoE Starter Kit to new Service Account. Need advice and guidance on steps involved in the process for a clean transition.
+- #9972-[CoE Starter Kit - BUG] Admin | Sync Template v3 (Flow Action Details) - Cannot Enable Flow
+- #9974-[CoE Starter Kit - BUG] Bots, solutions, powerpages... tables are not populated by condition in Sync Template flows
+- #9978-[CoE Starter Kit - BUG] SharePoint form apps
+- #9979-Issue with COE Power BI Report Marking Active Flows and Apps as Deleted
+~~~~
+
+> **Примітка:** Sync Audit Logs (V2) згадується в 17 чанках різних релізів
+
+---
+
+## r18 · складне · є схожий документ-пастка · ⏳ не перевірено
+
+**Питання:** Що робить параметр --packagetype саме в команді pac solution clone?
+
+**Очікується:** документ `learn-cli-solution`, чанк містить «Specifies the extraction type for the solution» — знайдено чанків: 1
+
+`learn-cli-solution#021` · Microsoft Power Platform CLI solution command group › pac solution > pac solution clone > Optional Parameters for solution clone > --outputDirectory -o (+2)
+
+~~~~text
+#### --outputDirectory -o
+Output directory
+#### --packagetype -p
+Specifies the extraction type for the solution. Can be: 'Unmanaged', 'Managed' or 'Both'. The default value is: 'Both'.
+#### --targetversion -v
+Deprecated: This parameter is ignored.
+~~~~
+
+> **Примітка:** --packagetype є також у pack і sync з іншим описом
+
+---
+
+## r19 · складне · перефразоване питання без ключових слів документа · ⏳ не перевірено
+
+**Питання:** Які дані зникнуть, якщо видалити managed solution із середовища?
+
+**Очікується:** документ `learn-alm-solution-concepts`, чанк містить «following data is lost» — знайдено чанків: 1
+
+`learn-alm-solution-concepts#002` · Solution concepts with Power Platform › Solution concepts > Managed and unmanaged solutions
+
+~~~~text
+- Managed solutions are deployed. Managed solutions are deployed to any environment that isn't a development environment for that solution. These environments include test, user acceptance testing (UAT), system integration testing (SIT), and production environments. Managed solutions can be serviced independently from other managed solutions in an environment. As an ALM best practice, managed solutions should be generated by exporting an unmanaged solution as managed and considered a build artifact. Additionally: You can't edit components directly within a managed solution. To edit managed components, first add them to an unmanaged solution. When you edit a managed component, you create a dependency between your unmanaged customizations and the managed solution. When a dependency exists, the managed solution can't be uninstalled until you remove the dependency. Some managed components can’t be edited. To verify whether a component can be edited, view the Managed properties. You can't export a managed solution. But you can export an unmanaged solution as managed. When a managed solution is deleted (uninstalled), all the customizations and extensions included with it are removed.
+Important
+- You can't import a managed solution into the same environment that contains the originating unmanaged solution. To test a managed solution, you need a separate environment to import it into.
+- When you delete a managed solution, the following data is lost: data stored in custom tables that are part of the managed solution and data stored in custom columns that are part of the managed solution on other tables that aren't part of the managed solution.
+~~~~
+
+---
+
+## r20 · складне · перефразоване питання без ключових слів документа · ⏳ не перевірено
+
+**Питання:** Який тест перевіряє, що картка проєкту в Project Hub не відкривається надто довго?
+
+**Очікується:** документ `contoso-regression-test-plan-1.5`, чанк містить «TC-134» — знайдено чанків: 1
+
+`contoso-regression-test-plan-1.5#001` · Contoso Procurement — Регресійний тест-план 1.5 › Contoso Procurement — Регресійний тест-план 1.5 > Тест-кейси
+
+~~~~text
+## Тест-кейси
+ID | Компонент | Сценарій | Пріоритет
+TC-101 | canvas app «Заявки на закупівлю» | Створення заявки з вкладенням 8 MB | High
+TC-104 | cnt_request | Заявка понад 50 000 грн без центру витрат не зберігається | High
+TC-110 | Approval Flow v2 | Погодження заявки: лист погоджувачу з посиланням | High
+TC-112 | Approval Flow v2 | Повторний запуск з run history не створює дубль інвойсу | High
+TC-118 | canvas app «Заявки на закупівлю» | Кнопка Reject активна для заявок понад 100 000 грн | Medium
+TC-120 | cnt_ApprovalValidation | Відхилення без коментаря показує повідомлення, а не помилку | High
+TC-125 | LEO Task Sync | Синхронізація 500 задач без помилки 429 | Medium
+TC-130 | Project Hub | Кнопка «Затвердити бюджет» видима для ролі Project Manager | High
+TC-134 | Project Hub | Форма проєкту відкривається менш ніж за 5 секунд на PROD-подібних даних | Medium
+~~~~
+
+> **Примітка:** у документі — «менш ніж за 5 секунд»; TC-130 теж про Project Hub
+
+---
+
+## r21 · складне · перефразоване питання без ключових слів документа · ⏳ не перевірено
+
+**Питання:** У якій версії Contoso з'явилась роль лише для перегляду заявок та інвойсів?
+
+**Очікується:** документ `contoso-release-notes-1.4.3`, чанк містить «Procurement Auditor» — знайдено чанків: 1
+
+`contoso-release-notes-1.4.3#001` · Contoso Procurement — Release Notes 1.4.3 › Contoso Procurement — Release Notes 1.4.3 > Нові можливості
+
+~~~~text
+## Нові можливості
+- Model-driven app «Project Hub»: кнопка «Затвердити бюджет» на формі проєкту для ролі Project Manager.
+- Нова security role «Procurement Auditor» з доступом лише на читання до cnt_request і cnt_invoice.
+~~~~
+
+> **Примітка:** у питанні немає назви ролі
+
+---
+
+## r22 · складне · перефразоване питання без ключових слів документа · ⏳ не перевірено
+
+**Питання:** Як перевірити solution на типові помилки з командного рядка перед деплоєм?
+
+**Очікується:** документ `learn-cli-solution`, чанк містить «run against the Power Apps Checker service» — знайдено чанків: 2
+
+`learn-cli-solution#001` · Microsoft Power Platform CLI solution command group › pac solution > Commands
+
+~~~~text
+## Commands
+Command | Description
+pac solution add-license | Add license and plan info to the solution.
+pac solution add-reference | Adds a reference from the project in the current directory to the project at 'path'
+pac solution add-solution-component | Add one or more solution components to the target unmanaged solution in Dataverse.
+pac solution check | Upload a Dataverse solution project to run against the Power Apps Checker service.
+pac solution clone | Create a solution project based on an existing solution in your organization.
+pac solution create-settings | Create a settings file from solution zip or solution folder.
+pac solution delete | Delete a solution from Dataverse in the current environment.
+pac solution export | Export a solution from Dataverse.
+pac solution import | Import the solution into Dataverse.
+pac solution init | Initializes a directory with a new Dataverse solution project
+pac solution list | List all Solutions from the current Dataverse organization
+pac solution online-version | Gets or sets version for solution loaded in Dataverse.
+pac solution pack | Package solution components on local filesystem into solution.zip (SolutionPackager).
+pac solution publish | Publishes all customizations
+pac solution sync | Sync the current Dataverse solution project to the current state of the solution in your organization.
+pac solution unpack | Extract solution components from solution.zip onto local filesystem (SolutionPackager).
+pac solution upgrade | Apply solution upgrade
+pac solution version | Update build or revision version for the solution.
+~~~~
+
+`learn-cli-solution#010` · Microsoft Power Platform CLI solution command group › pac solution > pac solution check (+3)
+
+~~~~text
+## pac solution check
+Upload a Dataverse solution project to run against the Power Apps Checker service.
+### Example
+pac solution check --path c:\Users\Documents\Solution.zip --outputDirectory c:\samplepackage --geo UnitedStates
+### Optional Parameters for solution check
+#### --clearCache -cc
+Clears the solution checker enforcement cache, for your tenant, of all records that pertain to past results for your solutions.
+This parameter requires no value. It's a switch.
+~~~~
+
+> **Примітка:** у питанні немає слів check / Checker
+
+---
+
+## r23 · складне · є схожий документ-пастка · ⏳ не перевірено
+
+**Питання:** Що треба зробити перед встановленням оновлення CoE Starter Kit, якщо ви змінювали його flows?
+
+**Очікується:** документ `learn-coe-after-setup`, чанк містить «Remove unmanaged layers from inventory flows» — знайдено чанків: 1
+
+`learn-coe-after-setup#005` · Update the Center of Excellence (CoE) Starter Kit › Update the Center of Excellence (CoE) Starter Kit > Install updates > Remove unmanaged layers from inventory flows
+
+~~~~text
+### Remove unmanaged layers from inventory flows
+Before installing the upgrade, check that the solution is in a healthy state to receive the new updates.
+Making any changes to flows or apps in the solution creates an unmanaged layer. Components with unmanaged layers don't receive updates until you remove that unmanaged layer. Learn more in Solution layers.
+All flows with Admin | Sync Template v in the name are responsible for collecting your tenant's inventory and building the foundation that the CoE Starter Kit relies on. Don't customize these flows. If you have additional requirements on what inventory to collect, raise a feature ask or create your own flow. Learn more in Extend and customize CoE Starter Kit components.
+Before installing the upgrade, remove unmanaged layers from the inventory flows.
+Note
+You might unknowingly create an unmanaged layer by selecting Edit to look at flow actions or by modifying the run-only properties of the flow.
+You can check for unmanaged layers on the inventory flows by using the CoE Admin Command Center app.
+- Open the CoE Admin Command Center app from your CoE environment.
+- Select CoE flows from the navigation menu.
+- Check if any of the flows show the layer icon, indicating they have unmanaged layers.
+- Select the layer icon to go to the solution layer page of the flow and remove the unmanaged layer.
+~~~~
+
+> **Примітка:** FAQ і release notes листопада 2025 теж згадують unmanaged layers
+
+---
+
+## r24 · складне · є застаріла версія документа · ⏳ не перевірено
+
+**Питання:** Що потрібно зробити з connection reference cnt_sharedoffice365 після оновлення до 1.4.3?
+
+**Очікується:** документ `contoso-release-notes-1.4.3`, чанк містить «вручну прив'язати» — знайдено чанків: 1
+
+`contoso-release-notes-1.4.3#003` · Contoso Procurement — Release Notes 1.4.3 › Contoso Procurement — Release Notes 1.4.3 > Відомі проблеми
+
+~~~~text
+## Відомі проблеми
+- Після оновлення connection reference cnt_sharedoffice365 потрібно вручну прив'язати до сервісного акаунта в кожному середовищі.
+~~~~
+
+> **Примітка:** інструкція 1.5 і runbook теж згадують cnt_sharedoffice365
+
+---
+
+## r25 · складне · правильних чанків кілька · ⏳ не перевірено
+
+**Питання:** У якому релізі CoE виправили проблему, коли flow Inactivity notifications v2 (Clean Up and Delete) не вмикався?
+
+**Очікується:** документ `coe-release-september2025`, чанк містить «won't turn on» — знайдено чанків: 1
+
+`coe-release-september2025#007` · CoE Starter Kit release notes — September 2025 › Change Log (+1)
+
+~~~~text
+- #10127-[CoE Starter Kit - BUG] AI metadata not populating in Admin View
+- #10130-[CoE Starter Kit - BUG] DLP Impact Analysis Tool shows incorrect cached results across multiple tenants
+- #10131-[CoE Starter Kit - BUG] ISSUE TITLE
+- #10132-[CoE Starter Kit - BUG] - Permissions, turn off and delete flow dialogs empty
+- #10133-[CoE Starter Kit - BUG] Cannot get Audit (Usage) Flows to work - NEED HELP
+- #10136-[CoE Starter Kit - BUG] Request Orphaned Objects Reassigned Child Always Returns Success to Parent
+- #10137-[CoE Starter Kit - BUG] ISSUE TITLE - Flow Last Run On Field is unavailable in the Power Bi DashBoards of CoE Solution
+- #10146-[CoE Starter Kit - BUG] ISSUE TITLE - App Last Launched On is empty and Flow Last Run On is empty
+- #10147-[CoE Starter Kit v4.5 - BUG] - the "Admin | Sync Template v4 (Driver)" solution flow is not completing Inventory for CareFirst BCBS
+- #10148-[CoE Starter Kit - BUG] Admin | Inactivity notifications v2 (Clean Up and Delete) won't turn on
+~~~~
+**Очікується:** документ `coe-release-august2025`, чанк містить «won't turn on» — знайдено чанків: 1
+
+`coe-release-august2025#004` · CoE Starter Kit release notes — August 2025 › Change Log (+1)
+
+~~~~text
+- #10055-CoE Started Tool kit - Power Automate Flow "Admin | Audit Logs | Sync Audit Logs (V2)" if failing
+- #10056-[CoE Starter Kit - BUG] Inactivity notifications 2 Clean up and Delete flow won't turn on
+- #10060-[CoE Starter Kit - BUG] Unable to assign new Owner to a Flow that is part of a solution
+- #10066-[CoE Starter Kit - BUG] Developer Environments activity
+- #10075-[CoE Starter Kit - BUG] Connector name is missing in the 'Connectors' section of Environment Creation Requests
+- #10079-[CoE Starter Kit - BUG] Passwords Containing Plaintext still set to YES
+- #10082-[CoE Starter Kit - BUG] Flow Last Run On Date not populating
+- #10083-[CoE Starter Kit - BUG] Admin | Sync Blog Posts is missing
+- #10086-[CoE Starter Kit - BUG] SYNC HELPER - Get Security Role Users keeps failing
+- #10087-Unable to Deploy Powerpage based solution using ALM
+- #10089-[CoE Starter Kit - BUG] errors with wizard no automate displayed
+- #10094-[CoE Starter Kit - BUG] ISSUE TITLE
+- #10095-[CoE Starter Kit - BUG] Last Launched Date Wrong Time Zone
+~~~~
+
+> **Примітка:** два правильні релізи; ще 5 чанків згадують Inactivity notifications
