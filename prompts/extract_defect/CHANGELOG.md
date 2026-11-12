@@ -1,7 +1,7 @@
 # CHANGELOG — extract_defect
 
 ## v2 — 2026-10-18
-Що змінено і чому (за аналізом помилок v1 на golden set, див. REPORT.md):
+Що змінено і чому (за аналізом помилок v1 на golden set, див. reports/REPORT_case1.md):
 
 | Зміна | Помилка v1, яку виправляємо |
 |---|---|

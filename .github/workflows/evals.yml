@@ -1,0 +1,60 @@
+name: tests and RAG evals
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -e ".[dev]"
+      - run: python -m pytest -q
+
+  rag-evals:
+    needs: tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -e ".[dev]"
+
+      # embedding-модель і reranker (~1.8 ГБ) кешуються між запусками; embeddings чанків уже в репозиторії (data/index)
+      - uses: actions/cache@v4
+        with:
+          path: .cache/models
+          key: fastembed-${{ hashFiles('config/rag.yaml') }}
+
+      - name: Check OpenRouter secret
+        run: |
+          if [ -z "$OPENROUTER_API_KEY" ]; then
+            echo "::error::Додайте секрет репозиторію OPENROUTER_API_KEY (Settings → Secrets and variables → Actions)"
+            exit 1
+          fi
+
+      # падає з кодом 1, якщо будь-яка метрика нижче порогу з config/rag.yaml → evals.thresholds
+      - name: RAG evals
+        run: python main.py rag-eval --ci
+
+      - name: Metrics to job summary
+        if: always()
+        run: cat evals/results/rag_metrics.md >> "$GITHUB_STEP_SUMMARY" || true
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: rag-eval-results
+          path: evals/results/

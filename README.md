@@ -10,7 +10,7 @@ AI-система, яка аналізує релізну документаці
 Сирий баг-репорт (Teams, email, Azure DevOps, GitHub) → валідний JSON за схемою [`DefectReport`](src/schema.py).
 Порівнюються провайдерська модель (OpenRouter) і локальна (Ollama).
 
-**Результат** (повний звіт — [REPORT.md](REPORT.md)):
+**Результат** (повний звіт — [reports/REPORT_case1.md](reports/REPORT_case1.md)):
 
 | Модель | Промпт | Field accuracy | Валідних | p95 | $ / 1000 док. |
 |---|---|---|---|---|---|
@@ -124,6 +124,19 @@ python main.py ask "..." --json        # джерела, токени, варт�
 
 **Вартість:** gpt-4o-mini, ~1 700 токенів контексту → ≈ $0.0004 за відповідь, **≈ $0.40 на 1000 питань**; «не знаю» через поріг — $0.
 
+### Тестсет і evals у CI (крок 4)
+
+```bash
+python main.py rag-eval         # 23 питання → evals/results/rag_metrics.md, rag_answers.jsonl
+python main.py rag-eval --ci    # код виходу 1, якщо метрика нижче порогу
+python main.py calibrate        # згода LLM-судді з ручною розміткою
+```
+
+- **Тестсет** — [evals/testset.jsonl](evals/testset.jsonl) (перегляд — [evals/testset_review.md](evals/testset_review.md)): 17 питань з еталонною відповіддю, ключовими фактами й очікуваними джерелами + 6 питань без відповіді; пастки — застаріла версія, схожі документи, «двійники» неіснуючих релізів (Contoso 1.6.0, CoE Kit за березень 2026).
+- **Scoring** ([src/rag/evals.py](src/rag/evals.py)): детерміновані — «не знаю» там, де треба, правильне джерело, ключові факти, кожне твердження з джерелом; LLM-суддя (`claude-haiku-5.5`, інша модель, ніж генератор) — правильність і faithfulness; калібрування судді на ручній розмітці — [evals/calibration/hand_grades.json](evals/calibration/hand_grades.json).
+- **CI** — [.github/workflows/evals.yml](.github/workflows/evals.yml), пороги — `config/rag.yaml` → `evals.thresholds`. Для запуску в GitHub додайте секрет: **Settings → Secrets and variables → Actions → New repository secret** `OPENROUTER_API_KEY`.
+- **Результати й розбір помилок** — [REPORT.md](REPORT.md).
+
 ## Встановлення
 
 Потрібно: Python 3.11+, ключ [OpenRouter](https://openrouter.ai/keys), [Ollama](https://ollama.com).
@@ -174,7 +187,9 @@ src/llm/                спільний інтерфейс LLMClient: OpenRoute
 src/extraction/         промпти й пайплайн: модель → валідація → repair → запис
 src/evaluation/         field accuracy, % валідних, latency p50/p95, вартість
 results/                виходи моделей + metrics.md / metrics.csv
-REPORT.md               звіт-порівняння і вибір моделі для продакшну
+REPORT.md               кейс 2: метрики retrieval і відповідей, розбір помилок
+reports/REPORT_case1.md кейс 1: звіт-порівняння і вибір моделі для продакшну
+.github/workflows/      кейс 2: тести + RAG evals з порогами на кожен push / PR
 scripts/                завантаження й перегляд даних
 docs/SPEC.md            специфікація всього проєкту
 ```

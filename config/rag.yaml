@@ -36,7 +36,7 @@ search:
   reranker: BAAI/bge-reranker-v2-m3-int8   # багатомовний cross-encoder (INT8, CPU)
 
 answer:
-  prompt: rag_answer/v1
+  prompt: rag_answer/v2       # v1 — baseline; порівняння в REPORT.md
   model: provider             # ключ моделі з config/models.yaml (gpt-4o-mini через OpenRouter)
   candidates: 8               # скільки чанків після reranking розглядаємо для контексту
   context_budget_tokens: 2500 # ліміт токенів на джерела в промпті; решта чанків відкидається
@@ -44,6 +44,17 @@ answer:
                               # відсікає 7/10 питань без відповіді, помилково — 1/25 питань з відповіддю
   sampling: { temperature: 0.0, top_p: 1.0 }
   max_tokens: 800
+
+evals:
+  testset: evals/testset.jsonl
+  thresholds:                 # нижче будь-якого — CI падає (python main.py rag-eval --ci)
+    refusal_accuracy: 0.85
+    source_hit: 0.85
+    key_facts: 0.80
+    citations_ok: 0.95
+    judge_correctness: 0.75
+    faithfulness: 0.85
+    failed_max: 0
 
 retrieval_eval:
   questions: evals/retrieval_questions.jsonl

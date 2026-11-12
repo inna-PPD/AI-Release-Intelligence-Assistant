@@ -17,6 +17,11 @@ models:
     id: qwen2.5:7b-instruct
     structured: false
     price_per_1m_tokens: { input: 0, output: 0 }
+  judge:
+    # кейс 2: LLM-as-a-judge — інша модель, ніж генератор (gpt-4o-mini), щоб не оцінювала сама себе
+    client: openrouter
+    id: anthropic/claude-haiku-5.5
+    price_per_1m_tokens: { input: 0.10, output: 0.50 }   # openrouter.ai, 12.11.2026
 
 run:
   models: [provider, local]   # що запускає `python main.py run` без --models

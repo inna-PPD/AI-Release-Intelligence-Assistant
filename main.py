@@ -142,6 +142,9 @@ def main() -> int:
     ask.add_argument("--filter", action="append", default=[], metavar="KEY=VALUE")
     ask.add_argument("--prompt", help="версія промпту, напр. rag_answer/v1")
     ask.add_argument("--json", action="store_true", help="повний результат: джерела, токени, вартість")
+    re_ = sub.add_parser("rag-eval", help="кейс 2: тестсет → відповіді → оцінки → evals/results/rag_metrics.md")
+    re_.add_argument("--ci", action="store_true", help="код виходу 1, якщо метрика нижче порогу (для GitHub Actions)")
+    sub.add_parser("calibrate", help="кейс 2: згода LLM-судді з ручною розміткою → evals/results/judge_calibration.md")
     args = parser.parse_args()
 
     if sys.stdout.encoding.lower() != "utf-8":
@@ -154,6 +157,12 @@ def main() -> int:
         return cmd_retrieval_eval()
     if args.command == "ask":
         return cmd_ask(args)
+    if args.command == "rag-eval":
+        return cmd_rag_eval(args)
+    if args.command == "calibrate":
+        from src.rag.evals import calibrate
+        print(calibrate())
+        return 0
     config = load_config()
     return cmd_run(args, config) if args.command == "run" else cmd_eval(args, config)
 
@@ -198,6 +207,22 @@ def cmd_ask(args) -> int:
               f" · ${m.get('cost_usd', 0):.5f} · {m.get('latency_ms')} мс]")
     pipeline.retriever.close()
     return 0 if answer.status != "failed" else 1
+
+
+def cmd_rag_eval(args) -> int:
+    from src.ingest.pipeline import load_rag_config
+    from src.rag.evals import run_rag_eval
+
+    summary, failures = run_rag_eval(load_rag_config())
+    keys = ["refusal_accuracy", "source_hit", "key_facts", "citations_ok", "judge_correctness", "faithfulness"]
+    print("\n" + " · ".join(f"{k} {summary[k]:.2f}" for k in keys if summary[k] is not None)
+          + f" · failed {summary['failed']} · ${summary['cost_per_1000_questions_usd']:.2f} / 1000 питань")
+    print("→ evals/results/rag_metrics.md, rag_answers.jsonl")
+    if failures:
+        print("❌ нижче порогу: " + "; ".join(failures))
+        return 1 if args.ci else 0
+    print("✅ усі пороги пройдено")
+    return 0
 
 
 def cmd_retrieval_eval() -> int:

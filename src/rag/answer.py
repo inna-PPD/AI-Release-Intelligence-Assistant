@@ -45,6 +45,7 @@ class Source:
     url: str | None
     rerank: float | None
     tokens: int
+    text: str  # текст чанка — для перевірки faithfulness і розбору помилок
 
 
 @dataclass
@@ -85,7 +86,7 @@ def build_context(hits, budget: int) -> tuple[list[Source], str, int]:
         used += size
         blocks.append(block)
         sources.append(Source(sid, c["chunk_id"], c["title"], c["section"], c.get("version"), c.get("date"),
-                              c.get("url"), hit.scores.get("rerank"), size))
+                              c.get("url"), hit.scores.get("rerank"), size, c["text"]))
     return sources, "\n\n".join(blocks), len(hits) - len(sources)
 
 
