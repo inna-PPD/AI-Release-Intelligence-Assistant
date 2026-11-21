@@ -16,6 +16,7 @@ import yaml
 from pydantic import BaseModel, ConfigDict, Field
 
 from src.config import ROOT
+from src.tracker.models import DefectListOut, DefectOut, ReleaseOut, TicketOut
 from src.tracker.service import TrackerService
 
 TOOLS_DIR = ROOT / "prompts" / "agent_tools"
@@ -71,37 +72,6 @@ class SearchDocsOut(Strict):
     results: list[SearchResult]
 
 
-class ReleaseOut(Strict):
-    version: str
-    status: Literal["released", "in_testing", "planned"]
-    release_date: str | None
-    solution: str | None
-    deployed_to: list[str]
-
-
-class DefectOut(Strict):
-    id: str
-    title: str
-    version: str
-    severity: Severity
-    status: Literal["open", "resolved"]
-    component: str
-    environment: str
-    fixed_in: str | None
-
-
-class DefectListOut(Strict):
-    team: str
-    count: int
-    defects: list[DefectOut]
-
-
-class TicketOut(Strict):
-    ticket_id: str
-    status: Literal["created", "already_exists"]
-    idempotency_key: str
-
-
 # --- контекст виконання ---
 @dataclass
 class SourceRegistry:
@@ -123,6 +93,7 @@ class SourceRegistry:
 class ToolContext:
     tracker: TrackerService
     retriever: Any = None             # src.rag.search.Retriever; None — пошук вимкнено (юніт-тести)
+    mcp: Any = None                   # src.agent.mcp_client.McpTracker; None — трекер читається локально (юніт-тести)
     min_rerank_score: float = -1.0
     top_k: int = 5
     registry: SourceRegistry = field(default_factory=SourceRegistry)
@@ -142,15 +113,23 @@ def search_docs(a: SearchDocsArgs, ctx: ToolContext) -> dict:
     return {"results": results}
 
 
+# Читання трекера йде через MCP-сервер (ctx.mcp), якщо він підключений; локальний TrackerService — для тестів
+# і режиму tracker_backend: local. Відповідь в обох випадках перевіряється тією самою схемою в циклі агента.
 def get_release(a: GetReleaseArgs, ctx: ToolContext) -> dict:
+    if ctx.mcp:
+        return ctx.mcp.call("get_release", a.model_dump())
     return ctx.tracker.get_release(a.version)
 
 
 def list_defects(a: ListDefectsArgs, ctx: ToolContext) -> dict:
+    if ctx.mcp:
+        return ctx.mcp.call("list_defects", a.model_dump())
     return ctx.tracker.list_defects(a.version, a.severity, a.status)
 
 
 def get_defect(a: GetDefectArgs, ctx: ToolContext) -> dict:
+    if ctx.mcp:
+        return ctx.mcp.call("get_defect", a.model_dump())
     return ctx.tracker.get_defect(a.defect_id)
 
 

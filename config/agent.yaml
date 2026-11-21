@@ -5,6 +5,8 @@ agent:
   system_prompt: agent_system/v2  # v1 — перший прогін (REPORT); v2 — тікет без зайвих перепитувань
   tools: v2                       # prompts/agent_tools/v2.yaml
   team: procurement               # команда користувача: дефекти інших команд закриті
+  tracker_backend: mcp            # mcp — get_release / list_defects / get_defect через MCP-сервер (src/mcp_server);
+                                  # local — той самий TrackerService напряму (для порівняння й налагодження)
   sampling: { temperature: 0.0, top_p: 1.0 }
   max_tokens: 800                 # на одну відповідь моделі
 

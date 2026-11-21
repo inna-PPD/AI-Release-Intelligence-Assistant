@@ -1,6 +1,6 @@
 # Evals агента (кейс 3)
 
-Модель `openai/gpt-4o-mini` · промпт `agent_system/v2` (sha 551ad4737b20) · інструменти `agent_tools/v2` · задач: 20 · прогонів: 3 · 2026-11-21 12:01
+Модель `openai/gpt-4o-mini` · промпт `agent_system/v2` (sha 551ad4737b20) · інструменти `agent_tools/v2` · трекер: `mcp` · задач: 20 · прогонів: 3 · 2026-11-21 12:15
 
 | Метрика | прогін 1 | прогін 2 | прогін 3 |
 |---|---|---|---|
@@ -10,7 +10,7 @@
 | кроків на задачу (сер. / макс.) | 1.8 / 2 | 1.8 / 2 | 1.8 / 2 |
 | ціна на задачу | $0.0006 | $0.0006 | $0.0006 |
 | ціна на 1000 запитів | $0.61 | $0.61 | $0.61 |
-| latency p50 / p95 | 2852 / 10384 мс | 2545 / 11491 мс | 3446 / 11132 мс |
+| latency p50 / p95 | 3327 / 11523 мс | 2687 / 10403 мс | 2983 / 11649 мс |
 | провалені | a08 | a08 | a08 |
 
 ## Задачі (прогін 3)
@@ -21,7 +21,7 @@
 | a02 | docs | ✅ | search_docs→ok | 2 | answered | 0.0007 |  |
 | a03 | tracker | ✅ | get_release→ok | 2 | answered | 0.0006 |  |
 | a04 | tracker | ✅ | list_defects→ok | 2 | answered | 0.0007 |  |
-| a05 | multi_tool | ✅ | list_defects→ok, search_docs→ok | 2 | answered | 0.0009 |  |
+| a05 | multi_tool | ✅ | list_defects→ok, search_docs→ok | 2 | answered | 0.0010 |  |
 | a06 | no_tool | ✅ | — | 1 | answered | 0.0003 |  |
 | a07 | no_tool | ✅ | — | 1 | answered | 0.0003 |  |
 | a08 | unanswerable | ❌ | — | 1 | answered | 0.0003 | не викликано search_docs |

@@ -11,7 +11,9 @@ from src.extraction.prompts import load_prompt
 from src.llm import SamplingParams, make_client
 from src.tracker.service import TrackerService
 
+MCP_TOOLS = ["get_release", "list_defects", "get_defect"]   # інструменти, які агент бере з MCP-сервера
 _RETRIEVER = None  # моделі embeddings і reranker вантажаться один раз на процес
+_MCP = None        # один підпроцес MCP-сервера на процес агента
 
 
 def load_agent_config() -> dict:
@@ -27,11 +29,22 @@ def shared_retriever():
     return _RETRIEVER
 
 
+def shared_mcp(team: str):
+    global _MCP
+    if _MCP is None:
+        from src.agent.mcp_client import McpTracker
+        _MCP = McpTracker(team, MCP_TOOLS)
+    return _MCP
+
+
 def close_shared() -> None:
-    global _RETRIEVER
+    global _RETRIEVER, _MCP
     if _RETRIEVER is not None:
         _RETRIEVER.close()
         _RETRIEVER = None
+    if _MCP is not None:
+        _MCP.close()
+        _MCP = None
 
 
 def build_agent(confirm: Confirm | None = None, faults: str | None = None, limits: dict | None = None,
@@ -42,7 +55,9 @@ def build_agent(confirm: Confirm | None = None, faults: str | None = None, limit
     model_cfg = models["models"][a["model"]]
     rag = yaml.safe_load((ROOT / "config" / "rag.yaml").read_text(encoding="utf-8"))
     tools, tools_id = load_tools(a["tools"])
+    via_mcp = a.get("tracker_backend", "mcp") == "mcp"
     ctx = ToolContext(tracker=tracker or TrackerService(team=a["team"]), retriever=shared_retriever(),
+                      mcp=shared_mcp(a["team"]) if via_mcp else None,
                       min_rerank_score=rag["answer"]["min_rerank_score"], top_k=rag["search"]["top_k"])
     known = {f.name for f in fields(Limits)}
     lim = Limits(**{k: v for k, v in {**cfg["limits"], **(limits or {})}.items() if k in known})
@@ -50,4 +65,5 @@ def build_agent(confirm: Confirm | None = None, faults: str | None = None, limit
     return Agent(llm or make_client(model_cfg, models), tools, ctx, prompt, lim,
                  SamplingParams(**a["sampling"], max_tokens=a["max_tokens"]), model_cfg["price_per_1m_tokens"],
                  confirm=confirm, faults=faults,
-                 meta={"model": model_cfg["id"], "prompt": prompt.id, "prompt_sha": prompt.sha, "tools": tools_id})
+                 meta={"model": model_cfg["id"], "prompt": prompt.id, "prompt_sha": prompt.sha, "tools": tools_id,
+                       "tracker_backend": "mcp" if via_mcp else "local"})

@@ -112,7 +112,7 @@ def report(runs: list[list[dict]], meta: dict) -> str:
     sums = [summarize(r) for r in runs]
     lines = ["# Evals агента (кейс 3)", "",
              f"Модель `{meta['model']}` · промпт `{meta['prompt']}` (sha {meta['prompt_sha']}) · інструменти `{meta['tools']}`"
-             f" · задач: {sums[0]['tasks']} · прогонів: {len(runs)} · {datetime.now():%Y-%m-%d %H:%M}", "",
+             f" · трекер: `{meta.get('tracker_backend', 'local')}` · задач: {sums[0]['tasks']} · прогонів: {len(runs)} · {datetime.now():%Y-%m-%d %H:%M}", "",
              "| Метрика | " + " | ".join(f"прогін {i + 1}" for i in range(len(runs))) + " |",
              "|---|" + "---|" * len(runs)]
     rowdefs = [("пройдено задач", lambda s: f"{s['pass_rate']:.0%}"),
