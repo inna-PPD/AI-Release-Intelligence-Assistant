@@ -1,4 +1,4 @@
-from .base import LLMClient, LLMError, LLMResult, SamplingParams
+from .base import ChatResult, LLMClient, LLMError, LLMResult, SamplingParams, ToolCall
 from .ollama import OllamaClient
 from .openrouter import OpenRouterClient
 
@@ -16,4 +16,4 @@ def make_client(model_cfg: dict, config: dict) -> LLMClient:
     raise ValueError(f"Невідомий client: {model_cfg['client']}")
 
 
-__all__ = ["LLMClient", "LLMError", "LLMResult", "SamplingParams", "make_client"]
+__all__ = ["ChatResult", "LLMClient", "LLMError", "LLMResult", "SamplingParams", "ToolCall", "make_client"]

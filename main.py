@@ -146,6 +146,13 @@ def main() -> int:
     re_.add_argument("--ci", action="store_true", help="код виходу 1, якщо метрика нижче порогу (для GitHub Actions)")
     sub.add_parser("calibrate", help="кейс 2: згода LLM-судді з ручною розміткою → evals/results/judge_calibration.md")
     sub.add_parser("case2", help="кейс 2 однією командою: ingest → якість пошуку → evals відповідей")
+    ag = sub.add_parser("agent", help="кейс 3: агент з інструментами (пошук, трекер, тікети)")
+    ag.add_argument("question")
+    ag.add_argument("--faults", help="імітація збоїв, напр. 503:get_release (за замовчуванням — змінна FAULTS)")
+    ag.add_argument("--trace", action="store_true", help="показати trace: кроки, виклики інструментів, помилки")
+    ae = sub.add_parser("agent-eval", help="кейс 3: набір задач агента → evals/results/agent/")
+    ae.add_argument("--only", help="id задач через кому, напр. a01,a14")
+    ae.add_argument("--runs", type=int, default=1, help="скільки разів прогнати набір (результат моделі плаває)")
     args = parser.parse_args()
 
     if sys.stdout.encoding.lower() != "utf-8":
@@ -167,6 +174,11 @@ def main() -> int:
         from src.rag.evals import calibrate
         print(calibrate())
         return 0
+    if args.command == "agent":
+        return cmd_agent(args)
+    if args.command == "agent-eval":
+        from src.agent.evals import run_agent_eval
+        return run_agent_eval(only=args.only.split(",") if args.only else None, runs=args.runs)
     config = load_config()
     return cmd_run(args, config) if args.command == "run" else cmd_eval(args, config)
 
@@ -211,6 +223,33 @@ def cmd_ask(args) -> int:
               f" · ${m.get('cost_usd', 0):.5f} · {m.get('latency_ms')} мс]")
     pipeline.retriever.close()
     return 0 if answer.status != "failed" else 1
+
+
+def confirm_in_console(tool: str, tool_args: dict) -> bool:
+    """Підтвердження дії з побічним ефектом людиною — у коді, а не в промпті."""
+    print(f"\n⚠ Агент хоче виконати дію «{tool}»:")
+    for k, v in tool_args.items():
+        print(f"   {k}: {v}")
+    try:
+        return input("Підтвердити? [y/N] ").strip().lower() in ("y", "yes", "т", "так")
+    except EOFError:
+        return False  # неінтерактивний запуск — дія не виконується
+
+
+def cmd_agent(args) -> int:
+    import os
+
+    from src.agent.factory import build_agent, close_shared
+
+    agent = build_agent(confirm=confirm_in_console, faults=args.faults or os.getenv("FAULTS"))
+    result = agent.run(args.question)
+    close_shared()
+    if args.trace:
+        for e in result.trace:
+            print(json.dumps(e, ensure_ascii=False))
+        print()
+    print(result.render())
+    return 0 if result.status != "failed" else 1
 
 
 def cmd_rag_eval(args) -> int:

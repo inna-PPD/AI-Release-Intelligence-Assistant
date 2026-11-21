@@ -12,7 +12,13 @@ case2:  ## кейс 2: ingest → якість пошуку → evals відпо
 ask:  ## кейс 2: make ask Q="питання"
 	$(PYTHON) main.py ask "$(Q)"
 
+agent:  ## кейс 3: make agent Q="питання"
+	$(PYTHON) main.py agent "$(Q)"
+
+agent-eval:  ## кейс 3: набір задач агента → evals/results/agent/
+	$(PYTHON) main.py agent-eval
+
 test:
 	$(PYTHON) -m pytest -q
 
-.PHONY: run smoke case2 ask test
+.PHONY: run smoke case2 ask agent agent-eval test

@@ -1,0 +1,9 @@
+[
+  {"version": "1.4.2", "status": "released", "release_date": "2026-03-17", "solution": "ContosoCore_1_4_2_managed", "deployed_to": ["dev", "test", "uat", "prod"], "owner_team": "procurement", "release_manager": "Release Manager (Contoso)"},
+  {"version": "1.4.3", "status": "released", "release_date": "2026-04-21", "solution": "ContosoCore_1_4_3_managed", "deployed_to": ["dev", "test", "uat", "prod"], "owner_team": "procurement", "release_manager": "Release Manager (Contoso)"},
+  {"version": "1.5.0", "status": "released", "release_date": "2026-06-09", "solution": "ContosoCore_1_5_0_managed", "deployed_to": ["dev", "test", "uat", "prod"], "owner_team": "procurement", "release_manager": "Release Manager (Contoso)"},
+  {"version": "1.5.1", "status": "released", "release_date": "2026-07-02", "solution": "ContosoCore_1_5_1_managed", "deployed_to": ["dev", "test", "uat", "prod"], "owner_team": "procurement", "release_manager": "Release Manager (Contoso)"},
+  {"version": "1.5.2", "status": "released", "release_date": "2026-08-25", "solution": "ContosoCore_1_5_2_managed", "deployed_to": ["dev", "test", "uat", "prod"], "owner_team": "procurement", "release_manager": "Release Manager (Contoso)"},
+  {"version": "1.5.3", "status": "in_testing", "release_date": null, "solution": "ContosoCore_1_5_3_managed", "deployed_to": ["dev", "test"], "owner_team": "procurement", "release_manager": "Release Manager (Contoso)"},
+  {"version": "1.6.0", "status": "planned", "release_date": null, "solution": null, "deployed_to": [], "owner_team": "procurement", "release_manager": "Release Manager (Contoso)"}
+]

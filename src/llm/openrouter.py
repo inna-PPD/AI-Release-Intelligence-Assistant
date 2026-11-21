@@ -7,7 +7,7 @@ from openai import APIConnectionError, APIStatusError, APITimeoutError, OpenAI, 
 from openai.lib._pydantic import to_strict_json_schema
 from pydantic import BaseModel
 
-from .base import LLMError, LLMResult, SamplingParams
+from .base import ChatResult, LLMError, LLMResult, SamplingParams, ToolCall
 
 BASE_URL = "https://openrouter.ai/api/v1"
 RETRYABLE = (APIConnectionError, APITimeoutError, RateLimitError)
@@ -57,4 +57,30 @@ class OpenRouterClient:
                 )
             if attempt < self.retries:
                 time.sleep(2 ** attempt)  # 1 c, 2 c, ...
+        raise LLMError(f"{type(error).__name__}: {error}") from error
+
+    def chat(self, messages: list[dict], tools: list[dict] | None, params: SamplingParams,
+             tool_choice: str = "auto") -> ChatResult:
+        """Один крок агента: відповідь моделі з можливими tool calls (кейс 3)."""
+        kwargs = {"tools": tools, "tool_choice": tool_choice} if tools else {}
+        for attempt in range(self.retries + 1):
+            start = time.perf_counter()
+            try:
+                r = self._client.chat.completions.create(
+                    model=self.name, messages=messages, temperature=params.temperature, top_p=params.top_p,
+                    max_tokens=params.max_tokens, **kwargs)
+            except RETRYABLE as e:
+                error = e
+            except APIStatusError as e:
+                if e.status_code < 500:
+                    raise LLMError(f"{e.status_code}: {e.message}") from e
+                error = e
+            else:
+                msg = r.choices[0].message
+                calls = [ToolCall(c.id, c.function.name, c.function.arguments or "{}") for c in (msg.tool_calls or [])]
+                return ChatResult(msg.content or "", calls, r.usage.prompt_tokens if r.usage else 0,
+                                  r.usage.completion_tokens if r.usage else 0,
+                                  int((time.perf_counter() - start) * 1000))
+            if attempt < self.retries:
+                time.sleep(2 ** attempt)
         raise LLMError(f"{type(error).__name__}: {error}") from error

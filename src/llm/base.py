@@ -25,6 +25,22 @@ class LLMResult:
     model: str
 
 
+@dataclass
+class ToolCall:
+    id: str
+    name: str
+    arguments: str      # JSON-рядок від моделі — валідуємо в циклі агента
+
+
+@dataclass
+class ChatResult:
+    content: str
+    tool_calls: list[ToolCall]
+    tokens_in: int
+    tokens_out: int
+    latency_ms: int
+
+
 class LLMError(Exception):
     """Модель недоступна після всіх повторів (мережа, timeout, 5xx)."""
 

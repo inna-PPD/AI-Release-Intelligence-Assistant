@@ -1,0 +1,24 @@
+# Агент (кейс 3). Модель — ключ з config/models.yaml; пошук — налаштування з config/rag.yaml.
+
+agent:
+  model: provider                 # openai/gpt-4o-mini через OpenRouter (tool calling)
+  system_prompt: agent_system/v2  # v1 — перший прогін (REPORT); v2 — тікет без зайвих перепитувань
+  tools: v2                       # prompts/agent_tools/v2.yaml
+  team: procurement               # команда користувача: дефекти інших команд закриті
+  sampling: { temperature: 0.0, top_p: 1.0 }
+  max_tokens: 800                 # на одну відповідь моделі
+
+limits:                           # контроль виконання; причина зупинки пишеться в trace (stop_reason)
+  max_steps: 8                    # викликів моделі на запит; останній — без інструментів, з частковим результатом
+  max_tokens_total: 40000         # вхідні + вихідні токени на запит
+  max_cost_usd: 0.01              # ≈ 25 повних кроків gpt-4o-mini; на типовий запит — $0.0005–0.002
+  soft_limit: 0.8                 # після 80% бюджету — фінальна відповідь без нових інструментів
+  tool_timeout_s: 15              # на один виклик інструмента (пошук з reranker на CPU — 1–3 с)
+  request_timeout_s: 120          # на весь запит
+  tool_retries: 2                 # повтори безпечних (read-only) інструментів при timeout / 429 / 503
+  backoff_s: 0.5                  # пауза 0.5 c, 1 c, … (експоненційна)
+  max_same_call: 2                # той самий інструмент з тими самими аргументами — не більше 2 разів
+
+evals:
+  tasks: evals/agent_tasks.jsonl
+  results_dir: evals/results/agent
